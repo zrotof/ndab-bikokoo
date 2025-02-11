@@ -16,6 +16,7 @@ import {
 import {
   faFacebook
 } from '@fortawesome/free-brands-svg-icons'
+import { IconDefinition } from '@fortawesome/angular-fontawesome';
 
 @Pipe({
   name: 'convertStringLabelToFontawesomeIcon',
@@ -26,15 +27,15 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
   transform(value: string): IconProp {
     switch (value) {
       case 'faFaceLaugh':
-        return faFaceLaugh
+        return faFaceLaugh as IconProp
       case 'faFaceMeh':
-        return faFaceMeh
+        return faFaceMeh as IconProp
       case 'faFaceMehBlank' : 
-        return faFaceMehBlank
+        return faFaceMehBlank as IconProp
       case 'faFaceSmile':
-        return faFaceSmile
+        return faFaceSmile as IconProp
       default:
-        return faUser;
+        return faUser as IconProp
     }
   }
 

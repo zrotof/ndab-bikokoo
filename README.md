@@ -1,4 +1,4 @@
-# angular-starter-simple-type-v17
+# angular-starter-simple-type-v19
 The aim of this project is to provide a set of initial tools and configurations to facilitate the initialization of an Angular standalone project with a simple base architecture 
 
 # What is included
