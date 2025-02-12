@@ -1,13 +1,39 @@
 @import "primeicons/primeicons.css";
-@import 'variables.scss';
+@import "variables.scss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--project-white-primary-color);
+}
+
+.header-container {
+  max-width: 1400px;
+}
+
+.my-container {
+  max-width: 1300px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sub-title{
+  font-size: 2.5rem;
+  max-width: 700px;
 }

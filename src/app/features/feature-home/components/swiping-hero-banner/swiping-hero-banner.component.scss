@@ -1,0 +1,156 @@
+@import "swiper/swiper-bundle.css";
+
+.swiping-hero-banner {
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+
+  swiper-container {
+    height: 100%;
+    width: 100%;
+
+    swiper-slide {
+      height: 100%;
+      width: 100%;
+
+      .hero-view {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background: rgb(3,3,3);
+          background: linear-gradient(0deg, rgba(3,3,3,0.16710434173669464) 2%, rgba(4,4,4,0.592874649859944) 72%, rgba(6,6,6,0.7161239495798319) 99%);          
+        }
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
+
+        .content{
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            .texts{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                max-width: 700px;
+
+                h1{
+                    font-size: 3.5rem;
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                p{
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                }
+            }
+
+        .video-thumnail{
+            position: absolute;
+            right: 2rem;
+            bottom: 40px;
+            width: 230px;
+            height: 130px;
+            border-radius: 10px;
+            background-color: red;
+        }
+        }
+
+      }
+    }
+  }
+
+  .custom-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -80px;
+    z-index: 3;
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .swiper-pagination {
+        display: flex;
+        align-items: center;
+
+        .swiper-pagination-bullet {
+          width: 60px;
+          height: 9px;
+          margin-right: 5px;
+          background-color: none;
+          cursor: pointer;
+          border: 2px solid rgb(255, 255, 255);
+          box-shadow: #0000002c 0px 3px 6px;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: white;
+          border: 2px solid transparent;
+          width: 60px;
+          height: 6px;
+          cursor: unset;
+        }
+      }
+
+      .navigation {
+        display: flex;
+
+        button {
+          width: 40px;
+          height: 40px;
+          background-color: rgba(255, 255, 255, 0.256);
+          border: none;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          color: var(--project-primary-color);
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          box-shadow: #00000088 0px 3px 6px;
+
+          &:hover {
+            background-color: var(--project-primary-color);
+            color: white;
+          }
+
+          .pi {
+            font-weight: bold;
+            font-size: 1.1rem;
+            pointer-events: none;
+            z-index: -2;
+          }
+        }
+
+        .prev {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}

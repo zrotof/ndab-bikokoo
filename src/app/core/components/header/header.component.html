@@ -1,0 +1,53 @@
+<header [class.scrolled]="isSticky">
+  @if (!isSticky) {
+  <div class="contact-badge">
+    <div class="content header-container">
+      <ul class="networks">
+        @for (network of networks; track $index) {
+        <li>
+          <a href="{{ network.link }}" target="_blank">
+            <fa-icon
+              [icon]="network.icon | convertStringLabelToFontawesomeIcon"
+            ></fa-icon
+          ></a>
+        </li>
+        }
+      </ul>
+
+      <div class="contacts">
+        <a class="phone">
+          <fa-icon [icon]="'faPhone' | convertStringLabelToFontawesomeIcon">
+          </fa-icon>
+          <p>+33 012345678</p>
+        </a>
+        <a class="email">
+            <fa-icon
+            [icon]="'faEnvelope' | convertStringLabelToFontawesomeIcon"
+          ></fa-icon>
+            <p>contact&#64;ndab-bikokoo.com</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  }
+
+  <nav [class.fixed]="isSticky">
+    <div class="content header-container">
+      <div class="logo-wrapper">
+        <img
+          ngSrc="/img/logo/logo.png"
+          alt="logo de l'asociation Ndab Bikoko"
+          fill
+          priority
+          routerLink=""
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a routerLink="">Accueil</a></li>
+        <li><a routerLink="a-propos">À Propos</a></li>
+        <li><a href="#">ÉVènements</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

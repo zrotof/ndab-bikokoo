@@ -1,0 +1,16 @@
+<div class="hero-banner-type-two">
+    <div class="content my-container">
+        <h1> {{heroData.title}} </h1>
+
+        <div class="breadcumb">
+            @for (menu of heroData.menus; track $index; let first = $first; let last = $last) {
+                @if(first){
+                    <a routerLink={{menu.url}}> {{menu.label}} </a>
+                }
+                @else {
+                    | <span> {{menu.label}} </span>
+                }
+            }    
+        </div>
+    </div>
+</div>

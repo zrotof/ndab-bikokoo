@@ -1,0 +1,46 @@
+<div class="swiping-hero-banner">
+    <swiper-container #swiperRef [config]="config" >
+        <swiper-slide>
+            <div class="hero-view">
+                <img ngSrc="/img/hero/hero-1.jpeg" alt="" fill priority>
+
+                <div class="content my-container">
+
+                    <div class="texts">
+                        <h1>
+                            <span>NDAB bikokoo</span>
+                            <span>Pil Gweha</span>
+                        </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, magni similique? Quo quibusdam architecto, veritatis id excepturi a laborum fugit, perferendis hic ipsum eveniet! Iste fuga hic alias repudiandae non!</p>
+                    </div>
+                <div class="video-thumnail">
+                    
+                </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="hero-view">
+
+            <img ngSrc="/img/hero/hero-2.jpeg" alt="" fill priority>
+                </div>
+        </swiper-slide>
+    </swiper-container>
+
+    <div class="custom-controls">
+        <div class="controls my-container">
+    
+            <div class="swiper-pagination"></div>
+            
+            <div class="navigation">
+                <button class="prev" (click)="onNavigationEvent(-1)">
+                    <i class="pi pi-arrow-left"></i>
+                </button>
+            
+                <button class="next" (click)="onNavigationEvent(1)">
+                    <i class="pi pi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

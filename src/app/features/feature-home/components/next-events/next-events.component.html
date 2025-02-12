@@ -1,0 +1,36 @@
+<div class="next-events">
+    <div class="content my-container">
+        <div class="left">
+            <h2 class="sub-title">
+                Nos Prochains évènements
+            </h2>
+
+            <p>Découvrez Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi veritatis quod fugit, vero modi quasi est quibusdam?</p>
+
+            <button> Voir tout</button>
+        </div>
+
+        <div class="events">
+
+            @for (event of events; track $index) {
+                <div class="event">
+                    <div class="image-wrapper">
+                        <img ngSrc={{event.image}} alt="" fill>
+                        <span class="type"> {{event.type}} </span>
+                    </div>
+                    <div class="bottom">
+                        <span>
+                            <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
+                            {{event.date}}
+                         </span>
+                        <span> 
+                            <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  
+                            {{event.town}},
+                            {{event.country}}  
+                        </span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+import { HeaderComponent } from "./core/components/header/header.component";
+import { FooterComponent } from './core/components/footer/footer.component';
+
 import * as AOS from 'aos';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ConvertStringLabelToFontawesomeIconPipe } from './core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
     selector: 'app-root',
     imports: [
-        FontAwesomeModule,
-        ConvertStringLabelToFontawesomeIconPipe
-    ],
+      RouterOutlet,
+      HeaderComponent,
+      FooterComponent
+],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
