@@ -11,46 +11,39 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
-  faCircleXmark
-} from '@fortawesome/free-regular-svg-icons'
-
-import {
   faInstagram,
   faFacebookF,
   faXTwitter,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons'
-
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Pipe({
   name: 'convertStringLabelToFontawesomeIcon',
-  standalone: true
+  standalone: true,
 })
 export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
-
   transform(value: string): IconProp {
     switch (value) {
       case 'faCalendarDays':
-        return faCalendarDays as IconProp
+        return faCalendarDays as IconProp;
       case 'faEnvelope':
-        return faEnvelope as IconProp
+        return faEnvelope as IconProp;
       case 'faInstagram':
-        return faInstagram as IconProp
+        return faInstagram as IconProp;
       case 'faFacebookF':
-        return faFacebookF as IconProp
+        return faFacebookF as IconProp;
       case 'faLocationDot':
-        return faLocationDot as IconProp
+        return faLocationDot as IconProp;
       case 'faPhone':
-        return faPhone as IconProp
+        return faPhone as IconProp;
       case 'faQuoteRight':
-        return faQuoteRight as IconProp
+        return faQuoteRight as IconProp;
       case 'faXTwitter':
-        return faXTwitter as IconProp
+        return faXTwitter as IconProp;
       case 'faYoutube':
-        return faYoutube as IconProp
+        return faYoutube as IconProp;
       default:
-        return faUser as IconProp
+        return faUser as IconProp;
     }
   }
-
 }

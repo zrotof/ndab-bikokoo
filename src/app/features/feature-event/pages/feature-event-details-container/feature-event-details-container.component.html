@@ -1,0 +1,39 @@
+<div class="feature-event-details-container">
+  <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
+
+  <div class="container my-container">
+    <div class="left">
+      <h2>{{ eventDetail.title }}</h2>
+      <div class="date">
+        <fa-icon
+          [icon]="'faCalendarDays' | convertStringLabelToFontawesomeIcon"
+        >
+        </fa-icon>
+        <p>{{ eventDetail.date }}</p>
+      </div>
+
+      <div class="image-wrapper">
+        <img src="{{ eventDetail.coverImage }}" alt="event image" />
+      </div>
+
+      <div class="texts">
+        <div class="description">
+          {{ eventDetail.content }}
+        </div>
+        <h3>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+          labore voluptatem error eos repellendus est excepturi.
+        </h3>
+        <div class="description">{{ eventDetail.description }}</div>
+      </div>
+    </div>
+    <div class="right my-container">
+      <P
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+        corporis asperiores aliquam laudantium amet numquam similique saepe,
+        natus in, debitis mollitia distinctio. At doloremque iure dignissimos
+        iusto accusantium nemo recusandae?</P
+      >
+    </div>
+  </div>
+</div>

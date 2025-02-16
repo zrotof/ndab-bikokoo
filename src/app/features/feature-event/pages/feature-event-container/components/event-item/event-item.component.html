@@ -1,0 +1,10 @@
+<div class="event-item" (click)="onEventClick(event.id)">
+  <div class="image-wrapper">
+    <img src="{{ event.coverImage }}" alt="event.title" />
+  </div>
+
+  <div class="texts my-container">
+    <p>{{ event.date }} à {{ event.hour }}</p>
+    <h3>{{ event.title }}</h3>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+.feature-event-details-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5rem;
+  .container {
+    display: flex;
+    width: 100%;
+    .left{
+
+        h2{
+            font-size: 2.5rem;
+        }
+        .date{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        p{
+            margin-top: 4px;
+        }
+        .image-wrapper{
+        margin-top: 30px;
+        height: 500px;
+        width: 800px;
+           img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+           }
+        }
+        .texts{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .right{
+        margin-left: 2rem;
+        background-color:#f5f6f9 ;
+        border-radius: 10px;
+        height: fit-content;
+        p{
+            margin: 2rem;
+        }
+    }
+  }
+
+}
