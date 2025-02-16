@@ -4,128 +4,142 @@ header {
   top: 0;
   z-index: 9;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--project-white-primary-color);
+
+  .contact-badge {
     display: flex;
-    flex-direction: column;
-   
-    .contact-badge {
-      background-color: #040404;
-      padding: 10px;
-      text-align: center;
+    justify-content: center;
+    background-color: #151519;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
       width: 100%;
 
-      .content{
+      .networks {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        
-        .networks{
+        gap: 0.5rem;
+
+        li {
           display: flex;
-          gap: 0.5rem;
+          align-items: center;
+          justify-content: center;
+          width: 1.7rem;
+          height: 1.7rem;
+          border-radius: 50%;
+          padding: 1rem;
 
-          li{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 1.7rem;
-            height: 1.7rem;
-            border-radius: 50%;
-            padding: 1rem;
+          &:hover {
+            background-color: var(--project-white-primary-color);
 
-            &:hover{
-              background-color: rgb(248, 246, 246);
-
-              a{
-                color: rgb(0, 0, 0);
-              }
+            a {
+              color: var(--project-black-primary-color);;
             }
+          }
 
-            
-            a{
-              color: rgb(250, 248, 248);
+          a {
+            color: var(--project-white-primary-color);
 
-              fa-icon{
-                font-size: 1.1rem;
-              }
+            fa-icon {
+              font-size: 1.1rem;
             }
           }
         }
+      }
 
-        .contacts{
+      .contacts {
+        display: flex;
+        gap: 2rem;
+
+        .phone,
+        .email {
           display: flex;
-          gap: 2rem;
+          align-items: center;
+          gap: 0.7rem;
 
-          .phone,
-          .email{
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-
-            p{
-              font-size: 0.9rem;
-            }
+          p {
+            font-size: 0.9rem;
+            color: var(--project-white-primary-color);
           }
         }
-        }
+      }
     }
-  
-    nav {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        
-      .content {
-        display: flex ;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: fit-content;
-        padding-top: 1rem ;
-        padding-bottom: 1rem ;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      .logo-wrapper {
+        position: relative;
+        height: 120px;
+        width: 110px;
         transition: all 0.3s ease-in-out;
 
-        .logo-wrapper {position: relative;
-            height: 120px;
-            width: 110px;
-            transition: all 0.3s ease-in-out;
-
-            img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-            }
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
         }
+      }
 
-        
-    
-          ul{
-            display: flex;
-            gap: 2rem;
-            padding: 0;
-            margin: 0;
+      ul {
+        display: flex;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+
+        li{
+          a{
+            color: var(--project-white-primary-color);
           }
-      }
-    }
-
-    .fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      background-color: var(--project-white-primary-color);
-
-      .content{
-        padding-top: 0.5rem ;
-        padding-bottom: 0.5rem ;
-
-        .logo-wrapper {position: relative;
-          height: 85px;
-          width: 70px;
         }
       }
     }
-
-
+  }
 }
-  
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: var(--project-white-primary-color);
+
+  .content {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    height: fit-content !important;
+
+    .logo-wrapper {
+      position: relative !important;
+      height: 85px !important;
+      width: 70px !important;
+    }
+
+    ul{
+      li{
+        a{
+          color: var(--project-black-primary-color) !important;
+        }
+      }
+    }
+  }
+}

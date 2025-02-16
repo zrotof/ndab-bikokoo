@@ -14,11 +14,26 @@
         width: 100%;
         margin-top: 5rem;
 
+        h1{
+            color: var(--project-orange-primary-color);
+        }
+
         .breadcumb{
             display: flex;
             gap: 1rem;
 
+            a{
+                color: var(--project-brown-secondary-color);
+                cursor: pointer;
+
+                &:hover{
+                    color: var(--project-orange-primary-color);
+                    text-decoration: underline;
+                }
+            }
+
             span{
+                color: var(--project-white-primary-color);
             }
         }
     }

@@ -3,6 +3,8 @@ import { SwipingHeroBannerComponent } from "./components/swiping-hero-banner/swi
 import { InscriptionProcessComponent } from "./components/inscription-process/inscription-process.component";
 import { PresidentWordsComponent } from "./components/president-words/president-words.component";
 import { NextEventsComponent } from "./components/next-events/next-events.component";
+import { FaqComponent } from "./components/faq/faq.component";
+import { JoinBannerComponent } from "../../shared/components/join-banner/join-banner.component";
 
 @Component({
   selector: 'app-feature-home',
@@ -12,7 +14,9 @@ import { NextEventsComponent } from "./components/next-events/next-events.compon
     SwipingHeroBannerComponent,
     InscriptionProcessComponent,
     PresidentWordsComponent,
-    NextEventsComponent
+    NextEventsComponent,
+    FaqComponent,
+    JoinBannerComponent
 ]
 })
 

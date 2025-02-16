@@ -1,3 +1,49 @@
 <footer>
-    
+    <div class="top">
+        <div class="content my-container">
+            <div class="logo-bloc">
+                <div class="image-wrapper">
+                    <img src="img/logo/logo.png">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum itaque, quasi deserunt neque, commodi inventore vel, odio vero provident quaerat nam veniam.</p>
+
+                <ul>
+                    @for (network of networks; track $index) {
+                        <li>
+                            <a routerLink={{network.link}}> 
+                                <fa-icon [icon]=" network.icon | convertStringLabelToFontawesomeIcon "></fa-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="rapid-links">
+                <h3>Liens Rapides</h3>
+
+                <ul>
+                    <li>Accueil</li>
+                    <li>À Propos</li>
+                    <li>Évènements</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="legals">
+                <h3>Légal</h3>
+                <ul>
+                    <li>Accueil</li>
+                    <li>À Propos</li>
+                    <li>Évènements</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="content my-container">
+            <p>©2025 NDAP BIKOKOO, Tous droits réservés</p>
+        </div>
+    </div>
 </footer>

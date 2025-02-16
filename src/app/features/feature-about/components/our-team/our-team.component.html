@@ -1,0 +1,20 @@
+<div class="our-team">
+    <div class="content my-container">
+        <h2>Notre Équipe</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint illo incidunt eligendi consequuntur minus tempora sit debitis, numquam nihil iusto repellendus molestias iste a perspiciatis eos alias sequi. Quaerat, necessitatibus.</p>
+
+        <ul>
+            @for (member of team; track $index) {
+                <li>
+                    <div class="image-wrapper">
+                        <img src={{member.image}} alt="">
+                    </div>
+                    <div class="texts">
+                        <h3> {{member.name}} </h3>
+                        <p> {{member.position}} </p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

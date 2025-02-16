@@ -1,6 +1,5 @@
-<header [class.scrolled]="isSticky">
-  @if (!isSticky) {
-  <div class="contact-badge">
+<header #header>
+  <div #contactBadge class="contact-badge">
     <div class="content header-container">
       <ul class="networks">
         @for (network of networks; track $index) {
@@ -29,9 +28,8 @@
       </div>
     </div>
   </div>
-  }
-
-  <nav [class.fixed]="isSticky">
+  
+  <nav #navElement>
     <div class="content header-container">
       <div class="logo-wrapper">
         <img
@@ -46,7 +44,7 @@
         <li><a routerLink="">Accueil</a></li>
         <li><a routerLink="a-propos">À Propos</a></li>
         <li><a routerLink="evenements">Évènements</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a routerLink="contact">Contact</a></li>
       </ul>
     </div>
   </nav>

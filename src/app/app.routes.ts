@@ -1,15 +1,26 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  
   {
-    path: 'a-propos',
-    loadComponent: () =>
-      import('./features/feature-about/feature-about.component').then(
-        (m) => m.FeatureAboutComponent
-      ),
-  },
+    path: "a-propos",
+    data: {
+        isBackgroundReduced : true
+    },
+    loadComponent: () => import('./features/feature-about/feature-about.component').then(m => m.FeatureAboutComponent)
+},
+{
+    path: "contact",
+    data: {
+        isBackgroundReduced : true
+    },
+    loadComponent: () => import('./features/feature-contact/feature-contact.component').then(m => m.FeatureContactComponent)
+},
   {
     path: 'evenements',
+    data: {
+      isBackgroundReduced : true
+  },
     loadComponent: () =>
       import(
         './features/feature-event/pages/feature-event-container/feature-event-container.component'
@@ -17,16 +28,16 @@ export const routes: Routes = [
   },
   {
     path: 'evenements/:id',
+    data: {
+      isBackgroundReduced : true
+  },
     loadComponent: () =>
       import(
         './features/feature-event/pages/feature-event-details-container/feature-event-details-container.component'
       ).then((m) => m.FeatureEventDetailsContainerComponent),
   },
-  {
-    path: '',
-    loadComponent: () =>
-      import('./features/feature-home/feature-home.component').then(
-        (m) => m.FeatureHomeComponent
-      ),
-  },
+    {
+        path: "",
+        loadComponent: () => import('./features/feature-home/feature-home.component').then(m => m.FeatureHomeComponent)
+    },   
 ];

@@ -11,6 +11,5 @@ import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
 export class HeroBannerTypeTwoComponent {
 
   @Input() heroData !: HeroTypeTwo;
-
   
 }

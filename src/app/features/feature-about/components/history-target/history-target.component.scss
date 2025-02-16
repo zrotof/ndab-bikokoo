@@ -1,0 +1,59 @@
+.history-target{
+    display: flex;
+    justify-content: center;
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        
+        .card{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background-color: var(--project-brown-tertiary-color);
+            border-radius: 10px;
+
+            .texts{
+                display: flex;
+                flex-direction: column;
+                flex: 2;
+                gap: 1.5rem;
+
+                h3{
+                    font-size: 2.5rem;
+                    color: var(--project-orange-primary-color);
+                }
+
+                p{
+                    line-height: 1.5rem;
+                    color: var(--project-orange-secondary-color);
+                }
+            }
+
+            .image-wrapper{
+                overflow: hidden;
+                border-radius: 0 10px 10px 0;
+                flex: 1 ;
+                height: 25rem;
+                min-width: 500px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .target{
+            flex-direction: row-reverse;
+
+            .image-wrapper{
+                border-radius: 10px 0 0 10px;
+            }
+        }
+    }
+}

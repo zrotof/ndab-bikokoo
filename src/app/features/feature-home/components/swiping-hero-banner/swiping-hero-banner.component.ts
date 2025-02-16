@@ -1,5 +1,7 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { Swiper, SwiperOptions } from 'swiper/types';
 
 @Component({
@@ -9,7 +11,9 @@ import { Swiper, SwiperOptions } from 'swiper/types';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   encapsulation: ViewEncapsulation.None,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    FontAwesomeModule,
+    ConvertStringLabelToFontawesomeIconPipe
   ]
 })
 export class SwipingHeroBannerComponent {

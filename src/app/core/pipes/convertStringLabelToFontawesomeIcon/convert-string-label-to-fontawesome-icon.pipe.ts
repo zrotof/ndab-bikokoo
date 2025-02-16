@@ -5,9 +5,10 @@ import {
   faCalendarDays,
   faEnvelope,
   faLocationDot,
+  faPlay,
   faPhone,
   faQuoteRight,
-  faUser,
+  faUser
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -34,6 +35,8 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faFacebookF as IconProp;
       case 'faLocationDot':
         return faLocationDot as IconProp;
+      case 'faPlay' :
+        return faPlay as IconProp
       case 'faPhone':
         return faPhone as IconProp;
       case 'faQuoteRight':

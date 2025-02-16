@@ -4,7 +4,7 @@
             <div class="hero-view">
                 <img ngSrc="/img/hero/hero-1.jpeg" alt="" fill priority>
 
-                <div class="content my-container">
+                <div class="content header-container">
 
                     <div class="texts">
                         <h1>
@@ -14,7 +14,13 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, magni similique? Quo quibusdam architecto, veritatis id excepturi a laborum fugit, perferendis hic ipsum eveniet! Iste fuga hic alias repudiandae non!</p>
                     </div>
                 <div class="video-thumnail">
-                    
+                    <div class="image-video-wrapper">
+                        <img src="img/home/events/paris.jpeg" alt="">
+
+                        <div class="play-icon-wrapper">
+                            <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </div>
@@ -28,7 +34,7 @@
     </swiper-container>
 
     <div class="custom-controls">
-        <div class="controls my-container">
+        <div class="controls header-container">
     
             <div class="swiper-pagination"></div>
             

@@ -1,0 +1,32 @@
+<div class="faq">
+    <div class="content my-container">
+
+        <div class="texts">
+            <span class="pre">Vous Avez Des Questions ?</span>
+            <h2 class="sub-title">Questions Fréquemment Posées Par Les Adhérents</h2>
+            <p>Retrouvez ci-dessous des questions et des réponses aux questions les plus fréquentes posées par les adhérents.</p>
+        </div> 
+
+        <p-accordion value="0">
+            @for (question of questions; track $index) {
+                <p-accordion-panel [value]="''+$index">
+                    <p-accordion-header>
+                        <ng-template #toggleicon let-active="active">
+                            @if (active) {
+                                <i class="pi pi-minus"></i>
+                            } @else {
+                                <i class="pi pi-plus"></i>
+                            }
+                        </ng-template>
+                            <span class="font-bold whitespace-nowrap"> {{question.label}} </span>
+                    </p-accordion-header>
+                    <p-accordion-content>
+                        <p class="m-0">
+                            {{question.response}}
+                        </p>
+                    </p-accordion-content>
+                </p-accordion-panel>
+            }
+        </p-accordion>           
+    </div>
+</div>
