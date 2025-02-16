@@ -10,42 +10,42 @@ export class OurTeamComponent {
 
   protected readonly team = [
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/1.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/2.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/3.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/4.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/5.jpg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/6.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/7.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     },
     {
-      image: "img/hero/hero-1.jpeg",
+      image: "img/about/team/1.jpeg",
       name: "Mickaêl Carter",
       position: "Directe général"
     }

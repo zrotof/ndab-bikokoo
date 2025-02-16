@@ -10,15 +10,15 @@ export class SomeStatsComponent {
 
   protected readonly stats = [
     {
-      value: "+300",
+      value: "+90",
       label: "Familles Aidées",
     },
     {
-      value: "50",
+      value: "92",
       label: "Cantons",
     },
     {
-      value: "9",
+      value: "7",
       label: "Ans d'Existence",
     } 
   ]

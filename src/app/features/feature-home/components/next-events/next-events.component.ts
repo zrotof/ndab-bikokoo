@@ -20,22 +20,22 @@ export class NextEventsComponent {
     {
       image: "/img/home/events/amsterdam.jpeg",
       town: "Amsterdam",
-      country: "PAYS-BAS",
-      date: "6 juin 2025",
+      country: "Pays-bas",
+      date: "6-8 juin 2025",
       type: "Assemblée Générale"
     },
     {
       image: "/img/home/events/paris.jpeg",
       town: "Paris",
       country: "France",
-      date: "5 juin 2026",
+      date: "12-14 juin 2026",
       type: "Assemblée Générale"
     },
     {
       image: "/img/home/events/milan.jpeg",
       town: "Milan",
-      country: "ITALIE",
-      date: "11 Mai 2027",
+      country: "Italie",
+      date: "11-13 Mai 2027",
       type: "Assemblée Générale"
     }
   ]

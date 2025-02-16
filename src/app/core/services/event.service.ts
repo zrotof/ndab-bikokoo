@@ -9,7 +9,7 @@ export class EventService {
   defaultEvents: Event[] = [
     {
       id: 1,
-      coverImage: 'img/events/052b33d3-53ad-4d8c-a556-d76619ccbefd.jpeg',
+      coverImage: 'img/about/team/1.jpeg',
       title:
         "Assemblée Générale annuelle des membres Bassa'a en Italie – Un avenir solidaire pour la diaspora",
       date: '15 mai 2025',
