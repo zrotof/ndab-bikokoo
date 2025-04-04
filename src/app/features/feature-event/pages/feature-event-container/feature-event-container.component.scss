@@ -12,7 +12,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 5rem;
+        margin-top: 8rem;
 
         h2{
             font-size: 2.5rem;
@@ -23,9 +23,18 @@
             margin-bottom: 3rem;
         }
 
-        app-event-menu-item{
+        .event-list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 5rem 3rem;
             width: 100%;
+            
+            app-event-menu-item{
+                width: 100%;
+            }
         }
+
+        
     }
 
 }

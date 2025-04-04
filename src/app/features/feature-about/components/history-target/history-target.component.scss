@@ -31,6 +31,15 @@
                     line-height: 1.5rem;
                     color: var(--project-orange-secondary-color);
                 }
+
+                ul{
+                    list-style: inside disc;
+
+                    li{
+                        line-height: 1.5rem;
+                        color: var(--project-orange-secondary-color);
+                    }
+                }
             }
 
             .image-wrapper{

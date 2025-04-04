@@ -1,16 +1,6 @@
 <div class="feature-event">
   <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
   <div class="content my-container">
-    <h2>Événements à ne pas manquer !</h2>
-
-    <p>
-      Nos événements sont l’occasion idéale de découvrir de nouvelles
-      expériences, rencontrer des experts de l’industrie et interagir avec une
-      communauté passionnée. Chaque événement est soigneusement conçu pour
-      offrir des moments inoubliables, alliant contenu enrichissant et
-      atmosphère conviviale.
-    </p>
-
     <div class="event-list">
       @for (event of eventList$ | async; track $index) {
       <app-event-item

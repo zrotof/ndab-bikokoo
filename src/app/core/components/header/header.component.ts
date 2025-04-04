@@ -27,28 +27,6 @@ export class HeaderComponent {
 
   isBackgroundReduced = false;
 
-  ngOnInit(): void {
-    this.onRoutingEvent();
-  }
-
-  //On routing event we, if we are on small screen, we toggle the menu to disapear from the screen after we click on a link
-  onRoutingEvent() : void{
-    this.router.events.subscribe({
-      next : (event) => {
-        if(event instanceof ActivationEnd){
-          if(event.snapshot.component){
-            this.isBackgroundReduced = event.snapshot.data['isBackgroundReduced']
-
-            if(this.isBackgroundReduced){
-              this._renderer.addClass(this.navElement.nativeElement, 'fixed');
-            }else{
-              this._renderer.removeClass(this.navElement.nativeElement, 'fixed');
-            }
-          }
-        }
-      }
-    })
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

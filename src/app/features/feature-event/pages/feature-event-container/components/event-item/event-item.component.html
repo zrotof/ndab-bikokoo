@@ -1,10 +1,14 @@
 <div class="event-item" (click)="onEventClick(event.id)">
   <div class="image-wrapper">
-    <img src="{{ event.coverImage }}" alt="event.title" />
+    <img [ngSrc]="event.coverImage" alt="event.title" fill />
   </div>
 
   <div class="texts my-container">
-    <p>{{ event.date }} à {{ event.hour }}</p>
-    <h3>{{ event.title }}</h3>
+    <div class="top">
+      <span>{{ event.date }} à {{ event.hour }}</span>
+      <h3>{{ event.title }}</h3>
+    </div>
+
+    <button>Lire plus </button>
   </div>
 </div>
