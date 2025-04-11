@@ -11,7 +11,7 @@ header {
   .contact-badge {
     display: flex;
     justify-content: center;
-    background-color: #9D4B07;
+    background-color: var(--project-brown-quaterly-color);
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -108,6 +108,9 @@ header {
 
         li{
           a{
+            display: flex;
+            gap: 0.8rem;
+            text-wrap: nowrap;
             font-size: 0.95rem;
             color: var(--project-white-primary-color);
             font-weight: 400;

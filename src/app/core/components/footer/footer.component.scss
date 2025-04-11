@@ -17,10 +17,41 @@ footer{
             width: 100%;
 
             .logo-bloc{
+                position: relative;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 width: 400px;
                 gap: 1.5rem;
+                flex: 2;
+                padding: 0 4rem;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--project-white-secondary-color);
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 1px;
+                    border-radius: 10px;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--project-white-secondary-color);
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 1px;
+                    border-radius: 10px;
+                }
 
                 .image-wrapper{
                     width: 100px;
@@ -35,16 +66,28 @@ footer{
 
                 p{
                     line-height: 1.5em;
+                    text-align: center;
                 }
 
                 ul{
                     display: flex;
                     gap: 1.5rem;
+                    justify-content: center;
 
                     li{
                         a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 3.5rem;
+                            height: 3.5rem;
+                            border-radius: 50%;
+                        background-color: var(--project-white-primary-color);
+
+                            color: var(--project-black-primary-color);
+
                             fa-icon{
-                                font-size: 1.3rem;
+                                font-size: 1.5rem;
                             }
                         }
                     }
@@ -57,6 +100,7 @@ footer{
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+                flex: 1;
 
                 h3{
                     color: var(--project-orange-secondary-color);
@@ -74,15 +118,17 @@ footer{
     .bottom{
         display: flex;
         justify-content: center;
-        background-color: black;
-        padding: 2rem 0;
-
+        background-color: var(--project-brown-quaterly-color);
+        padding: 1rem 0;
+        
         .content{
             width: 100%;
             text-align: center;
 
             p{
+                font-weight: 600;
                 font-size: 0.9rem;
+                color: var(--project-white-primary-color);
             }
         }
     }

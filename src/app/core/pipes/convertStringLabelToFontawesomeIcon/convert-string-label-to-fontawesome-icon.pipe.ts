@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import {
+  faAngleDown,
   faCalendarDays,
   faEnvelope,
   faLocationDot,
@@ -17,36 +17,39 @@ import {
   faXTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import { IconDefinition } from '@fortawesome/angular-fontawesome';
 
 @Pipe({
   name: 'convertStringLabelToFontawesomeIcon',
   standalone: true,
 })
 export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
-  transform(value: string): IconProp {
+  transform(value: string): IconDefinition {
     switch (value) {
+      case 'faAngleDown':
+        return faAngleDown ;
       case 'faCalendarDays':
-        return faCalendarDays as IconProp;
+        return faCalendarDays;
       case 'faEnvelope':
-        return faEnvelope as IconProp;
+        return faEnvelope;
       case 'faInstagram':
-        return faInstagram as IconProp;
+        return faInstagram;
       case 'faFacebookF':
-        return faFacebookF as IconProp;
+        return faFacebookF;
       case 'faLocationDot':
-        return faLocationDot as IconProp;
+        return faLocationDot;
       case 'faPlay' :
-        return faPlay as IconProp
+        return faPlay
       case 'faPhone':
-        return faPhone as IconProp;
+        return faPhone ;
       case 'faQuoteRight':
-        return faQuoteRight as IconProp;
+        return faQuoteRight;
       case 'faXTwitter':
-        return faXTwitter as IconProp;
+        return faXTwitter;
       case 'faYoutube':
-        return faYoutube as IconProp;
+        return faYoutube;
       default:
-        return faUser as IconProp;
+        return faUser ;
     }
   }
 }

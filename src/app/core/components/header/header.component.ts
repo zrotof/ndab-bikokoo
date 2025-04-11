@@ -11,6 +11,8 @@ import { ActivationEnd, Router, RouterLink } from '@angular/router';
     RouterLink,
     NgOptimizedImage,
     FontAwesomeModule,
+    ConvertStringLabelToFontawesomeIconPipe,
+    FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe
   ],
   templateUrl: './header.component.html',
