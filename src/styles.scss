@@ -1,6 +1,13 @@
 @import "primeicons/primeicons.css";
 @import "variables.scss";
 
+@font-face {
+  font-family: 'castellar';
+  src: url('/castellar-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer reset, primeng;
 
 @layer reset {

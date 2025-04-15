@@ -37,6 +37,13 @@ export class NextEventsComponent {
       country: "Italie",
       date: "11-13 Mai 2027",
       type: "Assemblée Générale"
+    },
+    {
+      image: "/img/home/events/milan.jpeg",
+      town: "Milan",
+      country: "Italie",
+      date: "11-13 Mai 2027",
+      type: "Assemblée Générale"
     }
   ]
 }

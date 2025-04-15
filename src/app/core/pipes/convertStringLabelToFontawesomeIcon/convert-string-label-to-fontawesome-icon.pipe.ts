@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 import {
   faAngleDown,
+  faAngleRight,
   faCalendarDays,
   faEnvelope,
   faLocationDot,
@@ -17,6 +18,7 @@ import {
   faXTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+
 import { IconDefinition } from '@fortawesome/angular-fontawesome';
 
 @Pipe({
@@ -28,6 +30,8 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
     switch (value) {
       case 'faAngleDown':
         return faAngleDown ;
+      case 'faAngleRight':
+        return faAngleRight
       case 'faCalendarDays':
         return faCalendarDays;
       case 'faEnvelope':

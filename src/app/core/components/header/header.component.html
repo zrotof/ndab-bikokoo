@@ -28,8 +28,13 @@
       </div>
     </div>
   </div>
-  
-  <nav #navElement>
+
+  <div
+    class="main-header"
+    #navElement
+    role="navigation"
+    aria-label="Menu principal"
+  >
     <div class="content header-container">
       <div class="logo-wrapper">
         <img
@@ -40,13 +45,65 @@
           routerLink=""
         />
       </div>
-      <ul class="nav-links">
-        <li><a routerLink="">La Maison <fa-icon [icon]=" 'faAngleDown' | convertStringLabelToFontawesomeIcon"></fa-icon></a></li>
-        <li><a routerLink="gouvernance">Gouvernance <fa-icon [icon]=" 'faAngleDown' | convertStringLabelToFontawesomeIcon"></fa-icon></a></li>
-        <li><a routerLink="evenements">Évènements <fa-icon [icon]=" 'faAngleDown' | convertStringLabelToFontawesomeIcon"></fa-icon></a></li>
-        <li><a routerLink="a-propos">Culture <fa-icon [icon]=" 'faAngleDown' | convertStringLabelToFontawesomeIcon"></fa-icon></a></li>
-        <li><a routerLink="contact">Contact <fa-icon [icon]=" 'faAngleDown' | convertStringLabelToFontawesomeIcon"></fa-icon></a></li>
-      </ul>
+
+      <nav class="main-nav" role="navigation" aria-label="Menu principal">
+        <ul class="nav-list">
+          @for (item of menuItems; track $index) {
+
+          <li class="nav-item" [class.has-submenu]="item.children">
+            @if (item.children) {
+            <button
+              class="nav-link"
+              (mouseenter)="toggleInSubmenu(item)"
+              (mouseleave)="toggleOutSubmenu(item)"
+              aria-haspopup="true"
+              [attr.aria-expanded]="item.open"
+            >
+              {{ item.label }}
+              <fa-icon
+                [icon]="'faAngleDown' | convertStringLabelToFontawesomeIcon"
+              >
+              </fa-icon>
+            </button>
+
+            <div
+            class="dropdown-menu"
+            *ngIf="item.open"
+            (mouseenter)="cancelToggleOut()"
+            (mouseleave)="toggleOutSubmenu(item)"
+          >
+            <div class="submenus">
+              <div class="content">
+                <ul>
+                  <li *ngFor="let child of item.children">
+                    <a [routerLink]="child.link">
+                      {{ child.label }}
+                      <fa-icon [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                    </a>
+                  </li>
+                </ul>
+                <div class="right">
+                  <!-- Contenu à droite si besoin -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            } @else {
+            <a class="nav-link" [routerLink]="item.link">
+              {{ item.label }}
+            </a>
+            }
+          </li>
+          }
+        </ul>
+      </nav>
     </div>
-  </nav>
-</header>
+  </div>
+
+  <!--
+  <div class="auth-actions">
+    <a routerLink="/login" class="btn-link">Se connecter</a>
+    <a routerLink="/register" class="btn-primary">Créer un compte</a>
+  </div>
+--></header>

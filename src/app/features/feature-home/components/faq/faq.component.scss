@@ -1,6 +1,7 @@
 .faq{
     display: flex;
     justify-content: center;
+    padding: 8rem 0;
 
     .content{
         display: flex;
@@ -51,7 +52,7 @@
                 .p-accordioncontent{
 
                     .p-accordioncontent-content{
-                        background-color: var(--project-brown-tertiary-color);
+                        background-color: var(--project-brown-quaterly-color);
 
                         p{
                             line-height: 1.5em;

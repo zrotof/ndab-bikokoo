@@ -19,7 +19,7 @@ export class FeatureEventContainerComponent implements OnInit {
   constructor(private eventService: EventService, private router: Router) {}
 
   protected readonly heroData: HeroTypeTwo = {
-    image: '',
+    image: '/img/events/secondary-hero-houses.jpeg',
     title: 'ÉVÉNEMENTS',
     menus: [
       {
@@ -27,7 +27,7 @@ export class FeatureEventContainerComponent implements OnInit {
         url: '/',
       },
       {
-        label: 'Évènements',
+        label: 'Évênements',
         url: '/evenements',
       },
     ],

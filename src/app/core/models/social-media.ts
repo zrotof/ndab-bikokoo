@@ -1,5 +1,6 @@
 export interface SocialMedia {
     icon: string,
     link: string,
-    name: string
+    name: string,
+    color: string
 }

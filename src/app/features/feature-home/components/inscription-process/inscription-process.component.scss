@@ -1,8 +1,10 @@
 .inscription-process {
   display: flex;
   justify-content: center;
-  color: var(--project-black-primary-color);
-
+  color: var(--project-white-primary-color);
+  padding: 8rem 0;
+  background-color: var(--project-black-primary-color);
+  
   .content {
     display: flex;
     flex-direction: column;
@@ -11,11 +13,12 @@
     gap: 2rem;
 
     .pre{
-      border: 2px solid var(--project-black-primary-color);
+      border: 1px solid var(--project-white-primary-color);
     }
 
     .sub-title {
       text-align: center;
+      max-width: 100%;
     }
 
     ul {
@@ -27,14 +30,16 @@
 
       li {
         position: relative;
+        
 
         span {
+          font-family: "castellar", serif;
           position: absolute;
           font-size: 9rem;
           font-weight: bold;
           left: -2rem;
-          z-index: -1;
           top: -6rem;
+          z-index: 1;
           color: var(--project-orange-primary-color);
         }
 
@@ -42,20 +47,16 @@
           display: flex;
           flex-direction: column;
           gap: 0.7rem;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-          padding: 1.5rem 1rem;
+          padding: 3rem 1.5rem 1rem;
           width: 350px;
-          border-radius: 10px;
-          background: rgba(114, 113, 113, 0.2);
-          /* From https://css.glass */
-          background: rgb(236 235 235 / 54%);
+          background-color: var(--project-white-primary-color);
           border-radius: 16px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
-          border: 1px solid rgb(142 141 141 / 37%);
           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
           height: 100%;
+          color: var(--project-black-primary-color);
 
           h3{
             font-size: 1.15rem;
