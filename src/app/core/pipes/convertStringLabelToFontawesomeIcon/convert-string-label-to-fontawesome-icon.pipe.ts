@@ -16,6 +16,7 @@ import {
   faInstagram,
   faFacebookF,
   faXTwitter,
+  faWhatsapp,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -48,6 +49,8 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faPhone ;
       case 'faQuoteRight':
         return faQuoteRight;
+      case 'faWhatsapp':
+        return faWhatsapp
       case 'faXTwitter':
         return faXTwitter;
       case 'faYoutube':

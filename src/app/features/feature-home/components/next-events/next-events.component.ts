@@ -22,28 +22,32 @@ export class NextEventsComponent {
       town: "Amsterdam",
       country: "Pays-bas",
       date: "6-8 juin 2025",
-      type: "Assemblée Générale"
+      type: "Assemblée générale",
+      color: "#006600"
     },
     {
       image: "/img/home/events/paris.jpeg",
       town: "Paris",
       country: "France",
       date: "12-14 juin 2026",
-      type: "Assemblée Générale"
+      type: "Installation de canton",
+      color: "#7E350E"
     },
     {
       image: "/img/home/events/milan.jpeg",
       town: "Milan",
       country: "Italie",
       date: "11-13 Mai 2027",
-      type: "Assemblée Générale"
+      type: "Séminaire",
+      color: "#0070C0"
     },
     {
       image: "/img/home/events/milan.jpeg",
       town: "Milan",
       country: "Italie",
       date: "11-13 Mai 2027",
-      type: "Assemblée Générale"
+      type: "Assemblée générale",
+      color: "#006600"
     }
   ]
 }

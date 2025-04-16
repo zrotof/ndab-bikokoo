@@ -47,5 +47,5 @@ export class SwipingHeroBannerComponent {
       param > 0 ? this.swiper.slideNext() : this.swiper.slidePrev();
     }
   }
-
+  
 }

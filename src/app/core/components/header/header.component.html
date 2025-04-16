@@ -66,30 +66,36 @@
               </fa-icon>
             </button>
 
+            @if (item.open) {
             <div
-            class="dropdown-menu"
-            *ngIf="item.open"
-            (mouseenter)="cancelToggleOut()"
-            (mouseleave)="toggleOutSubmenu(item)"
-          >
-            <div class="submenus">
-              <div class="content">
-                <ul>
-                  <li *ngFor="let child of item.children">
-                    <a [routerLink]="child.link">
-                      {{ child.label }}
-                      <fa-icon [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
-                    </a>
-                  </li>
-                </ul>
-                <div class="right">
-                  <!-- Contenu à droite si besoin -->
+              class="dropdown-menu"
+              [class.show]="item.open"
+              (mouseenter)="cancelToggleOut()"
+              (mouseleave)="toggleOutSubmenu(item)"
+            >
+              <div class="submenus">
+                <div class="content">
+                  <ul>
+                    @for (child of item.children; track $index) {
+                      <li>
+                        <a [routerLink]="child.link">
+                          {{ child.label }}
+                          <fa-icon
+                            [icon]="
+                              'faAngleRight' | convertStringLabelToFontawesomeIcon
+                            "
+                          ></fa-icon>
+                        </a>
+                      </li>
+                    }
+                  </ul>
+                  <div class="right">
+                    <!-- Contenu à droite si besoin -->
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-            } @else {
+            } } @else {
             <a class="nav-link" [routerLink]="item.link">
               {{ item.label }}
             </a>
@@ -98,12 +104,11 @@
           }
         </ul>
       </nav>
+
+      <div class="auth-actions">
+        <a routerLink="/login" class="login">Se connecter</a>
+        <a routerLink="/register" class="register">S'inscrire</a>
+      </div>
     </div>
   </div>
-
-  <!--
-  <div class="auth-actions">
-    <a routerLink="/login" class="btn-link">Se connecter</a>
-    <a routerLink="/register" class="btn-primary">Créer un compte</a>
-  </div>
---></header>
+</header>

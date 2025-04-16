@@ -6,31 +6,40 @@
             </h2>
 
             <div class="texts">
-                <p>Découvrez Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi veritatis quod fugit, vero modi quasi est quibusdam?</p>
+                <p>
+                    Dans un contexte où l'unité et l'entraide sont plus cruciales que jamais, l'approche par espaces de rassemblement se présente comme une solution comprise et prometteuse. Imaginez un écosystème où acteurs de la diaspora issue de la grotte unissent leurs forces pour optimiser la communauté d'intérêts qui existe entre eux !                
+                </p>
     
-                <button> Voir tout</button>
+                <p>
+                    Le programme évènementiel Ndab Bikokoo offre cette opportunité unique : rassembler les membres, cadres et experts autour de sujets de découverte et d'assimilation des cultures Ɓàsà'a et organiser la convergence des synergies. Ensemble, améliorons notre connaissance et l'efficience des actions solidaires !
+                </p>
             </div>
+            <button> Voir tout</button>
+
         </div>
 
         <div class="events">
             @for (event of events; track $index) {
-                <div class="event">
-                    <div class="image-wrapper">
-                        <img ngSrc={{event.image}} alt="" fill>
-                        <span class="type"> {{event.type}} </span>
-                    </div>
-                    <div class="bottom">
-                        <span>
-                            <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
-                            {{event.date}}
-                         </span>
-                        <span> 
-                            <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  
-                            {{event.town}},
-                            {{event.country}}  
-                        </span>
-                    </div>
-                </div>
+                        <div class="event" [style.backgroundColor]="event.color">
+                            <div class="top">
+                                {{event.type}}
+                            </div>
+                            <div class="image-wrapper">
+                                <img ngSrc={{event.image}} alt="" fill>
+                            </div>
+                            <div class="bottom">
+                                <span>
+                                    <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
+                                    {{event.date}}
+                                 </span>
+                                <span> 
+                                    <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  
+                                    {{event.town}},
+                                    {{event.country}}  
+                                </span>
+                            </div>
+                        </div>
+                 
             }
         </div>
     </div>

@@ -13,8 +13,6 @@ import { DrawerModule } from 'primeng/drawer';
   styleUrl: './header.component.scss',
   encapsulation: ViewEncapsulation.None,
   imports: [
-    NgIf,
-    NgFor,
     RouterLink,
     NgOptimizedImage,
     FontAwesomeModule,

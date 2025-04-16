@@ -30,15 +30,19 @@
     background-color: var(--project-white-primary-color);
   }
 
-  .header-container {
+  .header-container,
+  .my-container
+   {
     max-width: 1400px;
     padding: 0 1rem;
   }
 
+/**
   .my-container {
     max-width: 1300px;
     padding: 0 1rem;
   }
+*/
 
   ul {
     list-style: none;

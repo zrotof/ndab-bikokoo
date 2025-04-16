@@ -14,15 +14,15 @@ export const SOCIAL_MEDIA: SocialMedia[] = [
         color: "#E1306C"
     },
     {
-        icon: "faXTwitter",
-        name: "Twitter",
-        link: "",
-        color: "#000000"
-    },
-    {
         icon: "faYoutube",
         name: "Youtube",
         link: "",
         color: "#FF0000"
+    },
+    {
+        icon: "faWhatsapp",
+        name: "Whatsapp",
+        link: "",
+        color: "green"
     }
 ]
