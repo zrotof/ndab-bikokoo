@@ -6,6 +6,9 @@ import { Event } from '../models/events';
   providedIn: 'root',
 })
 export class EventService {
+
+
+
   defaultEvents: Event[] = [
     {
       id: 1,
@@ -85,6 +88,31 @@ export class EventService {
         'Ce festival est bien plus qu’un simple événement culturel ; il représente un véritable hommage à l’histoire et aux valeurs du peuple Bassa’a. À travers des expositions, des conférences et des performances artistiques, nous mettrons en lumière la transmission des savoirs ancestraux et leur importance dans la préservation de notre identité. Nous inviterons des conteurs, des historiens et des artisans pour partager leur expertise et sensibiliser la nouvelle génération aux richesses de notre patrimoine. Cette journée sera marquée par un grand banquet traditionnel où chacun pourra goûter aux saveurs uniques de notre gastronomie locale.',
     },
   ];
+
+  getEventMenus(): Observable<any>{
+    return of([
+      {
+        id: 1,
+        title: "Assemblée générale",
+        isActive: true
+      },
+      {
+        id: 2,
+        title: "Installation de canton",
+        isActive: false
+      },
+      {
+        id:3,
+        title: "Séminaire",
+        isActive: false
+      },
+      {
+        id: 4,
+        title: "Anniversaire",
+        isActive: false
+      }
+    ])
+  }
 
   getEventList(): Observable<any[]> {
     return of(this.defaultEvents);

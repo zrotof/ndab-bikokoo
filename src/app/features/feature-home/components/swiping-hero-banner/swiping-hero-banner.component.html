@@ -1,132 +1,59 @@
 <div class="swiping-hero-banner">
-    <swiper-container #swiperRef [config]="config" >
-        <swiper-slide>
-            <div class="hero-view">
-                <img ngSrc="/img/hero/groups.jpeg" alt="" fill priority>
-
-                <div class="content header-container">
-
-                    <div class="texts">
-                        <h1>
-                            <span> Le seul espace où se rassemblent les ressortissants de la grotte. </span>
-                        </h1>
-                        <p>
-                        </p>
-                    </div>
-                <div class="video-thumnail">
-                    <div class="image-video-wrapper">
-                        <img src="img/home/events/paris.jpeg" alt="">
-
-                        <div class="play-icon-wrapper">
-                            <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="hero-view">
-
-            <img ngSrc="/img/hero/women.jpeg" alt="" fill priority>
-        
-            <div class="content header-container">
-
-                <div class="texts">
-                    <h1>
-                        <span>NDAB BIKOKOO</span>
-                        <span>Pil Gweha</span>
-                    </h1>
-                    <p>
-                        Rassembler un grand nombre de Mbɛ́nɛ̂, M̀pòo, Ɓàti vivant dans la diaspora, dans le but de créer et maintenir une dynamique familiale ; afin de renforcer l'unité entre les grandes familles Mbɛ́nɛ̂, M̀pòo, Ɓàti de la diaspora, communément appelées Ɓàsàa, et de promouvoir la solidarité entre tous leurs membres.                        
-                    </p>
-                </div>
-            <div class="video-thumnail">
-                <div class="image-video-wrapper">
-                    <img src="img/home/events/milan.jpeg" alt="">
-
-                    <div class="play-icon-wrapper">
-                        <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    </div>
-                </div>
-            </div>
-            </div>        
-        </div>
-        </swiper-slide>
-
-        <swiper-slide>
-            <div class="hero-view">
-
-            <img ngSrc="/img/hero/bello-group.jpeg" alt="" fill priority>
-        
-            <div class="content header-container">
-
-                <div class="texts">
-                    <h1>
-                        <span>NDAB BIKOKOO</span>
-                        <span>Pil Gweha</span>
-                    </h1>
-                    <p>
-                        Rassembler un grand nombre de Mbɛ́nɛ̂, M̀pòo, Ɓàti vivant dans la diaspora, dans le but de créer et maintenir une dynamique familiale ; afin de renforcer l'unité entre les grandes familles Mbɛ́nɛ̂, M̀pòo, Ɓàti de la diaspora, communément appelées Ɓàsàa, et de promouvoir la solidarité entre tous leurs membres.                        
-                    </p>
-                </div>
-            <div class="video-thumnail">
-                <div class="image-video-wrapper">
-                    <img src="img/home/events/milan.jpeg" alt="">
-
-                    <div class="play-icon-wrapper">
-                        <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    </div>
-                </div>
-            </div>
-            </div>        
-        </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="hero-view">
-
-            <img ngSrc="/img/hero/ndab.jpeg" alt="" fill priority>
-        
-            <div class="content header-container">
-
-                <div class="texts">
-                    <h1>
-                        <span>NDAB BIKOKOO</span>
-                        <span>Pil Gweha</span>
-                    </h1>
-                    <p>
-                        Rassembler un grand nombre de Mbɛ́nɛ̂, M̀pòo, Ɓàti vivant dans la diaspora, dans le but de créer et maintenir une dynamique familiale ; afin de renforcer l'unité entre les grandes familles Mbɛ́nɛ̂, M̀pòo, Ɓàti de la diaspora, communément appelées Ɓàsàa, et de promouvoir la solidarité entre tous leurs membres.                        
-                    </p>
-                </div>
-            <div class="video-thumnail">
-                <div class="image-video-wrapper">
-                    <img src="img/home/events/milan.jpeg" alt="">
-
-                    <div class="play-icon-wrapper">
-                        <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    </div>
-                </div>
-            </div>
-            </div>        
-        </div>
-        </swiper-slide>
-
-    </swiper-container>
-
-    <div class="custom-controls">
-        <div class="controls header-container">
+  <swiper-container #swiperRef [config]="config">
+    <swiper-slide>
+      <div class="hero-view">
+        <img ngSrc="/img/hero/groups.jpeg" alt="" fill priority />
+      </div>
+    </swiper-slide>
     
-            <div class="swiper-pagination"></div>
-            
-            <div class="navigation">
-                <button class="prev" (click)="onNavigationEvent(-1)">
-                    <i class="pi pi-arrow-left"></i>
-                </button>
-            
-                <button class="next" (click)="onNavigationEvent(1)">
-                    <i class="pi pi-arrow-right"></i>
-                </button>
-            </div>
-        </div>
+    <swiper-slide>
+      <div class="hero-view">
+        <img ngSrc="/img/hero/women.jpeg" alt="" fill priority />
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="hero-view">
+        <img ngSrc="/img/hero/bello-group.jpeg" alt="" fill priority />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="hero-view">
+        <img ngSrc="/img/hero/ndab.jpeg" alt="" fill priority />
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="content header-container">
+    <div class="texts">
+      <h1>
+        <span>Ndab Bìkòkoo Pil Gweha</span>
+        <span>Suivez le mouvement, le reste suivra</span>
+      </h1>
+      <p></p>
     </div>
+    <div class="video-thumnail" (click)="onVideoClick()">
+      <div class="image-video-wrapper">
+        <img src="img/home/events/paris.jpeg" alt="" />
+
+        <div class="play-icon-wrapper">
+          <fa-icon
+            [icon]="'faPlay' | convertStringLabelToFontawesomeIcon"
+          ></fa-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="navigation">
+      <button class="prev" (click)="onNavigationEvent(-1)">
+        <i class="pi pi-arrow-left"></i>
+      </button>
+
+      <button class="next" (click)="onNavigationEvent(1)">
+        <i class="pi pi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
 </div>

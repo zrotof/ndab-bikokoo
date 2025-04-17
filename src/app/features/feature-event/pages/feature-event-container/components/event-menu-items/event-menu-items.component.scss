@@ -1,0 +1,33 @@
+.event-menu-items {
+  display: flex;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+
+    .event-menu {
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      border: 2px solid var(--project-black-primary-color);
+      color: var(--project-black-primary-color);
+      cursor: pointer;
+
+      span{
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: var(--project-brown-quaterly-color);
+        border: 2px solid var(--project-brown-quaterly-color);
+      }
+    }
+
+    .active {
+      background-color: var(--project-brown-quaterly-color);
+      color: var(--project-white-primary-color) !important;
+      border: 2px solid var(--project-brown-quaterly-color);
+    }
+  }
+}

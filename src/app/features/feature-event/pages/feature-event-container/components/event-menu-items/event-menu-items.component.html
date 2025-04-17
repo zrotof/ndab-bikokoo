@@ -1,0 +1,9 @@
+<div class="event-menu-items">
+    <div class="content my-container">
+        @for (eventMenu of eventMenus; track $index) {
+            <div class="event-menu" [class.active]="eventMenu.isActive">
+                <span> {{eventMenu.title}} </span>
+            </div>
+        }
+    </div>
+</div>

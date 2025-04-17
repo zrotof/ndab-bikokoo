@@ -1,5 +1,6 @@
 <div class="feature-event">
   <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
+  <app-event-menu-items [eventMenus]="eventMenuList$ | async"></app-event-menu-items>
   <div class="content my-container">
     <div class="event-list">
       @for (event of eventList$ | async; track $index) {

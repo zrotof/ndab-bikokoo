@@ -61,4 +61,37 @@
     padding: 10px 25px;
     border-radius: 100px;
   }
+
+
+  .Facebook{
+    &:hover{
+      a{
+        color: #1877F2 !important;      
+      }
+    }
+  }
+
+  .Instagram{
+    &:hover{
+      a{      
+        color: #E1306C !important;
+      }
+    }
+  }
+
+  .Youtube{
+    &:hover{
+      a{      
+        color: #FF0000 !important;
+      }
+    }
+  }
+
+  .Whatsapp{
+    &:hover{
+      a{      
+        color: green !important;
+      }
+    }
+  }
 }

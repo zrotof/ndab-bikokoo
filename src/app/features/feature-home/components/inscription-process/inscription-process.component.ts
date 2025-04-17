@@ -27,7 +27,7 @@ export class InscriptionProcessComponent {
     {
       image: "img/home/inscriptions/three.png",
       title: "Les frais d'adhésion et la réserve de solidarité",
-      description: "En fonction de votre cas, acquittez-vous,  des frais de contribution à la vie Ndab Bikokoo."
+      description: "En fonction de votre cas, acquittez-vous,  des frais de contribution à la vie Ndab Bìkòkoo."
     }
   ]
 }

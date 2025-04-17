@@ -4,25 +4,21 @@ export const SOCIAL_MEDIA: SocialMedia[] = [
     {
         icon: "faFacebookF",
         name: "Facebook",
-        link: "",
-        color: "#1877F2"
+        link: ""
     },
     {
         icon: "faInstagram",
         name: "Instagram",
-        link: "",
-        color: "#E1306C"
+        link: ""
     },
     {
         icon: "faYoutube",
         name: "Youtube",
-        link: "",
-        color: "#FF0000"
+        link: ""
     },
     {
         icon: "faWhatsapp",
         name: "Whatsapp",
-        link: "",
-        color: "green"
+        link: ""
     }
 ]

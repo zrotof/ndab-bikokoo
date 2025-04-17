@@ -1,9 +1,9 @@
-import { NgFor, NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { Component, ElementRef, HostListener, inject, Input, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from '../../pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { SOCIAL_MEDIA } from '../../../shared/constants/social-media.constants';
-import { ActivationEnd, Router, RouterLink } from '@angular/router';
+import {Router, RouterLink } from '@angular/router';
 
 import { DrawerModule } from 'primeng/drawer';
 
