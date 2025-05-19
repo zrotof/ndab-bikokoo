@@ -1,11 +1,11 @@
 <div class="feature-event">
   <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
-  <app-event-menu-items [eventMenus]="eventMenuList$ | async"></app-event-menu-items>
+  <app-event-menu-items [plannerMenus]="plannerMenuList" (plannerMenuItemClicked)="onPlannerMenuItemHandler($event)"></app-event-menu-items>
   <div class="content my-container">
     <div class="event-list">
-      @for (event of eventList$ | async; track $index) {
+      @for (event of plannerList$ | async; track $index) {
       <app-event-item
-        [event]="event"
+        [planner]="event"
         (eventItemClikedTrigger)="onEventClickHandler($event)"
       ></app-event-item>
       }

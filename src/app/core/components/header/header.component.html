@@ -79,11 +79,10 @@
                     @for (child of item.children; track $index) {
                       <li>
                         <a [routerLink]="child.link">
-                          {{ child.label }}
+                          <img [ngSrc]="child.image" width="50" height="50">
+                          <span> {{ child.label }} </span>
                           <fa-icon
-                            [icon]="
-                              'faAngleRight' | convertStringLabelToFontawesomeIcon
-                            "
+                            [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"
                           ></fa-icon>
                         </a>
                       </li>
@@ -91,6 +90,7 @@
                   </ul>
                   <div class="right">
                     <!-- Contenu à droite si besoin -->
+                     a
                   </div>
                 </div>
               </div>

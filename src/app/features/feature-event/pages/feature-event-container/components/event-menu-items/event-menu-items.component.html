@@ -1,9 +1,25 @@
 <div class="event-menu-items">
     <div class="content my-container">
-        @for (eventMenu of eventMenus; track $index) {
-            <div class="event-menu" [class.active]="eventMenu.isActive">
-                <span> {{eventMenu.title}} </span>
-            </div>
+        @for (plannerMenu of plannerMenus; track $index) {
+        <button (click)="onPlannerMenuClicked($index)" class="event-menu">
+            @switch (plannerMenu.type) {
+                @case ('AG') {
+                    <span class="ag"> Assemblée générale </span>
+                }
+
+                @case ('IC') {
+                    <span class="ic">Installation de canton</span>
+                }
+
+                @case ('SEMINAR') {
+                    <span class="seminar">Séminaire</span>
+                }
+
+                @case ('BIRTHDAY') {
+                    <span class="birthday">Anniversaire</span>
+                }
+            }
+        </button>
         }
     </div>
 </div>

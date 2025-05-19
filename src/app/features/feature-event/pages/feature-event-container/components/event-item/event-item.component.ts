@@ -1,22 +1,25 @@
-import { NgOptimizedImage } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Event } from 'src/app/core/models/events';
+import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
   selector: 'app-event-item',
   templateUrl: './event-item.component.html',
   styleUrl: './event-item.component.scss',
   imports: [
-    NgOptimizedImage
+    NgClass,
+    NgOptimizedImage,
+    FontAwesomeModule,
+    ConvertStringLabelToFontawesomeIconPipe
   ],
 })
-export class EventItemComponent implements OnInit {
-  @Input() event!: Event;
+export class EventItemComponent {
+  @Input() planner!: any;
   @Output() eventItemClikedTrigger = new EventEmitter<number>();
 
-  ngOnInit(): void {
-    console.log(this.event);
-  }
+
   onEventClick(id: number): void {
     this.eventItemClikedTrigger.emit(id);
   }

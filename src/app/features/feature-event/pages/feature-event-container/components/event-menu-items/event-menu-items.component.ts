@@ -7,10 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './event-menu-items.component.scss'
 })
 export class EventMenuItemsComponent {
-  @Input() eventMenus: any;
-  @Output() eventItemClicked = new EventEmitter<number>();
+  @Input() plannerMenus: any;
+  @Output() plannerMenuItemClicked = new EventEmitter<number>();
 
-  onEventClicked(id: number): void {
-    this.eventItemClicked.emit(id)
+  onPlannerMenuClicked(id: number): void {
+    this.plannerMenuItemClicked.emit(id)
   }
 }

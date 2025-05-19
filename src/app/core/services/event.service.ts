@@ -1,14 +1,18 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Event } from '../models/events';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventService {
 
+  private http = inject(HttpClient);
 
-
+  private baseUrlPlanner = environment.baseUrl + "planners/";
+  
   defaultEvents: Event[] = [
     {
       id: 1,
@@ -89,30 +93,7 @@ export class EventService {
     },
   ];
 
-  getEventMenus(): Observable<any>{
-    return of([
-      {
-        id: 1,
-        title: "Assemblée générale",
-        isActive: true
-      },
-      {
-        id: 2,
-        title: "Installation de canton",
-        isActive: false
-      },
-      {
-        id:3,
-        title: "Séminaire",
-        isActive: false
-      },
-      {
-        id: 4,
-        title: "Anniversaire",
-        isActive: false
-      }
-    ])
-  }
+
 
   getEventList(): Observable<any[]> {
     return of(this.defaultEvents);

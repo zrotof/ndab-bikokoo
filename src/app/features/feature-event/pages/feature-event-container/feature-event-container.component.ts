@@ -8,6 +8,7 @@ import { AsyncPipe } from '@angular/common';
 import { EventItemComponent } from './components/event-item/event-item.component';
 import { Router } from '@angular/router';
 import { EventMenuItemsComponent } from './components/event-menu-items/event-menu-items.component';
+import { PlannerService } from 'src/app/core/services/planner.service';
 
 @Component({
   selector: 'app-feature-event',
@@ -23,11 +24,11 @@ import { EventMenuItemsComponent } from './components/event-menu-items/event-men
 
 export class FeatureEventContainerComponent implements OnInit {
   
-  private eventService = inject(EventService); 
+  private plannerService = inject(PlannerService); 
   private router = inject(Router);
   
-  eventList$!: Observable<Event[]>;
-  eventMenuList$ = this.eventService.getEventMenus();
+  protected plannerMenuList : any; 
+  protected plannerList$!: Observable<any>;
 
   protected readonly heroData: HeroTypeTwo = {
     image: '/img/events/secondary-hero-houses.jpeg',
@@ -45,14 +46,30 @@ export class FeatureEventContainerComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.getEventList();
+    this.getPlannerMenuTypes();
   }
 
-  getEventList(): void {
-    this.eventList$ = this.eventService.getEventList();
+  getPlannerMenuTypes(): void {
+    this.plannerService.getPlannerMenus().subscribe({
+      next: (res : any) => {
+        this.plannerMenuList = res;
+
+        this.onPlannerMenuItemHandler(0);
+      }
+    })
+  }
+
+  onPlannerMenuItemHandler(event : any){
+    const index = event;
+    if(this.plannerMenuList[index].isActive === false){
+      this.plannerMenuList.forEach((plannerMenu : any) => plannerMenu.isActive = false)
+      this.plannerMenuList[index].isActive = true;
+      this.plannerList$ = this.plannerService.getPlannerListByEventType(this.plannerMenuList[index].type)
+    }
   }
 
   onEventClickHandler(id: number): void {
     this.router.navigate(['/evenements', id]);
   }
+  
 }

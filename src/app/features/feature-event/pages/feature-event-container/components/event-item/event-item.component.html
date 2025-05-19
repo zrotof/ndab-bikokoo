@@ -1,14 +1,37 @@
-<div class="event-item" (click)="onEventClick(event.id)">
+<div class="event-item" [ngClass]="planner.type" (click)="onEventClick(planner.id)">
+  
+  <div class="top">
+    @switch (planner.type) {
+                @case ('AG') {
+                    <span> Assemblée générale </span>
+                }
+
+                @case ('IC') {
+                    <span>Installation de canton</span>
+                }
+
+                @case ('SEMINAR') {
+                    <span>Séminaire</span>
+                }
+
+                @case ('BIRTHDAY') {
+                    <span>Anniversaire</span>
+                }
+            }
+  </div>
   <div class="image-wrapper">
-    <img [ngSrc]="event.coverImage" alt="event.title" fill />
+    <img [ngSrc]="planner.coverImage" alt="event.title" fill />
   </div>
 
-  <div class="texts my-container">
-    <div class="top">
-      <span>{{ event.date }} à {{ event.hour }}</span>
-      <h3>{{ event.title }}</h3>
-    </div>
-
-    <button>Lire plus </button>
-  </div>
+  <div class="bottom">
+                                <span>
+                                    <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
+                                    {{planner.date}}
+                                 </span>
+                                <span> 
+                                    <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  
+                                    {{planner.town}},
+                                    {{planner.country}}  
+                                </span>
+                            </div>
 </div>

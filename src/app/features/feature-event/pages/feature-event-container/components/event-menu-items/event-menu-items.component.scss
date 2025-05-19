@@ -8,26 +8,43 @@
     gap: 1rem;
 
     .event-menu {
-      padding: 0.5rem 1rem;
-      border-radius: 100px;
-      border: 2px solid var(--project-black-primary-color);
       color: var(--project-black-primary-color);
-      cursor: pointer;
+      height: fit-content;
+      width: fit-content;
+      border: none;
+      background-color: transparent;
 
-      span{
+      span {
         font-size: 1rem;
-      }
+        padding: 0.5rem 1rem;
+        border-radius: 100px;
+        cursor: pointer;
 
-      &:hover {
+        &:hover {
         color: var(--project-brown-quaterly-color);
-        border: 2px solid var(--project-brown-quaterly-color);
       }
-    }
+      }
 
-    .active {
-      background-color: var(--project-brown-quaterly-color);
-      color: var(--project-white-primary-color) !important;
-      border: 2px solid var(--project-brown-quaterly-color);
+      .ag{
+        background-color: #006600;
+        color: white;
+      }
+
+      .ic{
+        background-color: #7E350E;
+        color: white;
+      }
+
+      .seminar{
+        background-color: #0070C0;
+        color: #0070C0;
+      }
+
+      .birthday{
+        background-color: red !important;
+        color: white !important;
+      }
     }
   }
 }
+

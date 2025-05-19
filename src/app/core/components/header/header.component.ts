@@ -55,8 +55,8 @@ export class HeaderComponent {
     {
       label: 'La Maison',
       children: [
-        { label: 'Histoire et valeurs', link: '/vehicles/cars' },
-        { label: 'Notre approches', link: '/vehicles/motorbikes' }
+        { label: 'Histoire et valeurs', link: '/vehicles/cars', image: "/img/header/1-2-notre-approche.png" },
+        { label: 'Notre approches', link: '/vehicles/motorbikes', image: "/img/header/1-2-notre-approche.png" }
       ],
       open: false
     },
@@ -64,10 +64,10 @@ export class HeaderComponent {
       label: 'Gouvernance',
       link: '/parts',
       children: [
-        { label: 'Organnigramme', link: '/vehicles/cars' },
-        { label: 'Fonctionnement', link: '/vehicles/motorbikes' },
-        { label: 'Nos cadres', link: '/vehicles/motorbikes' },
-        { label: 'Nos experts', link: '/vehicles/motorbikes' }
+        { label: 'Organnigramme', link: '/gouvernance', image: "/img/header/2-1-organigramme.png" },
+        { label: 'Fonctionnement', link: '/vehicles/motorbikes', image: "/img/header/2-2-fonctionnement.png" },
+        { label: 'Nos cadres', link: '/vehicles/motorbikes', image: "/img/header/2-3-nos-cadres.png" },
+        { label: 'Nos experts', link: '/vehicles/motorbikes', image: "/img/header/2-4-nos-experts.png" }
       ],
       open: false
     },
@@ -75,9 +75,9 @@ export class HeaderComponent {
       label: 'Évênements',
       link: '/garages',
       children: [
-        { label: 'Assemblées générales', link: '/vehicles/cars' },
-        { label: 'Installation des cantons', link: '/vehicles/motorbikes' },
-        { label: 'Séminaires de travail', link: '/vehicles/motorbikes' },
+        { label: 'Assemblées générales', link: '/vehicles/cars', image: "/img/header/3-1-ag.png" },
+        { label: 'Installation des cantons', link: '/vehicles/motorbikes', image: "/img/header/2-1-organigramme.png" },
+        { label: 'Séminaires de travail', link: '/vehicles/motorbikes', image: "/img/header/3-3-seminaires.png" },
       ],
       open: false
     },
@@ -85,11 +85,11 @@ export class HeaderComponent {
       label: 'Culture',
       link: '/garages',
       children: [
-        { label: 'Langues bassa', link: '/vehicles/cars' },
-        { label: 'Nos traditions', link: '/vehicles/motorbikes' },
-        { label: 'Nos danses', link: '/vehicles/motorbikes' },
-        { label: 'Notre gastronomie', link: '/vehicles/motorbikes' },
-        { label: 'Notre tissu', link: '/vehicles/motorbikes' }
+        { label: 'Langues bassa', link: '/vehicles/cars', image: "/img/header/4-1-langue-basaa.png" },
+        { label: 'Nos traditions', link: '/vehicles/motorbikes', image: "/img/header/2-1-organigramme.png" },
+        { label: 'Nos danses', link: '/vehicles/motorbikes', image: "/img/header/4-3-danses.png" },
+        { label: 'Notre gastronomie', link: '/vehicles/motorbikes', image: "/img/header/4-4-notre-gastronomie.png" },
+        { label: 'Notre tissu', link: '/vehicles/motorbikes', image: "/img/header/4-5-notre-tissu.png" }
       ],
       open: false
     },
@@ -97,12 +97,13 @@ export class HeaderComponent {
       label: 'Contacts',
       link: '/garages',
       children: [
-        { label: 'Tel/Email', link: '/vehicles/cars' },
-        { label: 'Vous faire connaitre', link: '/vehicles/motorbikes' },
+        { label: 'Tel/Email', link: '/vehicles/cars', image: "/img/header/5-1-tel-email.png" },
+        { label: 'Vous faire connaitre', link: '/vehicles/motorbikes', image: "/img/header/5-2-vous-faire-connaitre.png" },
       ],
       open: false
     }
   ];
+
   toggleInSubmenu(item: any) {
     clearTimeout(this.submenuTimeout);
     this.menuItems.forEach(i => {

@@ -73,6 +73,10 @@
         color: var(--project-orange-primary-color);
         text-shadow: 0 4px 3px rgb(71 34 1);        
       }
+
+      p{
+        font-size: 1.2rem;
+      }
     }
 
     .video-thumnail {
@@ -138,11 +142,11 @@
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          background-color: rgba(255, 255, 255, 0.429);
+          background-color: var(--project-orange-primary-color);;
           pointer-events: none;
 
           fa-icon {
-            color: var(--project-white-primary-color);
+            color: var(--project-white-primary-color);;
             font-size: 2rem;
           }
         }
@@ -158,13 +162,12 @@
       button {
         width: 45px;
         height: 45px;
-        background-color: var(--project-white-primary-color);
         border: none;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-        color: var(--project-black-primary-color);
         cursor: pointer;
         transition: all 0.2s ease-in-out;
         box-shadow: #00000088 0px 3px 6px;
+        background-color: var(--project-white-primary-color);
 
         &:hover {
           background-color: var(--project-orange-primary-color);
@@ -176,6 +179,7 @@
           font-size: 1.1rem;
           pointer-events: none;
           z-index: -2;
+          color: var(--project-black-primary-color);
         }
       }
 
