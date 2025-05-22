@@ -1,0 +1,78 @@
+.inscription-process {
+  display: flex;
+  justify-content: center;
+  color: var(--project-white-primary-color);
+  padding: 8rem 0;
+  background-color: var(--project-black-primary-color);
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    .sub-title {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    ul {
+      margin-top: 8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      width: 100%;
+
+      li {
+        position: relative;
+
+        img {
+          position: absolute;
+          left: -3rem;
+          top: -6rem;
+          z-index: 1;
+          width: 106px;
+          height: 130px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.7rem;
+          padding: 3rem 1.5rem 1rem;
+          width: 350px;
+          background-color: var(--project-white-primary-color);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          height: 100%;
+          color: var(--project-black-primary-color);
+
+          h3 {
+            font-size: 1.15rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1.4rem;
+          }
+        }
+      }
+    }
+
+    button{
+      padding: 0.6rem 1.5rem;
+      border-radius: 0.5rem;
+      width: fit-content;
+      border: none;
+      background-color: var(--project-white-primary-color);
+      font-weight: 550;
+      font-size: 1rem;
+      margin-top: 4rem;
+    }
+  }
+}

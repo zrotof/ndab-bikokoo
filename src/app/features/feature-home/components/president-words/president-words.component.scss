@@ -1,7 +1,7 @@
 .president-words {
   display: flex;
   justify-content: center;
-  background-color: var(--project-brown-quaterly-color);
+  background-color: var(--project-blue-primary-color);
   min-height: 40rem;
   padding-top: 5rem;
 
@@ -15,67 +15,66 @@
     .image-wrapper {
       position: relative;
       width: 600px;
-      height: 515px;
+      height: 600px;
 
       img {
         object-fit: cover;
         object-position: top;
       }
     }
-    .text-bloc{
+
+    .text-bloc {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       width: calc(100% - 500px);
-      margin-bottom: 4rem;
-      gap: 2rem;
+      align-self: center;
 
-    .texts {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 2rem;
-      background-color: var(--project-blue-primary-color);
-      border-radius: 10px;
-      color: var(--project-white-primary-color);
+      .texts {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        background-color: var(--project-white-primary-color);
+        border-radius: 10px;
+        color: var(--project-black-primary-color);
 
-      fa-icon {
-        position: absolute;
-        font-size: 7rem;
-        left: -10rem;
-        color: var(--project-brown-primary-color);
-        left: -15rem;
-        top: -7rem;
+        fa-icon {
+          position: absolute;
+          font-size: 7rem;
+          color: var(--project-brown-primary-color);
+          left: -5rem;
+          top: -5rem;
+        }
+
+        .sub-title {
+          font-weight: 900;
+          font-size: 2rem;
+        }
+
+        p {
+          line-height: 1.8rem;
+        }
       }
 
-      .sub-title {
-        font-weight: 900;
-        font-size: 2rem;
-      }
+      button {
+        padding: 10px 25px;
+        background-color: var(--project-white-primary-color);
+        color: var(--project-black-primary-color);
+        border: 1px solid var(--project-black-primary-color);
+        font-size: 1rem;
+        width: fit-content;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        font-weight: 500;
 
-      p {
-        line-height: 1.8rem;
+        &:hover {
+          background-color: var(--project-black-primary-color);
+          color: var(--project-white-primary-color);
+        }
       }
     }
-
-    button {
-      padding: 10px 25px;
-      background-color: var(--project-white-primary-color);
-      color: var(--project-black-primary-color);
-      border: 1px solid var(--project-black-primary-color);
-      font-size: 1rem;
-      width: fit-content;
-      border-radius: 5px;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-      font-weight: 500;
-
-      &:hover {
-        background-color: var(--project-black-primary-color);
-        color: var(--project-white-primary-color);
-      }
-    }
-  }
   }
 }

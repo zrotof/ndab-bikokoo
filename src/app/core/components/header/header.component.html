@@ -38,7 +38,7 @@
     <div class="content header-container">
       <div class="logo-wrapper">
         <img
-          ngSrc="/img/logo/logo.png"
+          ngSrc="/img/logo/logo-black.png"
           alt="logo de l'asociation Ndab Bikoko"
           fill
           priority
@@ -54,8 +54,9 @@
             @if (item.children) {
             <button
               class="nav-link"
-              (mouseenter)="toggleInSubmenu(item)"
-              (mouseleave)="toggleOutSubmenu(item)"
+              (mouseenter)="onEnterMenu(item)"
+              (mouseleave)="onLeaveMenu(item)"
+              (mouseover)="onMenuHovered($index)"
               aria-haspopup="true"
               [attr.aria-expanded]="item.open"
             >
@@ -77,9 +78,9 @@
                 <div class="content">
                   <ul>
                     @for (child of item.children; track $index) {
-                      <li>
-                        <a [routerLink]="child.link">
-                          <img [ngSrc]="child.image" width="50" height="50">
+                      <li (click)="onSelectSubMenu($index)">
+                        <a [routerLink]="child.link" [class.active-sub-menu]="child.isActive">
+                          <img [ngSrc]="child.image" width="45" height="45">
                           <span> {{ child.label }} </span>
                           <fa-icon
                             [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"
@@ -89,8 +90,54 @@
                     }
                   </ul>
                   <div class="right">
-                    <!-- Contenu à droite si besoin -->
-                     a
+                    @switch (currentSubMenu?.id) {
+                      @case (SUBMENUIDENUM.ABOUT_US) {
+                        {{SUBMENUIDENUM.ABOUT_US}}
+                      }
+                      @case (SUBMENUIDENUM.ENGAGE) {
+                        {{SUBMENUIDENUM.ENGAGE}}
+                      }
+                      @case (SUBMENUIDENUM.ORGANIGRAM) {
+                        {{SUBMENUIDENUM.ORGANIGRAM}}
+                      }
+                      @case (SUBMENUIDENUM.FUNCTIONNING) {
+                        {{SUBMENUIDENUM.FUNCTIONNING}}
+                      }
+                      @case (SUBMENUIDENUM.OUR_CADRES) {
+                        {{SUBMENUIDENUM.OUR_CADRES}}
+                      }
+                      @case (SUBMENUIDENUM.OUR_EXPERTS) {
+                        {{SUBMENUIDENUM.OUR_EXPERTS}}
+                      }
+                      @case (SUBMENUIDENUM.AGENDA) {
+                        {{SUBMENUIDENUM.AGENDA}}
+                      }
+                      @case (SUBMENUIDENUM.NEWS) {
+                        {{SUBMENUIDENUM.NEWS}}
+                      }
+                      @case (SUBMENUIDENUM.LANGUAGES) {
+                        {{SUBMENUIDENUM.LANGUAGES}}
+                      }
+
+                      @case (SUBMENUIDENUM.FOOD) {
+                        {{SUBMENUIDENUM.FOOD}}
+                      }
+                      @case (SUBMENUIDENUM.FOOD) {
+                        {{SUBMENUIDENUM.FOOD}}
+                      }
+                      @case (SUBMENUIDENUM.FOOD) {
+                        {{SUBMENUIDENUM.FOOD}}
+                      }
+                      @case (SUBMENUIDENUM.CONTACT_US) {
+                        {{SUBMENUIDENUM.CONTACT_US}}
+                      }
+                      @case (SUBMENUIDENUM.WRITE_US) {
+                        {{SUBMENUIDENUM.WRITE_US}}
+                      }
+                      @case (SUBMENUIDENUM.PROFESSIONAL) {
+                        {{SUBMENUIDENUM.PROFESSIONAL}}
+                      }
+                    }
                   </div>
                 </div>
               </div>

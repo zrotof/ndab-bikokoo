@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-
   {
     path: "a-propos",
     data: {
@@ -10,7 +9,7 @@ export const routes: Routes = [
     loadComponent: () => import('./features/feature-about/feature-about.component').then(m => m.FeatureAboutComponent)
   },
   {
-    path: "contact",
+    path: "contactez-nous",
     data: {
       isBackgroundReduced: true
     },
@@ -39,6 +38,10 @@ export const routes: Routes = [
   {
     path: "gouvernance",
     loadComponent: () => import('./features/feature-gouvernance/organizational/organizational.component').then(m => m.OrganizationalComponent)
+  },
+  {
+    path: "sengager",
+    loadComponent: () => import('./features/feature-engage/feature-engage.component').then(m => m.FeatureEngageComponent)
   },
   {
     path: "",

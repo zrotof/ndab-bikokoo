@@ -1,0 +1,19 @@
+<div class="why-join">
+    <div class="content my-container">
+        <h2>Pourquoi rejoinde Ndab Bikokoo?</h2>
+
+        <p>
+            Si les objectifs principaux de Ndab Bikokoosont de rassambler les Ɓàsà’a, renforcer l'unité entre leurs grandes familles, assurer la promotionde leur culture, et favoriser l'intégartionde tous les membres dans leurs pays d'accueil autour des concept d'aide au rapatriement de corps, le mouvement acceuille également des projets de développement initiés par ses membres. En rejoingnant le mouvement Ndab Bikokoo vous pouvez contribuer à :
+        </p>
+
+        <ul>
+            @for (reason of reasons; track $index) {
+                <li [style.background]="reason.bgColor">
+                    <img [ngSrc]="reason.picto" width="100" height="100">
+                    <h3> {{reason.title}} </h3>
+                    <p> {{reason.text}} </p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+.join{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+
+    background-color: var(--project-blue-primary-color);
+    background: url("/img/home/houses.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        color: white;
+        z-index: 2;
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        p{
+            font-size: 1rem;
+            line-height: 1.6rem;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        button{
+            background-color: var(--project-white-primary-color);
+            padding: 0.6rem 1.5rem;
+            color: var(--project-blue-primary-color);
+            width: fit-content;
+            border: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<div class="who-can-join">
+    <div class="content my-container">
+        <div class="joiners">
+
+            @for (joiner of joiners; track $index) {
+            <div class="joiner">
+                <h4> {{joiner.label}} </h4>
+                <ul>
+                    @for (possibility of joiner.possibilities; track $index) {
+                    <li> {{possibility}} </li>
+                    }
+                </ul>
+            </div>
+            }
+
+            <p>
+                Par votre adhésion, vous joignez un collectif de plusieurs milliers d'acteurs, du développement du plus
+                grand mouvement rassembleur de la daispora des ressortissants de la grotte.
+            </p>
+        </div>
+    </div>
+</div>

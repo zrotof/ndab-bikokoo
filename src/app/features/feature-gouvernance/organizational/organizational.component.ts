@@ -33,7 +33,7 @@ export class OrganizationalComponent {
   protected tabs = [
     {
       label: "L'instance Dirigeante",
-      isActive: false
+      isActive: true
     },
     {
       label: "Le Conseil Batat Ndab",
@@ -49,7 +49,7 @@ export class OrganizationalComponent {
     }
   ]
 
-  protected currentIndexTabContent !: number;
+  protected currentIndexTabContent = 0;
 
   onTabClicked(index : number): void {
     if (this.tabs[index].isActive != true) {

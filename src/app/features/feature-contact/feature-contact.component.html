@@ -1,5 +1,51 @@
 <div class="feature-contact">
-    <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
-    <app-contact-top></app-contact-top>
-    <app-join-banner></app-join-banner>
+    <img ngSrc="/img/contact/bg-contact.webp" fill priority>
+
+    <div class="content my-container">
+
+        <div class="texts">
+            <h1>
+                <span>Nos <span>cadres</span></span> 
+                <span>vous répondent,</span>
+                <span><span>écrivez-nous !</span></span>
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus laudantium quibusdam eaque,
+                laborum, doloribus vero quam illo similique natus optio aliquam incidunt! Quidem perspiciatis, minima
+                numquam incidunt quo explicabo esse.
+            </p>
+
+            <ul>
+                @for (contactWay of contactWays; track $index) {
+                    <li>
+                        <fa-icon [icon]="contactWay.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        <span> {{contactWay.value}} </span>
+                    </li>
+                }
+            </ul>
+        </div>
+        <form>
+            <div class="field">
+                <label>Nom</label>
+                <input type="text" pInputText placeholder="Entrez votre nom" />
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="text" pInputText placeholder="Entrez votre adresse mail" />
+            </div>
+            <div class="field">
+                <label>Téléphone</label>
+                <input type="text" pInputText placeholder="Entrez votre numéro de téléphone" />
+            </div>
+            <div class="field">
+                <label>Message</label>
+                <textarea [autoResize]="false" rows="7" cols="30" pTextarea formControlName="text"
+                    placeholder="Vous pouvez entrez votre message ici ...">
+        </textarea>
+            </div>
+
+            <button>Envoyer</button>
+        </form>
+    </div>
 </div>
