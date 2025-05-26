@@ -139,14 +139,14 @@ header {
                   justify-content: center;
                   max-width: 1000px;
                   width: 100%;
-                  padding: 5rem 0;
+                  padding: 2rem 0;
 
                   .content {
                     display: flex;
                     align-items: center;
                     width: 100%;
 
-                    ul {
+                    .sub-menus {
                       position: relative;
                       display: flex;
                       flex-direction: column;
@@ -205,11 +205,10 @@ header {
                       }
                     }
 
-                    .right {
+                    .sub-menu-items {
                       color: var(--project-black-primary-color);
                       height: 100%;
                       padding: 2rem;
-                      border: solid red;
                       flex: 1;
                     }
                   }

@@ -7,6 +7,10 @@ import {Router, RouterLink } from '@angular/router';
 
 import { DrawerModule } from 'primeng/drawer';
 import { SubMenuIdEnum } from '../../enums/sub-menu-id.enum';
+import { AboutUsHeaderComponent } from './sub-menus/about-us-header/about-us-header.component';
+import { EngageHeaderComponent } from './sub-menus/engage-header/engage-header.component';
+import { AgendaHeaderComponent } from './sub-menus/agenda-header/agenda-header.component';
+import { NewsHeaderComponent } from './sub-menus/news-header/news-header.component';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +24,11 @@ import { SubMenuIdEnum } from '../../enums/sub-menu-id.enum';
     ConvertStringLabelToFontawesomeIconPipe,
     FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe,
-    DrawerModule
+    DrawerModule,
+    AboutUsHeaderComponent,
+    EngageHeaderComponent,
+    AgendaHeaderComponent,
+    NewsHeaderComponent
   ]
 })
 
@@ -61,7 +69,7 @@ export class HeaderComponent {
       label: 'La Maison',
       children: [
         { label: 'À propos de nous?', link: '/vehicles/cars', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ABOUT_US, isActive : false },
-        { label: "S'engager", link: '/sengager', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ENGAGE, isActive : false }
+        { label: "S'engager", image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ENGAGE, isActive : false }
       ],
       open: false
     },

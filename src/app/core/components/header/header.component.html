@@ -76,7 +76,7 @@
             >
               <div class="submenus">
                 <div class="content">
-                  <ul>
+                  <ul class="sub-menus">
                     @for (child of item.children; track $index) {
                       <li (click)="onSelectSubMenu($index)">
                         <a [routerLink]="child.link" [class.active-sub-menu]="child.isActive">
@@ -89,13 +89,13 @@
                       </li>
                     }
                   </ul>
-                  <div class="right">
+                  <div class="sub-menu-items">
                     @switch (currentSubMenu?.id) {
                       @case (SUBMENUIDENUM.ABOUT_US) {
-                        {{SUBMENUIDENUM.ABOUT_US}}
+                        <app-about-us-header></app-about-us-header>
                       }
                       @case (SUBMENUIDENUM.ENGAGE) {
-                        {{SUBMENUIDENUM.ENGAGE}}
+                        <app-engage-header></app-engage-header>
                       }
                       @case (SUBMENUIDENUM.ORGANIGRAM) {
                         {{SUBMENUIDENUM.ORGANIGRAM}}
@@ -110,10 +110,10 @@
                         {{SUBMENUIDENUM.OUR_EXPERTS}}
                       }
                       @case (SUBMENUIDENUM.AGENDA) {
-                        {{SUBMENUIDENUM.AGENDA}}
+                        <app-agenda-header></app-agenda-header>
                       }
                       @case (SUBMENUIDENUM.NEWS) {
-                        {{SUBMENUIDENUM.NEWS}}
+                        <app-news-header></app-news-header>
                       }
                       @case (SUBMENUIDENUM.LANGUAGES) {
                         {{SUBMENUIDENUM.LANGUAGES}}

@@ -4,6 +4,7 @@ import { PresidentWordsComponent } from "./components/president-words/president-
 import { NextEventsComponent } from "./components/next-events/next-events.component";
 import { FaqComponent } from "./components/faq/faq.component";
 import { JoinBannerComponent } from "../../shared/components/join-banner/join-banner.component";
+import { TestimoniesComponent } from './components/testimonies/testimonies.component';
 
 @Component({
   selector: 'app-feature-home',
@@ -14,7 +15,8 @@ import { JoinBannerComponent } from "../../shared/components/join-banner/join-ba
     PresidentWordsComponent,
     NextEventsComponent,
     FaqComponent,
-    JoinBannerComponent
+    JoinBannerComponent,
+    TestimoniesComponent
 ]
 })
 
