@@ -38,7 +38,7 @@
     <div class="content header-container">
       <div class="logo-wrapper">
         <img
-          ngSrc="/img/logo/logo-black.png"
+          ngSrc="/img/logo/logo-white.png"
           alt="logo de l'asociation Ndab Bikoko"
           fill
           priority
@@ -80,7 +80,7 @@
                     @for (child of item.children; track $index) {
                       <li (click)="onSelectSubMenu($index)">
                         <a [routerLink]="child.link" [class.active-sub-menu]="child.isActive">
-                          <img [ngSrc]="child.image" width="45" height="45">
+                          <img [ngSrc]="child.image" width="35" height="35">
                           <span> {{ child.label }} </span>
                           <fa-icon
                             [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"

@@ -3,11 +3,12 @@
         <div class="texts">
             <span class="pre">Témoiganges</span>
             <h2 class="sub-title">Ce que disent nos adhérents et leur bénéficiaires</h2>
-            <p>Retrouvez ci-dessous un ensemble de témoignages récoltés au près de nos adhérents et de leurs ayant droits
+            <p>Retrouvez ci-dessous un ensemble de témoignages récoltés au près de nos adhérents et de leurs ayant
+                droits
             </p>
         </div>
 
-        <p-carousel [value]="testimonies" [numVisible]="3" [numScroll]="3" [circular]="true"
+        <p-carousel [value]="testimonies$ | async" [numVisible]="3" [numScroll]="3" [circular]="true"
             [responsiveOptions]="responsiveOptions">
             <ng-template let-testimony #item>
                 <div class="testimony">
@@ -17,12 +18,19 @@
                         </div>
                         <div class="name-role">
                             <p> {{testimony.name}}</p>
-                            <span> {{testimony.role}} </span>
+                            @switch (testimony.testimonyOwnerType) {
+                            @case ('ADHERENT') {
+                                <span>Adhérent</span>
+                            }
+                            @case ('BENEFICIARY') {
+                                <span>Bénéficiare</span>
+                            }
+                            }
                         </div>
                     </div>
                     <h4> {{testimony.title}} </h4>
                     <p> {{testimony.message}} </p>
-                    
+
                 </div>
             </ng-template>
         </p-carousel>

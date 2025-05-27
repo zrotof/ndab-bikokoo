@@ -1,11 +1,13 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
   selector: 'app-next-events',
   imports: [
+    RouterLink,
     NgOptimizedImage,
     FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe

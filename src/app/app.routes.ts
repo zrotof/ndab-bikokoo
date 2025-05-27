@@ -46,5 +46,5 @@ export const routes: Routes = [
   {
     path: "",
     loadComponent: () => import('./features/feature-home/feature-home.component').then(m => m.FeatureHomeComponent)
-  },
+  }
 ];

@@ -88,7 +88,7 @@ header {
       .logo-wrapper {
         position: relative;
         height: 85px;
-        width: 85px;
+        width: 72px;
         transition: all 0.3s ease-in-out;
 
         img {
@@ -133,6 +133,7 @@ header {
                 box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
                   rgba(0, 0, 0, 0.23) 0px 6px 6px;
                 background-color: var(--project-white-primary-color);
+                height: 16.5rem;
 
                 .submenus {
                   display: flex;

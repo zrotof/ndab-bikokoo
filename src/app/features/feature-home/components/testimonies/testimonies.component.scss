@@ -41,6 +41,10 @@
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+                background: #7e360d;
+                border-radius: 100px;
+                width: fit-content;
+                padding: 0.3rem 2rem 0.3rem 0.3rem;
 
                 .image-wrapper {
                     width: 65px;
@@ -59,10 +63,10 @@
                 .name-role {
                     display: flex;
                     flex-direction: column;
+                    color: var(--project-white-primary-color);
 
                     p {
                         font-weight: 600;
-                        color: var(--project-brown-quaterly-color);
                     }
 
                     span {
