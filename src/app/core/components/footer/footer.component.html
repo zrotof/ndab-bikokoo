@@ -1,73 +1,117 @@
 <footer>
-    <div class="top">
-        <div class="content my-container">
+    <div class="content my-container">
+        <div class="top">
+            <p>
+                Restez à jour!! Recevez <a routerLink="/actualites">les dernières actualités sur Ndab Bikokoo</a>
+                directement dans votre inbox Whatsapp
+            </p>
 
+            <form [formGroup]="subscriberForm">
+                <div class="input-bloc">
+                    <p-select formControlName="selectedCountry" [options]="COUNTRY_FLAGS_AND_DIAL_CODES"
+                        optionLabel="flag">
+                        <ng-template #selectedItem let-selectedOption>
+                            <span> {{selectedOption.flag}} </span>
+                        </ng-template>
+
+                        <ng-template let-country #item>
+                            <div class="country">
+                                <span> {{country.flag}} </span>
+                                <p> {{country.name}} ({{country.code}}) ({{country.dialCode}})</p>
+                            </div>
+                        </ng-template>
+                    </p-select>
+                    {{subscriberForm.controls.selectedCountry.value?.dialCode}}
+                    <input formControlName="phone" />
+                </div>
+                <button type="submit">Recevoir</button>
+            </form>
+        </div>
+
+        <div class="middle">
+            <div class="logo-bloc">
+                <img ngSrc="/img/logo/logo.png" width="140" height="150">
+            </div>
+
+            <div class="rapid-links">
+                <h3>À propos</h3>
+
+                <ul>
+                    <li>
+                        <a>Qui Sommes-Nous ?</a>
+                    </li>
+                    <li><a>Organigramme</a></li>
+                    <li><a>Nos évênements</a></li>
+                    <li><a>Pourquoi rejoinde Ndab Bikokoo?</a></li>
+                </ul>
+            </div>
 
             <div class="rapid-links">
                 <h3>Liens Utiles</h3>
 
                 <ul>
-                    <li><a>La Maison</a></li>
-                    <li><a>Notre mission</a></li>
-                    <li><a>Gouvernance</a></li>
-                    <li><a>Nos services</a></li>
-                    <li><a>Évènements</a></li>
-                    <li><a>Livre d'accueil</a></li>
-                    <li><a>Culture</a></li>
-                    <li><a>Règlement intérieur</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a>Bulletin d'adhésion</a></li>
+                    <li>
+                        <a href="/pdf/reglement_interieur_ndab_bikokoo.pdf" target="_blank">Règlement intérieur </a>
+                    </li>
+                    <li><a >Livret d'accueil</a></li>
+                    <li><a href="/pdf/bulletin_adhesion_ndab_bikokoo.pdf" target="_blank">Bulletin d'adhésion</a></li>
                 </ul>
             </div>
 
-            <div class="logo-bloc">
-                <h3>Suivez-nous</h3>
-                <p>
-                    A Ndab ée, mànɛ̀ ma nnɛ̀.                
-                </p>
+            <div class="contact">
+                <h3>Produits</h3>
+
+                <ul>
+                    <li><a>Assistance décès</a></li>
+                    <li><a>Opportunité de projet</a></li>
+                    <li><a>Réseau de compétences</a></li>
+                    <li><a>Réseau de compétences</a></li>
+                    <li><a>Nous contacter</a></li>
+                </ul>
+            
+            </div>
+
+            <div class="rgpd">
+                <h3>Légals</h3>
+                <ul>
+
+                    <li>
+                        <a>RGPD </a>
+                    </li>
+                    <li>
+                        <a> Mentions Légales </a>
+                    </li>
+                    <li>
+                        <a> Règles de confidentialité</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p>
+                Sekure Technologies Limited est une société immatriculée en Angleterre et au Pays de Galles sous le
+                numéro 15512483 et dont le siège social est situé au Monomark House 27 Old Gloucester Street LONDON -
+                WC1N 3AX United Kingdom (GB) et au Cameroun sur le N-RCCM /autorisation :CM-DLA-01-2024-B12-00558.
+                Sekure Technologies Limited est une société de technologie financière , pas une banque. Les services
+                bancaires et de transferts via notre application ou site web sont fournis par nos banques partenaires
+                dûment agréées dans leurs juridictions respectives .
+            </p>
+
+            <div class="copyright-networks">
+                <p>©2025 - Ndab Bìkòkoo Pil-Gweha, tous droits réservés</p>
 
                 <ul>
                     @for (network of networks; track $index) {
-                        <li [class]="network.name">
-                            <a routerLink={{network.link}} target="_blank"> 
-                                <fa-icon [icon]=" network.icon | convertStringLabelToFontawesomeIcon "></fa-icon>
-                            </a>
-                        </li>
+                    <li [class]="network.name">
+                        <a routerLink={{network.link}} target="_blank">
+                            <fa-icon [icon]=" network.icon | convertStringLabelToFontawesomeIcon "></fa-icon>
+                        </a>
+                    </li>
                     }
                 </ul>
             </div>
-
-            
-            <div class="help-contact">
-                <h3>Aide et contacts</h3>
-
-                <a>FAQ</a>
-                <ul>
-                    <h4>COntactez-nous</h4>
-                    <li><a>+49 179 7510920</a></li>
-                    <li><a>+33 6 61 52 96 65</a></li>
-                    <li><a>contact&#64;ndabbikokoo.com</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom">
-        <div class="content my-container">
-            <p>©2025 Ndab Bìkòkoo Pil-Gweha, tous droits réservés</p>
-            <ul>
-                <li>
-                    <a>RGPD </a>
-                </li>
-                <li>
-                    -
-                    <a>  Mentions Légales </a>
-                </li>
-                <li>
-                    -
-                    <a>  Règles de confidentialité</a>
-                </li>
-            </ul>
         </div>
     </div>
 </footer>

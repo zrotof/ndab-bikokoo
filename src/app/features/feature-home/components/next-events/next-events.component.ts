@@ -24,7 +24,7 @@ export class NextEventsComponent {
       town: "Amsterdam",
       country: "Pays-bas",
       date: "6-8 juin 2025",
-      type: "Assemblée générale",
+      type: "Assemblée Générale",
       color: "#006600"
     },
     {
@@ -48,7 +48,7 @@ export class NextEventsComponent {
       town: "Milan",
       country: "Italie",
       date: "11-13 Mai 2027",
-      type: "Assemblée générale",
+      type: "Assemblée Générale",
       color: "#006600"
     }
   ]
