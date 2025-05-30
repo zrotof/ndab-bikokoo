@@ -101,7 +101,7 @@ export class HeaderComponent {
         { label: 'Langues bassa', link: '/vehicles/cars', image: "/img/picto/4-1-langue-basaa.png", id: this.SUBMENUIDENUM.LANGUAGES, isActive : false },
         { label: 'Nos traditions', link: '/vehicles/motorbikes', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.TRADITION, isActive : false },
         { label: 'Nos danses', link: '/nos-danses', image: "/img/picto/4-3-danses.png", id: this.SUBMENUIDENUM.DANCES, isActive : false },
-        { label: 'Notre gastronomie', link: '/vehicles/motorbikes', image: "/img/picto/4-4-notre-gastronomie.png", id: this.SUBMENUIDENUM.FOOD, isActive : false },
+        { label: 'Notre gastronomie', link: '/notre-gastronomie', image: "/img/picto/4-4-notre-gastronomie.png", id: this.SUBMENUIDENUM.FOOD, isActive : false },
       ],
       open: false
     },

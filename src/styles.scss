@@ -31,13 +31,22 @@
   }
 
   .header-container,
-  .my-container
-   {
+  .my-container {
     max-width: 1400px;
     padding: 0 1rem;
   }
 
-/**
+  h1,
+  h2,
+  h3 {
+    font-family: 'Syne', sans-serif;
+
+    span {
+      font-family: "Syne", sans-serif;
+    }
+  }
+
+  /**
   .my-container {
     max-width: 1300px;
     padding: 0 1rem;
@@ -63,33 +72,33 @@
   }
 
 
-  .Facebook{
-    &:hover{
-      a{
-        color: #1877F2 !important;      
+  .Facebook {
+    &:hover {
+      a {
+        color: #1877F2 !important;
       }
     }
   }
 
-  .Instagram{
-    &:hover{
-      a{      
+  .Instagram {
+    &:hover {
+      a {
         color: #E1306C !important;
       }
     }
   }
 
-  .Youtube{
-    &:hover{
-      a{      
+  .Youtube {
+    &:hover {
+      a {
         color: #FF0000 !important;
       }
     }
   }
 
-  .Whatsapp{
-    &:hover{
-      a{      
+  .Whatsapp {
+    &:hover {
+      a {
         color: green !important;
       }
     }

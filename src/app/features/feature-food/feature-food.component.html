@@ -1,0 +1,18 @@
+<div class="feature-food">
+    <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
+
+    <div class="content my-container">
+        <div class="menu-bloc">
+            <h2>Nos Plats</h2>
+            <ul>
+            @for (foodMenu of foodListMenu; track $index) {
+                <li [class.active]="foodMenu.isActive" (click)="onChooseItem($index)">{{foodMenu.label}}</li>
+            }
+        </ul>
+        </div>
+
+        <div class="page-conent">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

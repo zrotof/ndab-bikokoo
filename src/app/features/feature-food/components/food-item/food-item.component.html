@@ -1,0 +1,28 @@
+@let food = currentFood();
+
+@if(food){
+    <div class="food-item">
+    <div class="top">
+        <h3>{{food.title}}</h3>
+        <p>{{food.description}}</p>
+    </div>
+
+    <div class="media-bloc">
+        <ul>
+            @for (item of food.options; track $index) {
+            <li>
+                <div class="icon-wrapper">
+                    <fa-icon [icon]="item.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                </div>
+                <span> {{item.value}} </span>
+            </li>
+            }
+        </ul>
+        <img [src]="food.image">
+    </div>
+
+</div>
+}
+@else {
+    <p>Il semble y avoir une erreur.</p>
+}

@@ -22,7 +22,7 @@ import { SomeStatsComponent } from "./components/some-stats/some-stats.component
 export class FeatureAboutComponent {
 
   protected readonly heroData: HeroTypeTwo = {
-    image: '',
+    image: '/img/dances/assiko.jpg',
     title: 'À PROPOS',
     menus: [
       {
@@ -32,7 +32,6 @@ export class FeatureAboutComponent {
       {
         label: "À propos",
         url: ""
-
       }
     ]
   }

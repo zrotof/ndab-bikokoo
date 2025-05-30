@@ -882,7 +882,7 @@ Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
 --------------------------------------------------------------------------------
-Package: @angular/common
+Package: @angular/router
 License: "MIT"
 
 The MIT License
@@ -908,7 +908,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 --------------------------------------------------------------------------------
-Package: @angular/router
+Package: @angular/common
 License: "MIT"
 
 The MIT License

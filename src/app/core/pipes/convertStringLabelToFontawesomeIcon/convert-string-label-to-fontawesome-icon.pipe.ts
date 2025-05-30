@@ -4,6 +4,9 @@ import {
   faAngleDown,
   faAngleRight,
   faCalendarDays,
+  faChartLine,
+  faClock,
+  faDollarSign,
   faEnvelope,
   faLocationDot,
   faPlay,
@@ -35,6 +38,12 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faAngleRight
       case 'faCalendarDays':
         return faCalendarDays;
+      case 'faChartLine':
+        return faChartLine
+      case 'faClock':
+        return faClock
+      case 'faDollarSign':
+        return faDollarSign
       case 'faEnvelope':
         return faEnvelope;
       case 'faInstagram':

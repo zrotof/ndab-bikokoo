@@ -1,5 +1,21 @@
-.feature-about{
+.feature-about {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+
+    .puzzle-piece {
+        width: 1000px;
+        height: 800px;
+        border: solid red;
+        background-image: url('/img/hero/ndab.jpeg');
+        background-size: cover;
+
+        mask-image: url('/img/mask.png');
+        mask-size: cover;
+        mask-repeat: no-repeat;
+
+        -webkit-mask-image: url('/img/mask.png');
+        -webkit-mask-size: cover;
+        -webkit-mask-repeat: no-repeat;
+    }
 }

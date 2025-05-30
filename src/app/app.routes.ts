@@ -47,6 +47,16 @@ export const routes: Routes = [
     loadComponent: () => import('./features/feature-gouvernance/organizational/organizational.component').then(m => m.OrganizationalComponent)
   },
   {
+    path: "notre-gastronomie",
+    loadComponent: () => import('./features/feature-food/feature-food.component').then(m => m.FeatureFoodComponent),
+    children: [
+      {
+        path:":name",
+        loadComponent: () => import('./features/feature-food/components/food-item/food-item.component').then(m => m.FoodItemComponent)
+      }
+    ]
+  },
+  {
     path: "sengager",
     loadComponent: () => import('./features/feature-engage/feature-engage.component').then(m => m.FeatureEngageComponent)
   },
