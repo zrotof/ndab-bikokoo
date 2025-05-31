@@ -1,0 +1,56 @@
+.two-equal-side-blocs {
+    display: flex;
+    justify-content: center;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        border-radius: 1rem;
+        background-color: #cbebcb;
+        padding: 2rem;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+
+            .texts {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                flex: 1;
+                width: 100%;
+
+                .tag {
+                    padding: 0.6rem 1.2rem;
+                    border-radius: 100px;
+                    background-color: var(--project-green-primary-color);
+                    color: var(--project-white-primary-color);
+                    width: fit-content;
+                }
+
+                h2{
+                    color: var(--project-green-primary-color);
+                }
+
+                p {
+                    line-height: 1.6rem;
+                }
+            }
+
+            .image-bloc {
+                background-color: #49a649;
+                height: 17rem;
+                border-radius: 1rem;
+                flex: 1;
+                width: 100%;
+            }
+        }
+
+        .item-reverse{
+            flex-direction: row-reverse;
+        }
+
+    }
+}

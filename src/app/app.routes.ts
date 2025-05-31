@@ -16,6 +16,13 @@ export const routes: Routes = [
     loadComponent: () => import('./features/feature-contact/feature-contact.component').then(m => m.FeatureContactComponent)
   },
   {
+    path: "culture-et-tradition",
+    data: {
+      isBackgroundReduced: true
+    },
+    loadComponent: () => import('./features/feature-culture-tradition/feature-culture-tradition.component').then(m => m.FeatureCultureTraditionComponent)
+  },
+  {
     path: "nos-danses",
     data: {
       isBackgroundReduced: true
