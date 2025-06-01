@@ -70,6 +70,7 @@ export class HeaderComponent {
       label: 'La Maison',
       children: [
         { label: 'À propos de nous?', link: '/vehicles/cars', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ABOUT_US, isActive : false },
+        { label: 'Notre offre', link: '/vehicles/cars', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ABOUT_US, isActive : false },
         { label: "S'engager", image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ENGAGE, isActive : false }
       ],
       open: false

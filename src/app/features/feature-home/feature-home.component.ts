@@ -5,6 +5,7 @@ import { NextEventsComponent } from "./components/next-events/next-events.compon
 import { FaqComponent } from "./components/faq/faq.component";
 import { JoinBannerComponent } from "../../shared/components/join-banner/join-banner.component";
 import { TestimoniesComponent } from './components/testimonies/testimonies.component';
+import { WorldMapProgressionComponent } from "./components/world-map-progression/world-map-progression.component";
 
 @Component({
   selector: 'app-feature-home',
@@ -16,7 +17,8 @@ import { TestimoniesComponent } from './components/testimonies/testimonies.compo
     NextEventsComponent,
     FaqComponent,
     JoinBannerComponent,
-    TestimoniesComponent
+    TestimoniesComponent,
+    WorldMapProgressionComponent
 ]
 })
 
