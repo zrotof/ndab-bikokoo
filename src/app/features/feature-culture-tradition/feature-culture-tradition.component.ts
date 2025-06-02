@@ -43,11 +43,11 @@ export class FeatureCultureTraditionComponent {
     {
       tag: "Notre parcours d'intégration culturelle",
       title: "Notre histoire",
-      image: "/img/about/team/4.jpeg",
+      image: "/img/culture-tradition/histoire.jpeg",
       descritpion: "Comme de nombreux groupes au Cameroun, les Bassa’a ont été affectés par la colonisation européenne, ce qui a entraîné des changements sociaux et économiques importants. Depuis l’indépendance du Cameroun en 1960, les Bassa’a, comme les autres groupes ethniques, ont continué à jouer un rôle important dans le développement politique et économique du pays.",
-      subtag: "J'ai pu gagner des marchés",
-      subtitle: "Proposer des services",
-      subDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, doloremque! Nihil earum.",
+      subtag: "D'Egypte à Ngog Lituba",
+      subtitle: "Je me réconcilie avec mes origines",
+      subDescription: "De tout leur ensemble, les Basa'a tirent leur origine de l'Egypte antique. Ils sont des descendants d'un ancêtre commun ; on les retrouve regroupés au sein de trois grandes familles. L'histoire raconte que c'est suite à une querelle familiale que le nom Basa'a, qui veut dire voit le jour.",
       links: [
         {
           label: "Origine", link: ""
@@ -75,11 +75,11 @@ export class FeatureCultureTraditionComponent {
     {
       tag: "Notre parcours d'intégration culturelle",
       title: "Nos Langues",
-      image: "/img/about/team/2.jpeg",
+      image: "/img/culture-tradition/langue.jpeg",
       descritpion: "La langue principale du peuple Bassa’a est le Bassa’a, une langue bantoue. C’est une langue tonale avec des variations dialectales. Le Bassa’a utilise l’alphabet latin modifié pour son écriture, avec des diacritiques pour représenter les sons spécifiques. Il s'agit plus précisément de l'AGLC : l'Alphabet Général des Langues du Cameroun.",
       subtag: "J'ai pu gagner des marchés",
-      subtitle: "Proposer des services",
-      subDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, doloremque!",
+      subtitle: "Proposer des ateliers",
+      subDescription: "Je me suis inscris au prochain webnair Apprendre de Basa'a. Grace à Ndab Bikokoo, je peux de n'importe quelle localité, participer aux séminaires proposés par le parcours d'intégration culturelle. Les premières présentation présentent les modules d'apprentissage adaptés aux enfants et aux adulltes. J'ai hate de commencer.",
       links: [
         {
           label: "⁠Ɓàsà’a (Mbɛ́nɛ)", link: ""
@@ -98,11 +98,11 @@ export class FeatureCultureTraditionComponent {
     {
       tag: "Notre parcours d'intégration culturelle",
       title: "Nos Us et coutumes",
-      image: "/img/about/team/2.jpeg",
+      image: "/img/culture-tradition/us.jpeg",
       descritpion: "La société Bassa’a est organisée autour des familles élargies et des clans. Les structures de parenté et les rôles de genre sont importants dans l’organisation sociale. Il existe des chefferies traditionnelles avec des chefs qui jouent un rôle dans la gestion des affaires communautaires et le maintien des traditions.",
-      subtag: "J'ai pu gagner des marchés",
-      subtitle: "Proposer des services",
-      subDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, doloremque! Nihil earum, illum explicabo aspernatur adipisci fugiat inventore maxime pariatur accusantium expedita ut dolorum quisquam sint. Distinctio aliquid temporibus praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis cupiditate voluptate eum minus numquam.",
+      subtag: "Héritage culturel Basa'a",
+      subtitle: "Évènements de la vie et cérémonies",
+      subDescription: "Les us et coutumes se manifestent pour la plupart, sous forme de rites ancrés dans la culture locale. Ces rites sont des lieux d'expresssion diverses, de rapports sociaux, des logiques de milieux et de représentations dont les deux moteurs sont les croyances et les pratiques locales séculaires. En fait, ils sont une combinaison de savoirs organisés en pratiques, explicites ou implicites, se transmettant de générations en générations. C'est en général matérialisé par une mise en jeu du symbolique sous forme de cérémonie publique régulée par un groupe d'initiés",
       links: [
         {
           label: "La Naissance", link: ""

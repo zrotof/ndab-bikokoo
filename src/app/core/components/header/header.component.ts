@@ -90,8 +90,8 @@ export class HeaderComponent {
       label: 'Évênements',
       link: '/garages',
       children: [
-        { label: 'Agenda', link: '/vehicles/cars', image: "/img/picto/3-1-ag.png", id: this.SUBMENUIDENUM.AGENDA, isActive : false },
-        { label: 'Actualités', link: '/vehicles/motorbikes', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.NEWS, isActive : false },
+        { label: 'Agenda', link: '/evenements', image: "/img/picto/3-1-ag.png", id: this.SUBMENUIDENUM.AGENDA, isActive : false },
+        { label: 'Actualités', link: '/actualites', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.NEWS, isActive : false },
       ],
       open: false
     },

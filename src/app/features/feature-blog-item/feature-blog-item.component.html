@@ -1,0 +1,8 @@
+@if (article) {
+<div class="feature-blog-item">
+    <div class="content my-container">
+        <app-article-data [article]="article"></app-article-data>
+        <app-article-detail-side-bloc [blogMenus]="(menus$ | async)" [article]="article"></app-article-detail-side-bloc>
+    </div>
+</div>
+}

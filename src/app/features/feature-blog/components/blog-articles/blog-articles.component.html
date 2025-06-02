@@ -1,0 +1,16 @@
+<div class="blog-articles">
+    <div class="content my-container">
+        @for (article of articles(); track $index) {
+            <div class="article" [routerLink]="['/actualites', article.id]">
+                <img [ngSrc]="article.coverImage" [alt]="article.title" width="350" height="250">
+
+                <div class="texts">
+                    <span> {{article.date | date}} </span>
+                    <h3> {{article.title}} </h3>
+                    <p> {{article.description}} </p>
+                    <button>Lire l'article</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

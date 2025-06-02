@@ -1,0 +1,31 @@
+<div class="article-side-bloc">
+    <div class="sharing-bloc">
+        <h4>
+            Partagez cet article
+        </h4>
+        <p>Vous pouvez partager cet article en utilisant un des moyens ci-après.</p>
+        <ul class="shariable-networks">
+            <li class="faWhatsapp" (click)="onShareOnSocialMedia('whatsapp')">
+                <fa-icon [icon]="'faWhatsapp' | convertStringLabelToFontawesomeIcon"></fa-icon>
+            </li>
+            <li class="facebook" (click)="onShareOnSocialMedia('facebook')">
+                <fa-icon [icon]="'faFacebookF' | convertStringLabelToFontawesomeIcon"></fa-icon>
+            </li>
+            <li class="twitter" (click)="onShareOnSocialMedia('twitter')">
+                <fa-icon [icon]="'faXTwitter' | convertStringLabelToFontawesomeIcon"></fa-icon>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="rubriques-bloc">
+        <h4>Rubriques d'articles</h4>
+
+        <div class="rubriques">
+            @for (rubric of blogMenus(); track $index) {
+                <button (click)="goToArticlesMenuList(rubric.id)">
+                    {{rubric.name}}
+                </button>
+            }
+        </div>
+    </div>
+</div>

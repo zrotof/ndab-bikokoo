@@ -1,0 +1,5 @@
+<div class="feature-blog">
+    <app-hero-banner-type-two [heroData]="heroData"></app-hero-banner-type-two>
+    <app-blog-menu [menus]="menus" (blogMenuClieckedEventEmitter)="onBlogMenuEventHandler($event)"></app-blog-menu>
+    <app-blog-articles [articles]="articles$ | async"></app-blog-articles>
+</div>

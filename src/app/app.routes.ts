@@ -1,6 +1,23 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+
+  {
+    path: "actualites",
+    data: {
+      isBackgroundReduced: true
+    },
+    children: [
+      {
+        path: "",
+        loadComponent: () => import('./features/feature-blog/feature-blog.component').then(m => m.FeatureBlogComponent)
+      },
+      {
+        path: ":id",
+        loadComponent: () => import('./features/feature-blog-item/feature-blog-item.component').then(m => m.FeatureBlogItemComponent)
+      }
+    ]
+  },
   {
     path: "a-propos",
     data: {
@@ -58,7 +75,7 @@ export const routes: Routes = [
     loadComponent: () => import('./features/feature-food/feature-food.component').then(m => m.FeatureFoodComponent),
     children: [
       {
-        path:":name",
+        path: ":name",
         loadComponent: () => import('./features/feature-food/components/food-item/food-item.component').then(m => m.FoodItemComponent)
       }
     ]

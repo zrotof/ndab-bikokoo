@@ -1,0 +1,23 @@
+@if (article()) {
+    <div class="article-content">
+        <h2 class="page-title"> {{article().title}} </h2>
+        <div class="date">
+            <span>
+                {{article().date | convertTimeZoneToDate}} 
+                @if (article().hour) {
+                    - {{article().hour}}
+                }
+            </span> 
+        </div>
+        <div class="media">
+            @if (article().hasVideo === false) {
+                <img ngSrc={{article().coverImage}} alt={{article().title}} fill priority>
+            }
+            @else {
+                <app-youtube-video-player [link]="(article().videoLink)!"></app-youtube-video-player>
+            }
+        </div>
+    
+        <div class="data" [innerHtml]="article().content"></div>
+    </div>
+}

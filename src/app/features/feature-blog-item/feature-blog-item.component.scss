@@ -1,0 +1,20 @@
+.feature-blog-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 4rem;
+
+        app-article-data{
+            width: calc(100% - 400px);
+        }
+
+        app-article-detail-side-bloc{
+            width: 400px;
+        }
+    }
+}

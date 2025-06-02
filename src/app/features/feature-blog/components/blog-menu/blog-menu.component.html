@@ -1,0 +1,14 @@
+<div class="blog-menu">
+    <div class="content my-container">
+        <ul>
+            @for (menu of menus(); track $index) {
+            @if (menu.isActive) {
+                <li class="active-blog-menu" (click)="onBlogMenuClicked($index)"> {{menu.name}} </li>
+            }
+            @else {
+                <li (click)="onBlogMenuClicked($index)"> {{menu.name}} </li>
+            }
+            }
+        </ul>
+    </div>
+</div>
