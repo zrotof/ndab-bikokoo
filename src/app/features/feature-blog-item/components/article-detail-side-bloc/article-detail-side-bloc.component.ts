@@ -2,18 +2,17 @@ import { Component, inject, input } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
-import { ConvertTimeZoneToDatePipe } from 'src/app/core/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 
 @Component({
   selector: 'app-article-detail-side-bloc',
   templateUrl: './article-detail-side-bloc.component.html',
   styleUrl: './article-detail-side-bloc.component.scss',
   imports: [
-    ConvertTimeZoneToDatePipe,
     ConvertStringLabelToFontawesomeIconPipe,
     FontAwesomeModule
   ]
 })
+
 export class ArticleDetailSideBlocComponent {
 
   blogMenus = input.required<any>();

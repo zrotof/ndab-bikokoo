@@ -15,7 +15,11 @@
     .sub-title {
       text-align: center;
       max-width: 100%;
+       max-width: 550px;
+      width: 100%;
     }
+
+
 
     ul {
       margin-top: 8rem;
@@ -64,7 +68,7 @@
       }
     }
 
-    button{
+    button {
       padding: 0.6rem 1.5rem;
       border-radius: 0.5rem;
       width: fit-content;

@@ -1,10 +1,6 @@
-import { AsyncPipe, DatePipe, NgOptimizedImage } from '@angular/common';
-import { Component, computed, inject, input, ViewEncapsulation } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject, input, ViewEncapsulation } from '@angular/core';
 import { BlogService } from 'src/app/core/services/blog.service';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { Observable } from 'rxjs';
-import { ConvertTimeZoneToDatePipe } from "../../core/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe";
-import { YoutubeVideoPlayerComponent } from "../../shared/components/youtube-video-player/youtube-video-player.component";
 import { ArticleDataComponent } from './components/article-data/article-data.component';
 import { ArticleDetailSideBlocComponent } from './components/article-detail-side-bloc/article-detail-side-bloc.component';
 
@@ -15,9 +11,6 @@ import { ArticleDetailSideBlocComponent } from './components/article-detail-side
   encapsulation: ViewEncapsulation.None,
   imports: [
     AsyncPipe,
-    NgOptimizedImage,
-    ConvertTimeZoneToDatePipe,
-    YoutubeVideoPlayerComponent,
     ArticleDataComponent,
     ArticleDetailSideBlocComponent
   ]

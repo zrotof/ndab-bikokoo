@@ -89,7 +89,6 @@ export class HeaderComponent {
     },
     {
       label: 'Administration',
-      link: '/parts',
       children: [
         { label: 'Organnigramme', link: '/gouvernance', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.ORGANIGRAM, isActive: false },
         { label: 'Fonctionnement', link: '/fonctionnement', image: "/img/picto/2-2-fonctionnement.png", id: this.SUBMENUIDENUM.FUNCTIONNING, isActive: false },
@@ -98,7 +97,6 @@ export class HeaderComponent {
     },
     {
       label: 'Évênements',
-      link: '/garages',
       children: [
         { label: 'Agenda', link: '/evenements', image: "/img/picto/3-1-ag.png", id: this.SUBMENUIDENUM.AGENDA, isActive: false },
         { label: 'Actualités', link: '/actualites', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.NEWS, isActive: false },
@@ -107,7 +105,6 @@ export class HeaderComponent {
     },
     {
       label: 'Culture et tradition',
-      link: '/culture-et-tradition',
       children: [
         { label: 'Histoire', link: '/culture-et-tradition', image: "/img/picto/4-1-langue-basaa.png", id: this.SUBMENUIDENUM.HISTORY, isActive: false },
         { label: 'Langues', link: '/culture-et-tradition', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.LANGUAGES, isActive: false },
@@ -118,7 +115,6 @@ export class HeaderComponent {
     },
     {
       label: 'Contacts',
-      link: '/garages',
       children: [
         { label: 'Contactez-nous', link: '/contactez-nous', image: "/img/picto/5-1-tel-email.png", id: this.SUBMENUIDENUM.CONTACT_US, isActive: false },
         { label: 'Écrivez-nous', link: '/vehicles/motorbikes', image: "/img/picto/5-2-vous-faire-connaitre.png", id: this.SUBMENUIDENUM.WRITE_US, isActive: false },

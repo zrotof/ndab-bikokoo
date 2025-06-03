@@ -14,7 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes, withComponentInputBinding(), withInMemoryScrolling({scrollPositionRestoration: 'enabled'}) ),
+    provideRouter(routes, withComponentInputBinding(), withInMemoryScrolling({scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled'}) ),
     provideHttpClient(),
     importProvidersFrom(FontAwesomeModule),
     provideAnimationsAsync(),

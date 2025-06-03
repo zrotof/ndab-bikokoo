@@ -1,11 +1,11 @@
-import { Component, effect, inject, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { HeroBannerTypeTwoComponent } from "../../shared/components/hero-banner-type-two/hero-banner-type-two.component";
 import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
-import { TopAboutComponent } from "./components/top-about/top-about.component";
-import { HistoryTargetComponent } from "./components/history-target/history-target.component";
-import { OurTeamComponent } from "./components/our-team/our-team.component";
-import { SomeStatsComponent } from "./components/some-stats/some-stats.component";
-import { NavigationExtras, Router } from '@angular/router';
+//import { TopAboutComponent } from "./components/top-about/top-about.component";
+//import { HistoryTargetComponent } from "./components/history-target/history-target.component";
+//import { OurTeamComponent } from "./components/our-team/our-team.component";
+//import { SomeStatsComponent } from "./components/some-stats/some-stats.component";
+import { Router } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 import { TwoEqualSideBlocsComponent } from 'src/app/shared/components/two-equal-side-blocs/two-equal-side-blocs.component';
 
@@ -17,10 +17,10 @@ import { TwoEqualSideBlocsComponent } from 'src/app/shared/components/two-equal-
     NgOptimizedImage,
     HeroBannerTypeTwoComponent,
     TwoEqualSideBlocsComponent,
-    TopAboutComponent,
-    HistoryTargetComponent,
-    OurTeamComponent,
-    SomeStatsComponent
+    //  TopAboutComponent,
+    //  HistoryTargetComponent,
+    //  OurTeamComponent,
+    //  SomeStatsComponent
   ]
 })
 
@@ -44,17 +44,4 @@ export class FeatureAboutComponent {
     ]
   }
 
-  constructor() {
-    effect(() => {
-        console.log(this.section())
-
-             const el = document.getElementById(this.section()!);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-
-    })
-  }
-
-  ngOnInit() {
-    console.log(this.section())
-  }
 }

@@ -1,5 +1,5 @@
 <ul class="organigram-header">
-    <li [routerLink]="['/a-propos']" [queryParams]="{ section: 'ok' }">
+    <li [routerLink]="['/gouvernance']" fragment="nos-instances">
         <img ngSrc="/img/picto/1-2-notre-approche.png" alt="" width="40" height="40">
         <h2>
             <span>Nos</span>
@@ -7,7 +7,7 @@
         </h2>
     </li>
 
-    <li routerLink="a-propos"> 
+    <li [routerLink]="['/gouvernance']" fragment="nos-cadres-experts"> 
         <img ngSrc="/img/picto/1-2-notre-approche.png" alt="" width="40" height="40">
         <h2>
             <span>Nos cadres</span>
@@ -15,7 +15,7 @@
         </h2>
     </li>
 
-    <li routerLink="">
+    <li [routerLink]="['/gouvernance']" fragment="nos-emanations">
         <img ngSrc="/img/picto/4-5-notre-tissu.png" alt="" width="40" height="40">
         <h2>
             <span>Nos</span>

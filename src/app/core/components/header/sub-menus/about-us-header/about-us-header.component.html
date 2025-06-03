@@ -1,5 +1,5 @@
 <ul class="about-us-header">
-    <li [routerLink]="['/a-propos']" [queryParams]="{ section: 'ok' }">
+    <li routerLink="a-propos"  fragment="notre-mission">
         <img ngSrc="/img/picto/1-2-notre-approche.png" alt="" width="40" height="40">
         <h2>
             <span>Notre</span>
@@ -7,7 +7,7 @@
         </h2>
     </li>
 
-    <li routerLink="a-propos"> 
+    <li routerLink="a-propos"  fragment="notre-vision"> 
         <img ngSrc="/img/picto/1-2-notre-approche.png" alt="" width="40" height="40">
         <h2>
             <span>Notre</span>
@@ -15,7 +15,7 @@
         </h2>
     </li>
 
-    <li routerLink="">
+    <li routerLink="a-propos" fragment="notre-tissu">
         <img ngSrc="/img/picto/4-5-notre-tissu.png" alt="" width="40" height="40">
         <h2>
             <span>Notre</span>

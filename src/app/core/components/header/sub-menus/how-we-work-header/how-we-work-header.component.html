@@ -1,5 +1,5 @@
 <ul class="how-we-work-header">
-    <li [routerLink]="['/a-propos']" [queryParams]="{ section: 'ok' }">
+    <li fragment="notre-charte" [routerLink]="['/fonctionnement']">
         <img ngSrc="/img/picto/1-2-notre-approche.png" alt="" width="40" height="40">
         <h2>
             <span>Notre</span>
@@ -7,7 +7,7 @@
         </h2>
     </li>
 
-    <li routerLink="a-propos"> 
+    <li fragment="notre-livret-daccueil" [routerLink]="['/fonctionnement']"> 
         <img ngSrc="/img/picto/1-2-notre-approche.png" alt="" width="40" height="40">
         <h2>
             <span>Notre</span>
@@ -15,7 +15,7 @@
         </h2>
     </li>
 
-    <li routerLink="">
+    <li fragment="la-solidarite" [routerLink]="['/fonctionnement']">
         <img ngSrc="/img/picto/4-5-notre-tissu.png" alt="" width="40" height="40">
         <h2>
             <span>La</span>

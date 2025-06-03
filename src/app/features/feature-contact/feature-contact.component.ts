@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InputTextModule } from 'primeng/inputtext';
 import { TextareaModule } from 'primeng/textarea';
@@ -13,7 +12,6 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/conv
   styleUrl: './feature-contact.component.scss',
   imports: [
     NgOptimizedImage,
-    RouterLink,
     FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe,
     InputTextModule,
