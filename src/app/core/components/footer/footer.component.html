@@ -6,7 +6,7 @@
                 directement dans votre inbox Whatsapp
             </p>
 
-            <form [formGroup]="subscriberForm">
+            <form [formGroup]="subscriberForm" (ngSubmit)="onNewsSubscribe()">
                 <div class="input-bloc">
                     <p-select formControlName="selectedCountry" [options]="COUNTRY_FLAGS_AND_DIAL_CODES"
                         optionLabel="flag">
@@ -59,7 +59,7 @@
             </div>
 
             <div class="contact">
-                <h3>Produits</h3>
+                <h3>Son Objet</h3>
                 <ul>
                     <li><a>Assistance décès</a></li>
                     <li><a>Opportunité de projet</a></li>

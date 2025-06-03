@@ -1,5 +1,6 @@
 export enum SubMenuIdEnum {
     ABOUT_US = "about-us", 
+    OUR_OFFER = "our-offer",
     ENGAGE = "engage",
     ORGANIGRAM = "organigram",
     FUNCTIONNING = "functionning",
@@ -7,10 +8,10 @@ export enum SubMenuIdEnum {
     OUR_EXPERTS = "our-experts",
     AGENDA = "agenda",
     NEWS = "news",
+    HISTORY = "our-history",
     LANGUAGES = "our-languages",
-    TRADITION = "our-tradition",
-    DANCES = "our-dances",
-    FOOD = "our-food",
+    US = "us",
+    ART = "art",
     CONTACT_US = "contact-us",
     WRITE_US = "write-us",
     PROFESSIONAL= "profesional"

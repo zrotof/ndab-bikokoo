@@ -6,13 +6,17 @@ import { HistoryTargetComponent } from "./components/history-target/history-targ
 import { OurTeamComponent } from "./components/our-team/our-team.component";
 import { SomeStatsComponent } from "./components/some-stats/some-stats.component";
 import { NavigationExtras, Router } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
+import { TwoEqualSideBlocsComponent } from 'src/app/shared/components/two-equal-side-blocs/two-equal-side-blocs.component';
 
 @Component({
   selector: 'app-feature-about',
   templateUrl: './feature-about.component.html',
   styleUrl: './feature-about.component.scss',
   imports: [
+    NgOptimizedImage,
     HeroBannerTypeTwoComponent,
+    TwoEqualSideBlocsComponent,
     TopAboutComponent,
     HistoryTargetComponent,
     OurTeamComponent,

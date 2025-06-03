@@ -5,10 +5,7 @@
         @for (network of networks; track $index) {
         <li [class]="network.name">
           <a href="{{ network.link }}" target="_blank">
-            <fa-icon
-              [icon]="network.icon | convertStringLabelToFontawesomeIcon"
-            ></fa-icon
-          ></a>
+            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon></a>
         </li>
         }
       </ul>
@@ -20,30 +17,17 @@
           <p>+49 179 7510920</p>
         </a>
         <a class="email">
-          <fa-icon
-            [icon]="'faEnvelope' | convertStringLabelToFontawesomeIcon"
-          ></fa-icon>
+          <fa-icon [icon]="'faEnvelope' | convertStringLabelToFontawesomeIcon"></fa-icon>
           <p>contact&#64;ndabbikokoo.com</p>
         </a>
       </div>
     </div>
   </div>
 
-  <div
-    class="main-header"
-    #navElement
-    role="navigation"
-    aria-label="Menu principal"
-  >
+  <div class="main-header" #navElement role="navigation" aria-label="Menu principal">
     <div class="content header-container">
       <div class="logo-wrapper">
-        <img
-          ngSrc="/img/logo/logo.png"
-          alt="logo de l'asociation Ndab Bikoko"
-          fill
-          priority
-          routerLink=""
-        />
+        <img ngSrc="/img/logo/logo.png" alt="logo de l'asociation Ndab Bikoko" fill priority routerLink="" />
       </div>
 
       <nav class="main-nav" role="navigation" aria-label="Menu principal">
@@ -52,91 +36,73 @@
 
           <li class="nav-item" [class.has-submenu]="item.children">
             @if (item.children) {
-            <button
-              class="nav-link"
-              (mouseenter)="onEnterMenu(item)"
-              (mouseleave)="onLeaveMenu(item)"
-              (mouseover)="onMenuHovered($index)"
-              aria-haspopup="true"
-              [attr.aria-expanded]="item.open"
-            >
+            <button class="nav-link" (mouseenter)="onEnterMenu(item)" (mouseleave)="onLeaveMenu(item)"
+              (mouseover)="onMenuHovered($index)" aria-haspopup="true" [attr.aria-expanded]="item.open">
               {{ item.label }}
-              <fa-icon
-                [icon]="'faAngleDown' | convertStringLabelToFontawesomeIcon"
-              >
+              <fa-icon [icon]="'faAngleDown' | convertStringLabelToFontawesomeIcon">
               </fa-icon>
             </button>
 
             @if (item.open) {
-            <div
-              class="dropdown-menu"
-              [class.show]="item.open"
-              (mouseenter)="cancelToggleOut()"
-              (mouseleave)="toggleOutSubmenu(item)"
-            >
+            <div class="dropdown-menu" [class.show]="item.open" (mouseenter)="cancelToggleOut()"
+              (mouseleave)="toggleOutSubmenu(item)">
               <div class="submenus">
                 <div class="content">
                   <ul class="sub-menus">
                     @for (child of item.children; track $index) {
-                      <li (click)="onSelectSubMenu($index)">
-                        <a [routerLink]="child.link" [class.active-sub-menu]="child.isActive">
-                          <img [ngSrc]="child.image" width="35" height="35">
-                          <span> {{ child.label }} </span>
-                          <fa-icon
-                            [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"
-                          ></fa-icon>
-                        </a>
-                      </li>
+                    <li (mouseover)="onSelectSubMenu($index)">
+                      <a [routerLink]="child.link" [class.active-sub-menu]="child.isActive">
+                        <img [ngSrc]="child.image" width="35" height="35">
+                        <span> {{ child.label }} </span>
+                        <fa-icon [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                      </a>
+                    </li>
                     }
                   </ul>
                   <div class="sub-menu-items">
                     @switch (currentSubMenu?.id) {
-                      @case (SUBMENUIDENUM.ABOUT_US) {
-                        <app-about-us-header></app-about-us-header>
-                      }
-                      @case (SUBMENUIDENUM.ENGAGE) {
-                        <app-engage-header></app-engage-header>
-                      }
-                      @case (SUBMENUIDENUM.ORGANIGRAM) {
-                        {{SUBMENUIDENUM.ORGANIGRAM}}
-                      }
-                      @case (SUBMENUIDENUM.FUNCTIONNING) {
-                        {{SUBMENUIDENUM.FUNCTIONNING}}
-                      }
-                      @case (SUBMENUIDENUM.OUR_CADRES) {
-                        {{SUBMENUIDENUM.OUR_CADRES}}
-                      }
-                      @case (SUBMENUIDENUM.OUR_EXPERTS) {
-                        {{SUBMENUIDENUM.OUR_EXPERTS}}
-                      }
-                      @case (SUBMENUIDENUM.AGENDA) {
-                        <app-agenda-header></app-agenda-header>
-                      }
-                      @case (SUBMENUIDENUM.NEWS) {
-                        <app-news-header></app-news-header>
-                      }
-                      @case (SUBMENUIDENUM.LANGUAGES) {
-                        {{SUBMENUIDENUM.LANGUAGES}}
-                      }
-
-                      @case (SUBMENUIDENUM.FOOD) {
-                        {{SUBMENUIDENUM.FOOD}}
-                      }
-                      @case (SUBMENUIDENUM.FOOD) {
-                        {{SUBMENUIDENUM.FOOD}}
-                      }
-                      @case (SUBMENUIDENUM.FOOD) {
-                        {{SUBMENUIDENUM.FOOD}}
-                      }
-                      @case (SUBMENUIDENUM.CONTACT_US) {
-                        {{SUBMENUIDENUM.CONTACT_US}}
-                      }
-                      @case (SUBMENUIDENUM.WRITE_US) {
-                        {{SUBMENUIDENUM.WRITE_US}}
-                      }
-                      @case (SUBMENUIDENUM.PROFESSIONAL) {
-                        {{SUBMENUIDENUM.PROFESSIONAL}}
-                      }
+                    @case (SUBMENUIDENUM.ABOUT_US) {
+                      <app-about-us-header></app-about-us-header>
+                    }
+                    @case (SUBMENUIDENUM.OUR_OFFER) {
+                      <app-our-offer-header></app-our-offer-header>
+                    }
+                    @case (SUBMENUIDENUM.ENGAGE) {
+                    <app-engage-header></app-engage-header>
+                    }
+                    @case (SUBMENUIDENUM.ORGANIGRAM) {
+                    <app-organigram-header></app-organigram-header>
+                    }
+                    @case (SUBMENUIDENUM.FUNCTIONNING) {
+                    <app-how-we-work-header></app-how-we-work-header>
+                    }
+                    @case (SUBMENUIDENUM.AGENDA) {
+                    <app-agenda-header></app-agenda-header>
+                    }
+                    @case (SUBMENUIDENUM.NEWS) {
+                    <app-news-header></app-news-header>
+                    }
+                    @case (SUBMENUIDENUM.HISTORY) {
+                      <app-history-header></app-history-header>
+                    }
+                    @case (SUBMENUIDENUM.LANGUAGES) {
+                      <app-language-header></app-language-header>
+                    }
+                    @case (SUBMENUIDENUM.US) {
+                      <app-us-header></app-us-header>
+                    }
+                    @case (SUBMENUIDENUM.ART) {
+                      <app-art-header></app-art-header>
+                    }
+                    @case (SUBMENUIDENUM.CONTACT_US) {
+                    {{SUBMENUIDENUM.CONTACT_US}}
+                    }
+                    @case (SUBMENUIDENUM.WRITE_US) {
+                    {{SUBMENUIDENUM.WRITE_US}}
+                    }
+                    @case (SUBMENUIDENUM.PROFESSIONAL) {
+                    {{SUBMENUIDENUM.PROFESSIONAL}}
+                    }
                     }
                   </div>
                 </div>

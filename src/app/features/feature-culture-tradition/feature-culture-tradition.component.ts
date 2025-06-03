@@ -3,7 +3,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { HeroBannerTypeTwoComponent } from 'src/app/shared/components/hero-banner-type-two/hero-banner-type-two.component';
-import { TwoEqualSideBlocsComponent } from "../../shared/components/two-equal-side-blocs/two-equal-side-blocs.component";
 import { ServiceItemComponent } from "../../shared/components/service-item/service-item.component";
 import { NgOptimizedImage } from '@angular/common';
 import { HeroComponent } from "./components/hero/hero.component";
@@ -18,7 +17,6 @@ import { HeroComponent } from "./components/hero/hero.component";
     ConvertStringLabelToFontawesomeIconPipe,
     HeroBannerTypeTwoComponent,
     HeroComponent,
-    TwoEqualSideBlocsComponent,
     ServiceItemComponent,
   ],
 })

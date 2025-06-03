@@ -7,7 +7,7 @@
         flex-direction: column;
         gap: 4rem;
         border-radius: 1rem;
-        background-color: #cbebcb;
+        background-color: var(--project-orange-secondary-color);
         padding: 2rem;
 
         .item {
@@ -25,13 +25,13 @@
                 .tag {
                     padding: 0.6rem 1.2rem;
                     border-radius: 100px;
-                    background-color: var(--project-green-primary-color);
+                    background-color: var(--project-brown-quaterly-color);
                     color: var(--project-white-primary-color);
                     width: fit-content;
                 }
 
                 h2{
-                    color: var(--project-green-primary-color);
+                    color: var(--project-brown-quaterly-color);
                 }
 
                 p {
@@ -40,7 +40,7 @@
             }
 
             .image-bloc {
-                background-color: #49a649;
+                background-color: var(--project-brown-quaterly-color);
                 height: 17rem;
                 border-radius: 1rem;
                 flex: 1;
@@ -50,6 +50,15 @@
 
         .item-reverse{
             flex-direction: row-reverse;
+
+            .texts{
+                flex-direction: column-reverse;
+                align-items: flex-end;
+
+                p{
+                    text-align: right;
+                }
+            }
         }
 
     }
