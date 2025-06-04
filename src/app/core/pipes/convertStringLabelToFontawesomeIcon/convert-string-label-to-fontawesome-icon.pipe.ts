@@ -3,6 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import {
   faAngleDown,
   faAngleRight,
+  faArrowRight,
   faCalendarDays,
   faChartLine,
   faCircleCheck,
@@ -12,8 +13,9 @@ import {
   faLocationDot,
   faPlay,
   faPhone,
+  faStar,
   faQuoteRight,
-  faUser
+  faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -37,6 +39,8 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faAngleDown;
       case 'faAngleRight':
         return faAngleRight
+      case 'faArrowRight':
+        return faArrowRight
       case 'faCalendarDays':
         return faCalendarDays;
       case 'faChartLine':
@@ -59,6 +63,8 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faPlay
       case 'faPhone':
         return faPhone;
+      case 'faStar':
+        return faStar
       case 'faQuoteRight':
         return faQuoteRight;
       case 'faWhatsapp':

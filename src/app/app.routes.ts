@@ -78,6 +78,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/feature-gouvernance/organizational/organizational.component').then(m => m.OrganizationalComponent)
   },
   {
+    path: "notre-offre",
+    loadComponent: () => import('./features/feature-our-offer/feature-our-offer.component').then(m => m.FeatureOurOfferComponent),
+  },
+  {
     path: "notre-gastronomie",
     loadComponent: () => import('./features/feature-food/feature-food.component').then(m => m.FeatureFoodComponent),
     children: [

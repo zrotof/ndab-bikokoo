@@ -7,7 +7,7 @@ import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
 //import { SomeStatsComponent } from "./components/some-stats/some-stats.component";
 import { Router } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
-import { TwoEqualSideBlocsComponent } from 'src/app/shared/components/two-equal-side-blocs/two-equal-side-blocs.component';
+import { TwoEqualSideBlocsComponent } from 'src/app/features/feature-about/components/two-equal-side-blocs/two-equal-side-blocs.component';
 
 @Component({
   selector: 'app-feature-about',

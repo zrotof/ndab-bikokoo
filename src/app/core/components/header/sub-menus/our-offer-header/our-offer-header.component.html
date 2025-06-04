@@ -1,13 +1,22 @@
 <ul class="our-offer-header">
-    <li [routerLink]="['/notre-offre']" fragment="">
-        Assistance Décès
+    <li class="sub-sub-menu-list-item" [routerLink]="['/notre-offre']" fragment="">
+        <div class="icon-wrapper">
+            <fa-icon [icon]="'faArrowRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
+        </div>
+        L'Assistance Décès solidaire
     </li>
 
-    <li routerLink="notre-offre" fragment="">
+    <li class="sub-sub-menu-list-item" routerLink="notre-offre" fragment="">
+        <div class="icon-wrapper">
+            <fa-icon [icon]="'faArrowRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
+        </div>
         Parcours d'intégration culturelle
     </li>
 
-    <li routerLink="notre-offre" fragment="">
-        accompagnement aux projets
+    <li class="sub-sub-menu-list-item" routerLink="notre-offre" fragment="">
+        <div class="icon-wrapper">
+            <fa-icon [icon]="'faArrowRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
+        </div>
+        Accompagnement aux projets
     </li>
 </ul>

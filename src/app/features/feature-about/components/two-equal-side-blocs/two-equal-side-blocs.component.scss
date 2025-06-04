@@ -5,7 +5,6 @@
     .content {
         display: flex;
         flex-direction: column;
-        gap: 4rem;
         border-radius: 1rem;
         background-color: var(--project-orange-secondary-color);
         padding: 2rem;
@@ -14,6 +13,7 @@
             display: flex;
             align-items: center;
             gap: 4rem;
+            padding: 6rem 0;
 
             .texts {
                 display: flex;
@@ -40,11 +40,20 @@
             }
 
             .image-bloc {
+                position: relative;
                 background-color: var(--project-brown-quaterly-color);
                 height: 17rem;
                 border-radius: 1rem;
                 flex: 1;
                 width: 100%;
+
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    object-fit: cover;
+                }
             }
         }
 
@@ -55,12 +64,24 @@
                 flex-direction: column-reverse;
                 align-items: flex-end;
 
-                p{
+                p {
                     text-align: right;
                 }
 
-                h2{
+                h2 {
                     text-align: right;
+                }
+            }
+
+            .image-bloc {
+
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    left: unset;
+                    transform: none;
+                    right: 0;
+                    object-fit: cover;
                 }
             }
         }
