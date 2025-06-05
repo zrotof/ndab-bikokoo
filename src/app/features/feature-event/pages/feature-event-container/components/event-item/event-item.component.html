@@ -26,7 +26,7 @@
   <div class="bottom">
                                 <span>
                                     <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
-                                    {{planner.date}}
+                                    {{planner.dateStart | dateRange:planner.dateEnd}}
                                  </span>
                                 <span> 
                                     <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  

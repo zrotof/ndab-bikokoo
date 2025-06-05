@@ -18,6 +18,8 @@ import { ArtHeaderComponent } from "./sub-menus/art-header/art-header.component"
 import { OurOfferHeaderComponent } from "./sub-menus/our-offer-header/our-offer-header.component";
 import { OrganigramHeaderComponent } from "./sub-menus/organigram-header/organigram-header.component";
 import { HowWeWorkHeaderComponent } from "./sub-menus/how-we-work-header/how-we-work-header.component";
+import { ContactUsHeaderComponent } from './sub-menus/contact-us-header/contact-us-header.component';
+import { LetUsKnowYouHeaderComponent } from './sub-menus/let-us-know-you-header/let-us-know-you-header.component';
 
 @Component({
   selector: 'app-header',
@@ -42,18 +44,17 @@ import { HowWeWorkHeaderComponent } from "./sub-menus/how-we-work-header/how-we-
     ArtHeaderComponent,
     OurOfferHeaderComponent,
     OrganigramHeaderComponent,
-    HowWeWorkHeaderComponent
+    HowWeWorkHeaderComponent,
+    ContactUsHeaderComponent,
+    LetUsKnowYouHeaderComponent
 ]
 })
 
 export class HeaderComponent {
-  @ViewChild('contactBadge') contactBadge !: ElementRef<HTMLElement>;
   @ViewChild('navElement') navElement !: ElementRef<HTMLElement>;
 
-  private readonly router = inject(Router);
   private _renderer = inject(Renderer2);
 
-  protected readonly networks = SOCIAL_MEDIA;
   protected currentSubMenus: any;
   protected currentSubMenu: any;
 
@@ -116,9 +117,8 @@ export class HeaderComponent {
     {
       label: 'Contacts',
       children: [
-        { label: 'Contactez-nous', link: '/contactez-nous', image: "/img/picto/5-1-tel-email.png", id: this.SUBMENUIDENUM.CONTACT_US, isActive: false },
-        { label: 'Écrivez-nous', link: '/vehicles/motorbikes', image: "/img/picto/5-2-vous-faire-connaitre.png", id: this.SUBMENUIDENUM.WRITE_US, isActive: false },
-        { label: 'Vous faire connaitre', link: '/vehicles/motorbikes', image: "/img/picto/5-2-vous-faire-connaitre.png", id: this.SUBMENUIDENUM.PROFESSIONAL, isActive: false },
+        { label: 'Contactez-nous', link: '/contactez-nous', image: "/img/picto/5-5-contact-us.jpeg", id: this.SUBMENUIDENUM.CONTACT_US, isActive: false },
+        { label: 'Vous faire connaitre', link: '/vehicles/motorbikes', image: "/img/picto/5-1-tel-email.png", id: this.SUBMENUIDENUM.PROFESSIONAL, isActive: false },
       ],
       open: false
     }

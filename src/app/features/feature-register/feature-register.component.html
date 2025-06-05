@@ -1,0 +1,28 @@
+<app-top-header></app-top-header>
+<div class="stepper-container">
+
+    <div class="content my-container">
+        <h1>Nous Rejoindre</h1>
+
+        <app-steps-menu [steps]="steps" [currentStepIndex]="currentStepIndex"></app-steps-menu>
+
+        <div class="stepper-content">
+            <!-- ÉTAPE 1 -->
+            @if (currentStepIndex === 1) {
+            <app-informations></app-informations>
+            }
+            @else if (currentStepIndex === 2) {
+                <app-dependents></app-dependents>
+            }
+            @else {
+                <app-paiement></app-paiement>
+            }
+        </div>
+
+        <div class="stepper-nav">
+            <button (click)="previousStep()" [disabled]="currentStepIndex === 1">Précédent</button>
+            <button *ngIf="currentStepIndex < 3" (click)="nextStep()">Suivant</button>
+            <button *ngIf="currentStepIndex === 3" (click)="onSubmit()">Soumettre</button>
+        </div>
+    </div>
+</div>

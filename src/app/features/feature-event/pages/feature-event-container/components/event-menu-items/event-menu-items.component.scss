@@ -15,36 +15,39 @@
       background-color: transparent;
 
       span {
+        display: inline-flex;
         font-size: 1rem;
         padding: 0.5rem 1rem;
         border-radius: 100px;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
-        color: var(--project-brown-quaterly-color);
-      }
+          color: var(--project-brown-quaterly-color);
+          transform: scale(1.05); 
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        }
       }
 
-      .ag{
+      .ag {
         background-color: #006600;
         color: white;
       }
 
-      .ic{
+      .ic {
         background-color: #7E350E;
         color: white;
       }
 
-      .seminar{
+      .seminar {
         background-color: #0070C0;
-        color: #0070C0;
+        color: white;
       }
 
-      .birthday{
+      .birthday {
         background-color: red !important;
         color: white !important;
       }
     }
   }
 }
-

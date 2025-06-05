@@ -18,18 +18,18 @@
         </div>
 
         <div class="events">
-            @for (event of events; track $index) {
+            @for (event of events$ | async; track $index) {
                         <div class="event" [style.backgroundColor]="event.color">
                             <div class="top">
-                                {{event.type}}
+                                {{event.typeName}}
                             </div>
                             <div class="image-wrapper">
-                                <img ngSrc={{event.image}} alt="" fill>
+                                <img ngSrc={{event.coverImage}} alt="" fill>
                             </div>
                             <div class="bottom">
                                 <span>
                                     <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
-                                    {{event.date}}
+                                    {{event.dateStart | dateRange:event.dateEnd}}
                                  </span>
                                 <span> 
                                     <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  

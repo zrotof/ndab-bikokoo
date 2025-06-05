@@ -1,0 +1,28 @@
+<div class="blog-home">
+    <div class="content my-container">
+        <h2>Le Mag</h2>
+        <ul>
+            @for (blog of blog$ | async; track $index) {
+            <li class="blog">
+                <img [ngSrc]="blog.coverImage" [alt]="blog.title" width="100" height="300">
+
+                <div class="bottom">
+                    <div class="texts">
+                        <span class="tag"> {{blog.rubric.name}} </span>
+                        <h3> {{blog.title}} </h3>
+                        <p> {{blog.description}} </p>
+                    </div>
+
+                    <div class="read-date">
+                        <button [routerLink]="['/actualites', blog.id]">Lire</button>
+
+                        <span> {{blog.date | date:'d MMMM y':'':'fr'}} </span>
+                    </div>
+                </div>
+            </li>
+            }
+        </ul>
+
+        <button class="see-all"> Voir toutes les actualités associées > </button>
+    </div>
+</div>

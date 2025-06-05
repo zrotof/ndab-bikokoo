@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: "actualites",
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     children: [
       {
@@ -21,42 +21,42 @@ export const routes: Routes = [
   {
     path: "a-propos",
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () => import('./features/feature-about/feature-about.component').then(m => m.FeatureAboutComponent)
   },
   {
     path: "contactez-nous",
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () => import('./features/feature-contact/feature-contact.component').then(m => m.FeatureContactComponent)
   },
   {
     path: "culture-et-tradition",
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () => import('./features/feature-culture-tradition/feature-culture-tradition.component').then(m => m.FeatureCultureTraditionComponent)
   },
   {
     path: "fonctionnement",
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () => import('./features/feature-fonctionnement/feature-fonctionnement.component').then(m => m.FeatureFonctionnementComponent)
   },
   {
     path: "nos-danses",
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () => import('./features/feature-dances/feature-dances.component').then(m => m.FeatureDancesComponent)
   },
   {
     path: 'evenements',
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () =>
       import(
@@ -66,7 +66,7 @@ export const routes: Routes = [
   {
     path: 'evenements/:id',
     data: {
-      isBackgroundReduced: true
+      isHeaderDisplayed: true
     },
     loadComponent: () =>
       import(
@@ -75,14 +75,23 @@ export const routes: Routes = [
   },
   {
     path: "gouvernance",
+    data: {
+      isHeaderDisplayed: true
+    },
     loadComponent: () => import('./features/feature-gouvernance/organizational/organizational.component').then(m => m.OrganizationalComponent)
   },
   {
     path: "notre-offre",
+    data: {
+      isHeaderDisplayed: true
+    },
     loadComponent: () => import('./features/feature-our-offer/feature-our-offer.component').then(m => m.FeatureOurOfferComponent),
   },
   {
     path: "notre-gastronomie",
+    data: {
+      isHeaderDisplayed: true
+    },
     loadComponent: () => import('./features/feature-food/feature-food.component').then(m => m.FeatureFoodComponent),
     children: [
       {
@@ -92,11 +101,31 @@ export const routes: Routes = [
     ]
   },
   {
+    path: "se-connecter",
+    data: {
+      isHeaderDisplayed: false
+    },
+    loadComponent: () => import('./features/feature-login/feature-login.component').then(m => m.FeatureLoginComponent)
+  },
+  {
     path: "sengager",
+    data: {
+      isHeaderDisplayed: true
+    },
     loadComponent: () => import('./features/feature-engage/feature-engage.component').then(m => m.FeatureEngageComponent)
   },
   {
+    path: "sinscrire",
+    data: {
+      isHeaderDisplayed: false
+    },
+    loadComponent: () => import('./features/feature-register/feature-register.component').then(m => m.FeatureRegisterComponent)
+  },
+  {
     path: "",
+    data: {
+      isHeaderDisplayed: true
+    },
     loadComponent: () => import('./features/feature-home/feature-home.component').then(m => m.FeatureHomeComponent)
   }
 ];

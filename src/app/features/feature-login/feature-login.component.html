@@ -1,0 +1,36 @@
+<div class="feature-login">
+    <div class="left">
+        <img ngSrc="/img/about/team/4.jpeg" fill priority>
+        <div class="top">
+            <img ngSrc="/img/logo/logo.png" alt="" width="85" height="90" priority>
+            <button routerLink="">
+                <fa-icon [icon]="'faArrowRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                Revenir sur le site web
+            </button>
+        </div>
+        <h2>Ndab Bìkòkoo Pil Gweha</h2>
+        <p>Suivez le mouvement, le reste suivra</p>
+    </div>
+    <div class="right">
+        <h1>Se Connecter</h1>
+        <p>Vous n'avez pas encore de compte ? <a href="">Inscrivez-vous</a></p>
+
+        <form [formGroup]="loginForm" (submit)="onSubmit()">
+            <div class="field">
+                <label>Nom d'utilisateur</label>
+                <input type="text" pInputText formControlName="username" placeholder="Entrez votre nbom d'utilisateur">
+            </div>
+
+            <div class="field">
+                <label>Mot de passe</label>
+                <p-password formControlName="password" [feedback]="false" placeholder="Entrez votre mot de passe"
+                    [toggleMask]="true" />
+            </div>
+
+            <button type="submit"> Se Connecter</button>
+
+            <a routerLink="">Vous avez oublié votre mot de passe ?</a>
+
+        </form>
+    </div>
+</div>

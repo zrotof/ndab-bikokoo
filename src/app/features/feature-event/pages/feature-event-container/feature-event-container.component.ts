@@ -64,7 +64,9 @@ export class FeatureEventContainerComponent implements OnInit {
     if(this.plannerMenuList[index].isActive === false){
       this.plannerMenuList.forEach((plannerMenu : any) => plannerMenu.isActive = false)
       this.plannerMenuList[index].isActive = true;
-      this.plannerList$ = this.plannerService.getPlannerListByEventType(this.plannerMenuList[index].type)
+
+      const params = `type=${this.plannerMenuList[index].type}`;
+      this.plannerList$ = this.plannerService.getPlanners(params);
     }
   }
 

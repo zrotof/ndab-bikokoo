@@ -1,0 +1,60 @@
+<div class="dependents-sponsor">
+    <h2>Vos ayants droits</h2>
+
+    <div class="dependents" formArrayName="dependents">
+        @for (dependent of dependents.controls; track $index) {
+        <div class="dependent" [formGroupName]="$index">
+            <h3>Ayant droit {{$index + 1}}</h3>
+            <div class="row-two">
+                <div class="field">
+                    <label for="">Nom</label>
+                    <input pInputText formControlName="name">
+                </div>
+                <div class="field">
+                    <label for="">prénom</label>
+                    <input pInputText formControlName="name">
+                </div>
+
+                <div class="field">
+                    <label for="">Matricule</label>
+                    <input pInputText formControlName="name">
+                </div>
+            </div>
+            <div class="row-two">
+                <div class="field">
+                    <label for="">Filiation / Parenté</label>
+                    <input pInputText formControlName="name">
+                </div>
+                <div class="field">
+                    <label for="">Téléphone</label>
+                    <input pInputText formControlName="phone">
+                </div>
+                <div class="field">
+                    <label for="">Email</label>
+                    <input pInputText formControlName="email">
+                </div>
+            </div>
+            <hr />
+        </div>
+        }
+    </div>
+    <h2>Ton parrain / Ta marraine</h2>
+    <div class="sponsor" formGroupName="sponsor">
+        <div class="row-two">
+            <div class="field">
+                <label for="">Nom & prénom</label>
+                <input pInputText formControlName="name">
+            </div>
+
+            <div class="field">
+                <label for="">Canton</label>
+                <input pInputText formControlName="canton">
+            </div>
+
+            <div class="field">
+                <label for="">Matricule</label>
+                <input pInputText formControlName="matricule">
+            </div>
+        </div>
+    </div>
+</div>

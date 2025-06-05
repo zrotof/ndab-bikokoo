@@ -29,17 +29,28 @@ export class BlogService {
     )
   }
 
-  getBlogArticlesByMenuId(menuId: string): Observable<any> {
-
-    const queryParam = `rubricId=${menuId}`
-
-    return this.http.get<any>(`${this.baseUrlBlogArticle}/?${queryParam}`).pipe(
-      map(({ status, data, message }) => data)
+  getArticles(queryParams?: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrlBlogArticle}/?${queryParams}`).pipe(
+      map(res => res.data),
+      map(res => res.map((item: any) => {
+        return {
+          id: item.id,
+          title: item.title,
+          coverImage: item.coverImage,
+          date: item.date,
+          hour: item.hour,
+          description: item.description,
+          content: item.content,
+          hasVideo: item.hasVideo,
+          videoLink: item.videoLink,
+          rubric : item.rubric
+        }
+      }))
     )
   }
 
-  getBlogArticleById(id : string): Observable<any>{
-    return this.http.get<any>(this.baseUrlBlogArticle+`/${id}`).pipe(
+  getBlogArticleById(id: string): Observable<any> {
+    return this.http.get<any>(this.baseUrlBlogArticle + `/${id}`).pipe(
       map(({ status, data, message }) => data)
     )
   }

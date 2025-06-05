@@ -1,29 +1,4 @@
 <header #header>
-  <div #contactBadge class="contact-badge">
-    <div class="content header-container">
-      <ul class="networks">
-        @for (network of networks; track $index) {
-        <li [class]="network.name">
-          <a href="{{ network.link }}" target="_blank">
-            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon></a>
-        </li>
-        }
-      </ul>
-
-      <div class="contacts">
-        <a class="phone">
-          <fa-icon [icon]="'faPhone' | convertStringLabelToFontawesomeIcon">
-          </fa-icon>
-          <p>+49 179 7510920</p>
-        </a>
-        <a class="email">
-          <fa-icon [icon]="'faEnvelope' | convertStringLabelToFontawesomeIcon"></fa-icon>
-          <p>contact&#64;ndabbikokoo.com</p>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <div class="main-header" #navElement role="navigation" aria-label="Menu principal">
     <div class="content header-container">
       <div class="logo-wrapper">
@@ -62,10 +37,10 @@
                   <div class="sub-menu-items">
                     @switch (currentSubMenu?.id) {
                     @case (SUBMENUIDENUM.ABOUT_US) {
-                      <app-about-us-header></app-about-us-header>
+                    <app-about-us-header></app-about-us-header>
                     }
                     @case (SUBMENUIDENUM.OUR_OFFER) {
-                      <app-our-offer-header></app-our-offer-header>
+                    <app-our-offer-header></app-our-offer-header>
                     }
                     @case (SUBMENUIDENUM.ENGAGE) {
                     <app-engage-header></app-engage-header>
@@ -83,25 +58,22 @@
                     <app-news-header></app-news-header>
                     }
                     @case (SUBMENUIDENUM.HISTORY) {
-                      <app-history-header></app-history-header>
+                    <app-history-header></app-history-header>
                     }
                     @case (SUBMENUIDENUM.LANGUAGES) {
-                      <app-language-header></app-language-header>
+                    <app-language-header></app-language-header>
                     }
                     @case (SUBMENUIDENUM.US) {
-                      <app-us-header></app-us-header>
+                    <app-us-header></app-us-header>
                     }
                     @case (SUBMENUIDENUM.ART) {
-                      <app-art-header></app-art-header>
+                    <app-art-header></app-art-header>
                     }
                     @case (SUBMENUIDENUM.CONTACT_US) {
-                    {{SUBMENUIDENUM.CONTACT_US}}
-                    }
-                    @case (SUBMENUIDENUM.WRITE_US) {
-                    {{SUBMENUIDENUM.WRITE_US}}
+                    <app-contact-us-header></app-contact-us-header>
                     }
                     @case (SUBMENUIDENUM.PROFESSIONAL) {
-                    {{SUBMENUIDENUM.PROFESSIONAL}}
+                    <app-let-us-know-you-header></app-let-us-know-you-header>
                     }
                     }
                   </div>
@@ -115,8 +87,8 @@
       </nav>
 
       <div class="auth-actions">
-        <a routerLink="/login" class="login">Se connecter</a>
-        <a routerLink="/register" class="register">S'inscrire</a>
+        <a routerLink="/se-connecter" class="login">Se connecter</a>
+        <a routerLink="/sinscrire" class="register">S'inscrire</a>
       </div>
     </div>
   </div>

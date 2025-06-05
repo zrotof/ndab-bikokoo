@@ -1,0 +1,20 @@
+<div class="paiements">
+ <label>Montant d'inscription (€) :
+                    <select formControlName="amount">
+                        <option value="20">20 €</option>
+                        <option value="35">35 €</option>
+                        <option value="50">50 €</option>
+                        <option value="250">250 €</option>
+                    </select>
+                </label>
+                <label>Mode de paiement :
+                    <select formControlName="paymentMethod">
+                        <option value="especes">Espèces</option>
+                        <option value="cheque">Chèque</option>
+                        <option value="virement">Virement bancaire</option>
+                    </select>
+                </label>
+                <label>Montant de la réserve (€) : <input formControlName="reserve" type="number"></label>
+                <label>Fait à : <input formControlName="place"></label>
+                <label>Date : <input formControlName="date" type="date"></label>
+</div>

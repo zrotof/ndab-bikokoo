@@ -1,0 +1,58 @@
+  .top-header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--project-brown-quaterly-color);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .networks {
+        display: flex;
+        gap: 0.5rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.7rem;
+          height: 1.7rem;
+          border-radius: 50%;
+          padding: 1rem;
+
+          &:hover {
+            background-color: var(--project-white-primary-color);
+          }
+
+          a {
+            color: var(--project-white-primary-color);
+
+            fa-icon {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+
+      .contacts {
+        display: flex;
+        gap: 2rem;
+
+        .phone,
+        .email {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+          color: var(--project-white-primary-color);
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }

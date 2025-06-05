@@ -1,0 +1,24 @@
+<div class="top-header">
+    <div class="content header-container">
+        <ul class="networks">
+            @for (network of networks; track $index) {
+            <li [class]="network.name">
+                <a href="{{ network.link }}" target="_blank">
+                    <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon></a>
+            </li>
+            }
+        </ul>
+
+        <div class="contacts">
+            <a class="phone">
+                <fa-icon [icon]="'faPhone' | convertStringLabelToFontawesomeIcon">
+                </fa-icon>
+                <p>+49 179 7510920</p>
+            </a>
+            <a class="email">
+                <fa-icon [icon]="'faEnvelope' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                <p>contact&#64;ndabbikokoo.com</p>
+            </a>
+        </div>
+    </div>
+</div>

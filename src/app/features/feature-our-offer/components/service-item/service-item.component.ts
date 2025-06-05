@@ -22,14 +22,14 @@ export class ServiceItemComponent {
       message: "La famille endeuillée est vraiment au cœur de l'action de Ndab Bìkokoo Pil-Gweha. J'ai vraiment ressenti que la volonté de mon défunt papa, a été respectée lorsqu'une délégation du mouvement est venu pour me remettre l'enveloppe de solidarité.",
       name: "Nyango Ngo Y.",
       place: "Membre en France",
-      image: "/img/our-offer/testimonies/nyango.jpeg"
+      image: "/img/logo/logo.png"
     },
     {
       title:"La mise à disposition rapide",
       message: "Ce qui m'a agréablement surpris, c'est le délai entre le moment ou j'annonce le décès de ma grand-mère, et le jour où je reçois l'aide solidaire. En à peine 10 jours, j'ai engagé l'ensemble des étapes du processus funéraire ; que j'ai pu financer jusqu'à la mise en sépulture.",
       name: "Ndjombi T.",
       place: "Membre aux Etats-Unis",
-      image: "/img/our-offer/testimonies/nyango.jpeg"
+      image: "/img/logo/logo.png"
     }
   ]
 }

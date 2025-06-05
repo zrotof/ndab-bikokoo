@@ -65,7 +65,8 @@ export class FeatureBlogComponent implements OnInit {
   }
 
   getArticleByMenuId(menuId : string) : void{
-    this.articles$ = this.blogService.getBlogArticlesByMenuId(menuId)
+    const params = `rubricId=${menuId}`
+    this.articles$ = this.blogService.getArticles(params)
   }
 
 }
