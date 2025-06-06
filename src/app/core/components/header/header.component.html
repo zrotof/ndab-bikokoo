@@ -26,7 +26,7 @@
                   <ul class="sub-menus">
                     @for (child of item.children; track $index) {
                     <li (mouseover)="onSelectSubMenu($index)">
-                      <a [routerLink]="child.link" [class.active-sub-menu]="child.isActive">
+                      <a [routerLink]="child.link" [class]="child.isActive ? item.class : ''">
                         <img [ngSrc]="child.image" width="35" height="35">
                         <span> {{ child.label }} </span>
                         <fa-icon [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"></fa-icon>
@@ -50,6 +50,9 @@
                     }
                     @case (SUBMENUIDENUM.FUNCTIONNING) {
                     <app-how-we-work-header></app-how-we-work-header>
+                    }
+                    @case (SUBMENUIDENUM.OUR_YOUNGS) {
+                      <app-youngs-header></app-youngs-header>
                     }
                     @case (SUBMENUIDENUM.AGENDA) {
                     <app-agenda-header></app-agenda-header>

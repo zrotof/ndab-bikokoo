@@ -23,6 +23,13 @@ export class NextEventsComponent {
 
   private readonly plannerService = inject(PlannerService);
 
-  private readonly today = new Date().toISOString().split('T')[0];
-  protected readonly events$ = this.plannerService.getPlanners(`startDate = ${this.today} `)
+  private readonly today = this.getTwoDaysAgoDate();
+  protected readonly events$ = this.plannerService.getPlanners(`dateStart=${this.today}&order=ASC&limit=4`)
+
+
+  private getTwoDaysAgoDate(): string {
+  const date = new Date(); // Get current date and time
+  date.setDate(date.getDate() - 2); // Subtract 2 days
+  return date.toISOString().split('T')[0]; // Convert to ISO string and take only the date part
+}
 }

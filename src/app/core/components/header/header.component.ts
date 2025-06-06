@@ -1,9 +1,8 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef, HostListener, inject, Input, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from '../../pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
-import { SOCIAL_MEDIA } from '../../../shared/constants/social-media.constants';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 import { DrawerModule } from 'primeng/drawer';
 import { SubMenuIdEnum } from '../../enums/sub-menu-id.enum';
@@ -20,6 +19,7 @@ import { OrganigramHeaderComponent } from "./sub-menus/organigram-header/organig
 import { HowWeWorkHeaderComponent } from "./sub-menus/how-we-work-header/how-we-work-header.component";
 import { ContactUsHeaderComponent } from './sub-menus/contact-us-header/contact-us-header.component';
 import { LetUsKnowYouHeaderComponent } from './sub-menus/let-us-know-you-header/let-us-know-you-header.component';
+import { YoungsHeaderComponent } from "./sub-menus/youngs-header/youngs-header.component";
 
 @Component({
   selector: 'app-header',
@@ -46,7 +46,8 @@ import { LetUsKnowYouHeaderComponent } from './sub-menus/let-us-know-you-header/
     OrganigramHeaderComponent,
     HowWeWorkHeaderComponent,
     ContactUsHeaderComponent,
-    LetUsKnowYouHeaderComponent
+    LetUsKnowYouHeaderComponent,
+    YoungsHeaderComponent
 ]
 })
 
@@ -81,6 +82,7 @@ export class HeaderComponent {
   protected menuItems = [
     {
       label: 'La Maison',
+      class: 'green',
       children: [
         { label: 'À propos de nous?', link: '/a-propos', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ABOUT_US, isActive: false },
         { label: 'Notre offre', link: '/notre-offre', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.OUR_OFFER, isActive: false },
@@ -90,14 +92,17 @@ export class HeaderComponent {
     },
     {
       label: 'Administration',
+      class: 'green',
       children: [
         { label: 'Organnigramme', link: '/gouvernance', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.ORGANIGRAM, isActive: false },
         { label: 'Fonctionnement', link: '/fonctionnement', image: "/img/picto/2-2-fonctionnement.png", id: this.SUBMENUIDENUM.FUNCTIONNING, isActive: false },
+        { label: 'Les jeunes', link: '/nos-jeunes', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.OUR_YOUNGS, isActive: false },
       ],
       open: false
     },
     {
       label: 'Évênements',
+      class: 'blue',
       children: [
         { label: 'Agenda', link: '/evenements', image: "/img/picto/3-1-ag.png", id: this.SUBMENUIDENUM.AGENDA, isActive: false },
         { label: 'Actualités', link: '/actualites', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.NEWS, isActive: false },
@@ -106,6 +111,7 @@ export class HeaderComponent {
     },
     {
       label: 'Culture et tradition',
+      class: 'brown',
       children: [
         { label: 'Histoire', link: '/culture-et-tradition', image: "/img/picto/4-1-langue-basaa.png", id: this.SUBMENUIDENUM.HISTORY, isActive: false },
         { label: 'Langues', link: '/culture-et-tradition', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.LANGUAGES, isActive: false },
@@ -116,6 +122,7 @@ export class HeaderComponent {
     },
     {
       label: 'Contacts',
+      class: 'black',
       children: [
         { label: 'Contactez-nous', link: '/contactez-nous', image: "/img/picto/5-5-contact-us.jpeg", id: this.SUBMENUIDENUM.CONTACT_US, isActive: false },
         { label: 'Vous faire connaitre', link: '/vehicles/motorbikes', image: "/img/picto/5-1-tel-email.png", id: this.SUBMENUIDENUM.PROFESSIONAL, isActive: false },

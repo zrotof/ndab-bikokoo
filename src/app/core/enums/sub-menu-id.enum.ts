@@ -4,6 +4,7 @@ export enum SubMenuIdEnum {
     ENGAGE = "engage",
     ORGANIGRAM = "organigram",
     FUNCTIONNING = "functionning",
+    OUR_YOUNGS = "our-youngs",
     OUR_CADRES  = "our-cadres",
     OUR_EXPERTS = "our-experts",
     AGENDA = "agenda",

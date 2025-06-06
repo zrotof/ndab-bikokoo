@@ -47,6 +47,13 @@ export const routes: Routes = [
     loadComponent: () => import('./features/feature-fonctionnement/feature-fonctionnement.component').then(m => m.FeatureFonctionnementComponent)
   },
   {
+    path: "nos-jeunes",
+    data: {
+      isHeaderDisplayed: true
+    },
+    loadComponent: () => import('./features/feature-youngs/feature-youngs.component').then(m => m.FeatureYoungsComponent)
+  },
+  {
     path: "nos-danses",
     data: {
       isHeaderDisplayed: true

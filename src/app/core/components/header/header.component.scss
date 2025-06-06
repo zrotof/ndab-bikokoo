@@ -147,11 +147,32 @@ header {
                           }
                         }
 
-                        .active-sub-menu {
+                        .green {
                           background-color: #e5f2e5;
                           color: var(--project-green-primary-color);
                           font-weight: 600;
-                          border: 1px solid var(--project-green-primary-color);
+                          border: 1px solid var(--project-green-primary-color) !important;
+                        }
+
+                        .blue {
+                          background-color: #d0e0ec;
+                          color: var(--project-blue-primary-color);
+                          font-weight: 600;
+                          border: 1px solid var(--project-blue-primary-color) !important;
+                        }
+
+                        .brown {
+                          background-color: #f1e1d9;
+                          color: var(--project-brown-quaterly-color);
+                          font-weight: 600;
+                          border: 1px solid var(--project-brown-quaterly-color) !important;
+                        }
+
+                        .black {
+                          background-color: #cfcecd;
+                          color: var(--project-black-primary-color);
+                          font-weight: 600;
+                          border: 1px solid var(--project-black-primary-color) !important;
                         }
                       }
                     }
