@@ -24,6 +24,4 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
   ]
 })
 
-export class FeatureHomeComponent {
-
-}
+export class FeatureHomeComponent {}
