@@ -385,7 +385,8 @@ export class WorldMapProgressionComponent {
     let cantonsList = '';
     console.log(countryInfo);
     countryInfo.cantons.forEach(canton => {
-      cantonsList += `<li>${canton.name} ( ${canton.population} personnes )</li>`;
+      //cantonsList += `<li>${canton.name} ( ${canton.population} personnes )</li>`;
+      cantonsList += `<li>${canton.name} </li>`;
     });
 
     const modalContentHTML = `

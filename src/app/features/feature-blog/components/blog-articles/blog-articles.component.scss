@@ -63,3 +63,39 @@
         }
     }
 }
+
+@media all and (max-width: 800px) {
+.blog-articles {
+    .content {
+        .article {
+            img {
+                width: 270px
+            }
+        }
+    }
+}
+}
+
+@media all and (max-width: 600px) {
+.blog-articles {
+    .content {
+        .article {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+
+            .texts {
+                h3 {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+}

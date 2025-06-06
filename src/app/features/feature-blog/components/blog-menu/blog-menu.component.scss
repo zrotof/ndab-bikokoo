@@ -1,16 +1,18 @@
-.blog-menu{
+.blog-menu {
     display: flex;
     justify-content: center;
     width: 100%;
 
-    .content{
+    .content {
         width: 100%;
 
-        ul{
+        ul {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
+            overflow: auto;
+            padding: 1rem;
 
-            li{
+            li {
                 cursor: pointer;
                 padding: 0.6rem 1rem;
                 border-radius: 5px;
@@ -18,14 +20,15 @@
                 border: 1px solid rgb(160, 160, 160);
                 color: #5b5b5b;
                 font-weight: 500;
+                white-space: nowrap;
 
-                &:hover{
+                &:hover {
                     background-color: var(--project-orange-primary-color);
                     color: var(--project-black-primary-color);
                 }
             }
 
-            .active-blog-menu{
+            .active-blog-menu {
                 background-color: var(--project-brown-quaterly-color) !important;
                 color: var(--project-white-primary-color) !important;
             }

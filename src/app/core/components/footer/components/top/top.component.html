@@ -1,0 +1,27 @@
+<div class="top">
+    <p>
+        Restez à jour!! Recevez <a routerLink="/actualites">les dernières actualités sur Ndab Bikokoo</a>
+        directement dans votre inbox Whatsapp
+    </p>
+
+    <form [formGroup]="subscriberForm" (ngSubmit)="onNewsSubscribe()">
+        <div class="input-bloc">
+            <p-select formControlName="selectedCountry" [options]="COUNTRY_FLAGS_AND_DIAL_CODES" optionLabel="flag">
+                <ng-template #selectedItem let-selectedOption>
+                    <img [ngSrc]="selectedOption.flagUrl" alt="{{selectedOption.name}} flag" width="25" height="17" />
+                </ng-template>
+
+                <ng-template let-country #item>
+                    <div class="country">
+                        <img [ngSrc]="country.flagUrl" alt="{{country.name}} flag" width="25"
+                            height="17" />
+                        <p> {{country.name}} ({{country.code}}) ({{country.dialCode}})</p>
+                    </div>
+                </ng-template>
+            </p-select>
+            {{subscriberForm.controls.selectedCountry.value?.dialCode}}
+            <input formControlName="phone" />
+        </div>
+        <button type="submit">Recevoir</button>
+    </form>
+</div>

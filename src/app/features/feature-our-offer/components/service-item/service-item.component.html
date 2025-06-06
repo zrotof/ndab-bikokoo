@@ -7,27 +7,32 @@
                 nous, ne restera plus sans assistance.</p>
             <ul>
                 <li><fa-icon [icon]=" 'faCircleCheck' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    <p>⁠<b>Nous encourageons</b> tous les ressortissants de la grotte, de la diaspora, à rejoindre le
-                        mouvement afin de renforcer la solidarité.</p>
+                    ⁠<b>Nous encourageons</b> tous les ressortissants de la grotte, de la diaspora, à rejoindre le
+                        mouvement afin de renforcer la solidarité.
                 </li>
                 <li> <fa-icon [icon]=" 'faCircleCheck' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    <p><b>Nous rassemblons</b> les Basà'a autour du concept solidaire d'aide au rapatriement de corps.
-                    </p>
+                    <b>Nous rassemblons</b> les Basà'a autour du concept solidaire d'aide au rapatriement de corps.
                 </li>
                 <li> <fa-icon [icon]=" 'faCircleCheck' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    <p><b>Nous organisons</b>notre structure en accueillant ceux qui s'engagent et s'impliquent ; et de
-                        manière collective, nous travaillons pour faciliter notre collaboration.</p>
+                    <b>Nous organisons</b> notre structure en accueillant ceux qui s'engagent et s'impliquent ; et de
+                        manière collective, nous travaillons pour faciliter notre collaboration.
                 </li>
                 <li> <fa-icon [icon]=" 'faCircleCheck' | convertStringLabelToFontawesomeIcon "></fa-icon>
-                    <p><b>Nous offrons</b> à nos semblables, une couverture à tous nos adhérents via leur ayant droits.
-                    </p>
+                    <b>Nous offrons</b> à nos semblables, une couverture à tous nos adhérents via leur ayant droits.
                 </li>
             </ul>
 
             <div class="testimonies">
                 @for (testimony of testimonies; track $index) {
                 <div class="testimony">
-                    <div class="texts">
+                    <div class="stars">
+                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                    </div>
+                    <div class="testimony-texts">
                         <h3> {{testimony.title}} </h3>
                         <p> {{testimony.message}} </p>
                     </div>
@@ -39,14 +44,6 @@
                             <h4> {{testimony.name}} </h4>
                             <span> {{testimony.place}} </span>
                         </div>
-                    </div>
-
-                    <div class="stars">
-                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
-                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
-                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
-                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
-                        <fa-icon [icon]="'faStar' | convertStringLabelToFontawesomeIcon"></fa-icon>
                     </div>
                 </div>
                 }

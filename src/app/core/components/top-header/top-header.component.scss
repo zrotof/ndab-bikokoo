@@ -56,3 +56,20 @@
       }
     }
   }
+
+  @media all and (max-width: 720px) {
+    .top-header {
+      .content {
+        padding: 0;
+
+        .networks {
+          display: none;
+        }
+
+        .contacts {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }

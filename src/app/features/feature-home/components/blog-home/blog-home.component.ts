@@ -1,6 +1,7 @@
-import { AsyncPipe, DatePipe, NgOptimizedImage } from '@angular/common';
+import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ConvertTimeZoneToDatePipe } from 'src/app/core/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 import { BlogService } from 'src/app/core/services/blog.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { BlogService } from 'src/app/core/services/blog.service';
   styleUrl: './blog-home.component.scss',
   imports: [
     AsyncPipe,
-    DatePipe,
+    ConvertTimeZoneToDatePipe,
     RouterLink,
     NgOptimizedImage
   ]

@@ -1,0 +1,176 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--project-white-primary-color);
+    gap: 2rem;
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        max-width: 550px;
+
+        a {
+            color: var(--project-orange-secondary-color);
+        }
+    }
+
+    form {
+        display: flex;
+        gap: 0.5rem;
+
+        .input-bloc {
+            display: flex;
+            align-items: center;
+            border-radius: 7px;
+            gap: 0.3rem;
+            background-color: var(--project-green-primary-color);
+
+            .p-select {
+                align-items: center;
+                background: transparent;
+                border: none;
+                outline: none;
+                height: 100%;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.289);
+                }
+
+                .p-select-label {
+                    padding: 0 0 0 0.5rem;
+
+                    span {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .p-select-dropdown {
+                    width: 25px;
+                    color: white;
+
+                    chevrondownicon {
+                        svg {
+                            width: 12px;
+                        }
+                    }
+                }
+            }
+
+            input {
+                width: 170px;
+                background: transparent;
+                color: var(--project-white-primary-color);
+                border: none;
+                padding: 0;
+                outline: none;
+                box-shadow: none;
+                height: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        button {
+            border: none;
+            border-radius: 7px;
+            padding: 0 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: var(--project-orange-primary-color);
+            color: var(--project-white-primary-color);
+        }
+    }
+
+    .country {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 275px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            gap: 0.5rem;
+
+            .input-bloc {
+                display: flex;
+                align-items: center;
+                border-radius: 7px;
+                gap: 0.3rem;
+                background-color: var(--project-green-primary-color);
+                height: 48px;
+
+                .p-select {
+                    align-items: center;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    height: 100%;
+
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.289);
+                    }
+
+                    .p-select-label {
+                        padding: 0 0 0 0.5rem;
+
+                        span {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .p-select-dropdown {
+                        width: 25px;
+                        color: white;
+
+                        chevrondownicon {
+                            svg {
+                                width: 12px;
+                            }
+                        }
+                    }
+                }
+
+                input {
+                    width: 170px;
+                    background: transparent;
+                    color: var(--project-white-primary-color);
+                    border: none;
+                    padding: 0;
+                    outline: none;
+                    box-shadow: none;
+                    height: 100%;
+                    font-size: 1rem;
+                }
+            }
+
+            button {
+                border: none;
+                border-radius: 7px;
+                padding: 0 1rem;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                background-color: var(--project-orange-primary-color);
+                color: var(--project-white-primary-color);
+            }
+        }
+
+        .country {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 275px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <div class="blog-home">
     <div class="content my-container">
-        <h2>Le Mag</h2>
+        <h2>Nos dernières actualités</h2>
         <ul>
             @for (blog of blog$ | async; track $index) {
             <li class="blog">
@@ -16,7 +16,7 @@
                     <div class="read-date">
                         <button [routerLink]="['/actualites', blog.id]">Lire</button>
 
-                        <span> {{blog.date | date:'d MMMM y':'':'fr'}} </span>
+                        <span> {{blog.date | convertTimeZoneToDate}} </span>
                     </div>
                 </div>
             </li>

@@ -7,23 +7,4 @@
     app-hero-banner-type-two{
         width: 100%;
     }
-    
-    img {
-        max-width: 1400px;
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
-
-    .content{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
-        
-        p{
-            text-align: center;
-            line-height: 1.6rem;
-        }
-    }
 }

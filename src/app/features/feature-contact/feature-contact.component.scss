@@ -26,6 +26,7 @@
             flex-direction: column;
             gap: 2rem;
             margin-top: 5rem;
+            flex: 1;
 
             h1 {
                 display: flex;
@@ -44,14 +45,14 @@
             p {
                 font-size: 1rem;
                 line-height: 1.8rem;
-                width: 700px;
+                max-width: 700px;
             }
 
             ul {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                width: 550px;
+                max-width: 550px;
 
                 li {
                     display: flex;
@@ -77,11 +78,12 @@
             flex-direction: column;
             gap: 1rem;
             background-color: var(--project-white-primary-color);
-            width: 550px;
             padding: 3rem 2rem;
             border-radius: 8px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
+            max-width: 550px;
+            width: 100%;
+            
             .field {
                 display: flex;
                 flex-direction: column;
@@ -96,7 +98,8 @@
                 input,
                 textarea {
                     width: 100%;
-                    background-color: rgb(243 244 246);;
+                    background-color: rgb(243 244 246);
+                    ;
                 }
             }
 
@@ -111,5 +114,152 @@
             }
         }
 
+    }
+}
+
+@media all and (max-width: 1150px) {
+    .feature-contact {
+        .content {
+            form {
+                max-width: 430px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .feature-contact {
+        .content {
+            gap: 3rem;
+            padding-top: 3rem;
+
+            .texts {
+                gap: 2rem;
+                margin-top: 4rem;
+
+                h1 {
+                    font-size: 2.5rem;
+
+                    span {
+                        span {
+                            color: var(--project-brown-quaterly-color);
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                }
+
+                ul {
+
+                    li {
+                        gap: 1rem;
+
+                        fa-icon {
+                            font-size: 1.35rem;
+                            color: var(--project-brown-quaterly-color);
+                        }
+
+                        span {
+                            font-size: 1rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 900px) {
+    .feature-contact {
+        margin-top: 6rem;
+
+        .content {
+            flex-direction: column;
+            gap: 3rem;
+            padding-top: 0;
+
+            .texts {
+                gap: 1rem;
+                margin-top: 3rem;
+                align-items: center;
+
+                h1 {
+                    font-size: 2.5rem;
+                    align-items: center;
+
+                    span {
+                        span {
+                            color: var(--project-brown-quaterly-color);
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                    max-width: 100%;
+                    text-align: center;
+                }
+
+                ul {
+
+                    li {
+                        gap: 1rem;
+
+                        fa-icon {
+                            font-size: 1.35rem;
+                            color: var(--project-brown-quaterly-color);
+                        }
+
+                        span {
+                            font-size: 1rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            form{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 500px) {
+    .feature-contact {        
+        .content {
+            .texts {
+
+                h1 {
+                    font-size: 2.2rem;
+                }
+
+                ul {
+
+                    li {
+                        gap: 1rem;
+
+                        fa-icon {
+                            font-size: 1.35rem;
+                            color: var(--project-brown-quaterly-color);
+                        }
+
+                        span {
+                            font-size: 1rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            form{
+                max-width: 100%;
+            }
+        }
     }
 }

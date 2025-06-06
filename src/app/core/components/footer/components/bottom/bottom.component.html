@@ -1,0 +1,23 @@
+<div class="bottom">
+    <p>
+        Ndab Bìkokoo Pil-GWeha International est un mouvement née en Allemagne dont le siège social est situé au
+        Hermann-Albertz-Straße 218 46045 Oberhausen Deutschland (Germany). Ndab Bìkokoo Pil-GWeha International est un
+        rassemblement des natifs de la grotte Ngog Lituba, qui constituent la diaspora européenne, américaine, asiatique
+        et océanienne. Son produit phare, l'aide au rapatriement de corps est le socle autour duquel naissent des
+        projets de développement de la communauté Basa'a.
+    </p>
+
+    <div class="copyright-networks">
+        <p>©2025 - Ndab Bìkòkoo Pil-Gweha, tous droits réservés</p>
+
+        <ul>
+            @for (network of networks; track $index) {
+            <li [class]="network.name">
+                <a routerLink={{network.link}} target="_blank">
+                    <fa-icon [icon]=" network.icon | convertStringLabelToFontawesomeIcon "></fa-icon>
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

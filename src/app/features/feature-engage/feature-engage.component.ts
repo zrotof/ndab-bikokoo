@@ -3,7 +3,6 @@ import { HeroBannerTypeTwoComponent } from "../../shared/components/hero-banner-
 import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
 import { WhyJoinComponent } from './components/why-join/why-join.component';
 import { InscriptionProcessComponent } from "./components/inscription-process/inscription-process.component";
-import { WhoCanJoinComponent } from './components/who-can-join/who-can-join.component';
 import { JoinComponent } from './components/join/join.component';
 
 @Component({
@@ -13,7 +12,6 @@ import { JoinComponent } from './components/join/join.component';
     imports: [
     HeroBannerTypeTwoComponent,
     WhyJoinComponent,
-    WhoCanJoinComponent,
     InscriptionProcessComponent,
     JoinComponent
 ],

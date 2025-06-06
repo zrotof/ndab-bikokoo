@@ -12,14 +12,24 @@
     width: 100%;
     gap: 2rem;
 
-    .sub-title {
+    h2 {
       text-align: center;
       max-width: 100%;
-       max-width: 550px;
+      max-width: 550px;
       width: 100%;
+      font-size: 2.5rem;
+
+      span {
+        color: var(--project-orange-primary-color);
+      }
     }
 
-
+    p {
+      text-align: center;
+      max-width: 1000px;
+      line-height: 1.6rem;
+      font-size: 1rem;
+    }
 
     ul {
       margin-top: 8rem;
@@ -63,6 +73,7 @@
           p {
             font-size: 1rem;
             line-height: 1.4rem;
+            text-align: left;
           }
         }
       }
@@ -73,10 +84,162 @@
       border-radius: 0.5rem;
       width: fit-content;
       border: none;
-      background-color: var(--project-white-primary-color);
+      background-color: var(--project-blue-primary-color);
+      color: var(--project-white-primary-color);
       font-weight: 550;
       font-size: 1rem;
       margin-top: 4rem;
+    }
+  }
+}
+
+@media all and (max-width: 1185px) {
+  .inscription-process {
+    padding: 6rem 0;
+
+    .content {
+
+      h2 {
+        width: 100%;
+        font-size: 2.2rem;
+      }
+
+      ul {
+        margin-top: 7rem;
+
+        gap: 1rem;
+
+        li {
+          position: relative;
+
+          img {
+            left: 50%;
+            top: -4rem;
+            transform: translateX(-50%);
+            width: 85px;
+            height: 100px;
+          }
+
+          div {
+            padding: 3rem 1rem 1rem;
+            width: 100%;
+
+            h3 {
+              text-align: center;
+            }
+
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      button {
+        padding: 0.6rem 1.5rem;
+        border-radius: 0.5rem;
+        width: fit-content;
+        border: none;
+        background-color: var(--project-blue-primary-color);
+        color: var(--project-white-primary-color);
+        font-weight: 550;
+        font-size: 1rem;
+        margin-top: 4rem;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .inscription-process {
+    padding: 6rem 0;
+
+    .content {
+
+      h2 {
+        width: 100%;
+        font-size: 2rem;
+      }
+
+      ul {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          position: relative;
+          flex-direction: row;
+          gap: 2rem;
+          background-color: var(--project-white-primary-color);
+
+          img {
+            position: relative;
+            width: 85px;
+            height: 80px;
+            left: unset;
+            top: unset;
+            transform: unset;
+          }
+
+          div {
+            padding: 1.5rem;
+            width: 100%;
+
+            h3 {
+              text-align: left;
+            }
+
+            p {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .inscription-process {
+    padding: 6rem 0;
+
+    .content {
+      ul {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          gap: 0;
+
+          img {
+            position: relative;
+            width: 55px;
+            height: 65px;
+            left: unset;
+            top: unset;
+            transform: unset;
+          }
+
+          div {
+            padding: 1rem;
+            width: 100%;
+
+            h3 {
+              text-align: left;
+            }
+
+            p {
+              text-align: left;
+            }
+          }
+        }
+      }
     }
   }
 }

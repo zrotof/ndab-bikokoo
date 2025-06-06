@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeroTypeTwo } from 'src/app/core/models/hero-type-two';
-import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { HeroBannerTypeTwoComponent } from 'src/app/shared/components/hero-banner-type-two/hero-banner-type-two.component';
-import { NgOptimizedImage } from '@angular/common';
 import { HeroComponent } from "./components/hero/hero.component";
+import { CultureItemsComponent } from './components/culture-items/culture-items.component';
 
 @Component({
   selector: 'app-feature-culture-tradition',
   templateUrl: './feature-culture-tradition.component.html',
   styleUrl: './feature-culture-tradition.component.scss',
   imports: [
-    NgOptimizedImage,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
     HeroBannerTypeTwoComponent,
     HeroComponent,
+    CultureItemsComponent
   ],
 })
 export class FeatureCultureTraditionComponent {

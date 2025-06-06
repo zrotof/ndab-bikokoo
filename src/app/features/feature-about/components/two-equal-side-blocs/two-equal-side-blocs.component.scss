@@ -1,6 +1,7 @@
 .two-equal-side-blocs {
     display: flex;
     justify-content: center;
+    padding: 1rem;
 
     .content {
         display: flex;
@@ -30,7 +31,7 @@
                     width: fit-content;
                 }
 
-                h2{
+                h2 {
                     color: var(--project-brown-quaterly-color);
                 }
 
@@ -47,7 +48,7 @@
                 flex: 1;
                 width: 100%;
 
-                img{
+                img {
                     position: absolute;
                     bottom: 0;
                     left: 50%;
@@ -57,10 +58,10 @@
             }
         }
 
-        .item-reverse{
+        .item-reverse {
             flex-direction: row-reverse;
 
-            .texts{
+            .texts {
                 flex-direction: column-reverse;
                 align-items: flex-end;
 
@@ -75,7 +76,7 @@
 
             .image-bloc {
 
-                img{
+                img {
                     position: absolute;
                     bottom: 0;
                     left: unset;
@@ -86,5 +87,162 @@
             }
         }
 
+    }
+}
+
+
+@media all and (max-width: 1170px) {
+    .two-equal-side-blocs {
+        .content {
+            .item {
+                padding: 3rem 0;
+
+                .texts {
+                    h2 {
+                        font-size: 1.4rem;
+                    }
+
+                    p {
+                        line-height: 1.6rem;
+                    }
+                }
+
+                .image-bloc {
+                    img {
+                        width: 406px;
+                        height: 312px;
+                    }
+                }
+            }
+
+            .item-reverse {
+                flex-direction: row-reverse;
+
+                .texts {
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+
+                    p {
+                        text-align: right;
+                    }
+
+                    h2 {
+                        text-align: right;
+                    }
+                }
+
+                .image-bloc {
+
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        left: unset;
+                        transform: none;
+                        right: 0;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media all and (max-width: 990px) {
+    .two-equal-side-blocs {
+        .content {
+            .item {
+                flex-direction: column;
+                padding: 3rem 0;
+                gap: 6rem;
+
+                .texts {
+                    h2 {
+                        font-size: 1.4rem;
+                    }
+
+                    p {
+                        line-height: 1.6rem;
+                    }
+                }
+
+                .image-bloc {
+
+                    height: 16rem;
+                    border-radius: 1rem;
+                    flex: none;
+                    width: 100%;
+
+                    img {
+                        width: 406px;
+                        height: 312px;
+                    }
+                }
+            }
+
+            .item-reverse {
+                flex-direction: column;
+
+                .texts {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    p {
+                        text-align: left;
+                    }
+
+                    h2 {
+                        text-align: left;
+                    }
+                }
+
+                .image-bloc {
+
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        left: unset;
+                        transform: none;
+                        right: 0;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 520px) {
+    .two-equal-side-blocs {
+
+        .content {
+            padding: 1rem;
+            gap: 2rem;
+
+            .item {
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 6rem;
+
+                .texts {
+                    h2 {
+                        font-size: 1.35rem;
+                    }
+
+                }
+
+                .image-bloc {
+
+                    height: 12rem;
+
+                    img {
+                        width: 320px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
     }
 }
