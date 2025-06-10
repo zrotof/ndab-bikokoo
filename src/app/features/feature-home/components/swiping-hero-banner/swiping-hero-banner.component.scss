@@ -4,10 +4,9 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 52px);
   width: 100%;
   color: var(--project-white-primary-color);
-
 
   &::before {
     content: "";
@@ -67,15 +66,15 @@
 
       h1 {
         font-size: 4rem;
-        font-weight: 800;
+        font-weight: 900;
         display: flex;
         flex-direction: column;
         text-align: center;
         color: var(--project-orange-primary-color);
-        text-shadow: 0 4px 3px rgb(71 34 1);        
+        text-shadow: 0 4px 3px rgb(71 34 1);
       }
 
-      p{
+      p {
         font-size: 1.2rem;
       }
     }
@@ -143,11 +142,13 @@
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          background-color: var(--project-orange-primary-color);;
+          background-color: var(--project-orange-primary-color);
+          ;
           pointer-events: none;
 
           fa-icon {
-            color: var(--project-white-primary-color);;
+            color: var(--project-white-primary-color);
+            ;
             font-size: 2rem;
           }
         }
@@ -189,7 +190,7 @@
       }
     }
 
-/*
+    /*
     .swiper-pagination {
       display: flex;
       align-items: center;
@@ -215,5 +216,65 @@
       }
     }
   */
+  }
+}
+
+@media all and (max-width: 825px) {
+  .swiping-hero-banner {
+
+    .content {
+      .texts {
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .swiping-hero-banner {
+    height: 35rem;
+
+    .content {
+      .texts {
+        margin: 0;
+        h1 {
+          font-size: 2.7rem;
+        }
+      }
+
+      .video-thumnail {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 4.5rem;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding: 0.4rem;
+
+        .image-video-wrapper {
+          border-radius: 50%;
+
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+
+          .play-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            fa-icon {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .navigation {
+        display: none;
+      }
+    }
   }
 }

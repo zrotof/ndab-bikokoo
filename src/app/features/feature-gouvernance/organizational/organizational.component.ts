@@ -44,11 +44,11 @@ export class OrganizationalComponent {
       isActive: false
     },
     {
-      label: "Les Administrateurs",
+      label: "Bakèna Matunga",
       isActive: false
     },
     {
-      label: "Bakèna Matunga",
+      label: "Les Administrateurs",
       isActive: false
     }
   ]

@@ -1,5 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, input, ViewEncapsulation } from '@angular/core';
+import { Component, computed, inject, input, ViewEncapsulation } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ConvertTimeZoneToDatePipe } from 'src/app/core/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 import { YoutubeVideoPlayerComponent } from 'src/app/shared/components/youtube-video-player/youtube-video-player.component';
 
@@ -17,4 +18,11 @@ import { YoutubeVideoPlayerComponent } from 'src/app/shared/components/youtube-v
 export class ArticleDataComponent {
   article = input.required<any>();
 
+  sanitizer = inject(DomSanitizer);
+  articleContent = computed(() => {
+    const cleanedContent = this.article().content.replace(/&nbsp;/g, ' ');
+
+    // Étape 2: Sanitize le contenu nettoyé
+    return this.sanitizer.bypassSecurityTrustHtml(cleanedContent);
+  })
 }
