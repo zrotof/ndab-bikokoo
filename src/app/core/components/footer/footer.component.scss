@@ -16,51 +16,14 @@ footer {
         overflow: hidden;
         padding: 3rem;
         gap: 1.5rem;
-
-
-
-        .middle {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
-            padding: 1.5rem 0;
-
-            .logo-bloc {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .rapid-links,
-            .contact,
-            .rgpd {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-                color: var(--project-white-primary-color);
-
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.4rem;
-
-                    li {
-                        a {
-                            color: var(--project-white-primary-color);
-                            cursor: pointer;
-
-                            &:hover {
-                                text-decoration: underline;
-                                color: var(--project-orange-secondary-color);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        
     }
+}
+
+@media all and (max-width: 1024px) {
+footer {
+    .content {
+        border-radius: 2rem;
+        padding: 3rem 1rem 2rem ;
+    }
+}
 }

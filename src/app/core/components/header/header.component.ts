@@ -4,7 +4,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from '../../pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { RouterLink } from '@angular/router';
 
-import { DrawerModule } from 'primeng/drawer';
 import { SubMenuIdEnum } from '../../enums/sub-menu-id.enum';
 import { AboutUsHeaderComponent } from './sub-menus/about-us-header/about-us-header.component';
 import { EngageHeaderComponent } from './sub-menus/engage-header/engage-header.component';
@@ -20,6 +19,8 @@ import { HowWeWorkHeaderComponent } from "./sub-menus/how-we-work-header/how-we-
 import { ContactUsHeaderComponent } from './sub-menus/contact-us-header/contact-us-header.component';
 import { LetUsKnowYouHeaderComponent } from './sub-menus/let-us-know-you-header/let-us-know-you-header.component';
 import { YoungsHeaderComponent } from "./sub-menus/youngs-header/youngs-header.component";
+import { DrawerModule } from 'primeng/drawer';
+import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.component';
 
 @Component({
   selector: 'app-header',
@@ -47,7 +48,8 @@ import { YoungsHeaderComponent } from "./sub-menus/youngs-header/youngs-header.c
     HowWeWorkHeaderComponent,
     ContactUsHeaderComponent,
     LetUsKnowYouHeaderComponent,
-    YoungsHeaderComponent
+    YoungsHeaderComponent,
+    NavSmallScreenComponent
 ]
 })
 
@@ -63,6 +65,8 @@ export class HeaderComponent {
   private submenuTimeout: any;
 
   protected readonly SUBMENUIDENUM = SubMenuIdEnum;
+
+  isSmallNavVisible: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -175,6 +179,10 @@ export class HeaderComponent {
 
   onRemoveSelectedSubMenu() {
     this.currentSubMenu.isActive = false;
+  }
+
+  onBurgerMenu(){
+    this.isSmallNavVisible = !this.isSmallNavVisible 
   }
 
 }

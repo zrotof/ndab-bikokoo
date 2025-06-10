@@ -4,7 +4,7 @@
     width: 100%;
     gap: 1rem;
 
-    .page-title {
+    .title {
         margin-bottom: 30px;
         font-size: 3rem;
         color: var(--project-brown-quaterly-color);
@@ -58,6 +58,55 @@
         .media {
             height: 25rem;
             margin-bottom: 40px;
+        }
+    }
+}
+
+@media all and (max-width: 970px){
+    .article-content{
+        width: 100%;
+    
+        .title{
+            font-size: 2rem;
+            margin-bottom: 25px;
+    
+            &::before{
+                width: 6px;
+            }
+        }
+    
+        .media{
+            height: 22rem;
+        }
+    
+        .data{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 503px){
+    .article-content{
+        .title{
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+    
+            &::before{
+                width: 5px;
+            }
+        }
+    
+        .media{
+            height: 17rem;
+        }
+    
+        .data{
+            p{
+                font-size: 15px;
+                line-height: 23px;
+            }
         }
     }
 }

@@ -69,7 +69,7 @@ export class FeatureCultureTraditionComponent {
       title: "Nos Langues",
       image: "/img/culture-tradition/langue.jpeg",
       descritpion: "La langue principale du peuple Bassa’a est le Bassa’a, une langue bantoue. C’est une langue tonale avec des variations dialectales. Le Bassa’a utilise l’alphabet latin modifié pour son écriture, avec des diacritiques pour représenter les sons spécifiques. Il s'agit plus précisément de l'AGLC : l'Alphabet Général des Langues du Cameroun.",
-      subtag: "J'ai pu gagner des marchés",
+      subtag: "Je parle le Basa'a",
       subtitle: "Proposer des ateliers",
       subDescription: "Je me suis inscris au prochain webnair Apprendre de Basa'a. Grace à Ndab Bikokoo, je peux de n'importe quelle localité, participer aux séminaires proposés par le parcours d'intégration culturelle. Les premières présentation présentent les modules d'apprentissage adaptés aux enfants et aux adulltes. J'ai hate de commencer.",
       links: [
@@ -124,9 +124,9 @@ export class FeatureCultureTraditionComponent {
       title: "Nos Arts",
       image: "/img/about/team/3.jpeg",
       descritpion: "Les Bassa utilisaient le chant, la chanson et les complaintes pour raconter leurs exploits. La danse était toujours associée au chant ; aussi il y avait plusieurs instruments musicaux permettant d'épouser les danses y afférentes.",
-      subtag: "J'ai pu gagner des marchés",
-      subtitle: "Proposer des services",
-      subDescription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, doloremque! Nihil earum, illum explicabo aspernatur adipisci fugiat inventore maxime pariatur accusantium expedita ut dolorum quisquam sint. Distinctio aliquid temporibus praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis cupiditate voluptate eum minus numquam.",
+      subtag: "J'approfondi mes connaissances",
+      subtitle: "Proposer des ateliers",
+      subDescription: "En cours de rédaction ...",
       links: [
         {
           label: "La Musique (danses, …)", link: ""

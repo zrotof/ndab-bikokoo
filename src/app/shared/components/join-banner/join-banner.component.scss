@@ -86,3 +86,25 @@
         }
     }
 }
+
+
+@media all and (max-width: 545px) {
+    .join-banner {
+        height: 40rem;
+
+        .content {
+            .texts {
+                .infos {
+                    padding: 2rem 1rem;
+                    backdrop-filter: blur(0px);
+                    -webkit-backdrop-filter: blur(4px);
+
+                    p {
+                        line-height: 1.5rem;
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+    }
+}

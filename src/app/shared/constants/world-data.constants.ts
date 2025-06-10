@@ -1,79 +1,184 @@
-import { SocialMedia } from "../../core/models/social-media";
 
-export const WORLD_DATA = [
-  { id: 'DE', label: 'Baden Württemberg', value: 148 },
-  { id: 'DE', label: 'Bayern', value: 31 },
-  { id: 'DE', label: 'Berlin', value: 84 },
-  { id: 'DE', label: 'Hambourg', value: 284 },
-  { id: 'DE', label: 'Nordrhein - Westfalen', value: 170 },
-  { id: 'DE', label: 'Nordrhein - Westfalen Bis', value: 60 },
-  { id: 'DE', label: 'Hessen', value: 158 },
-  { id: 'GB', label: 'Nguissi Mère (London)', value: 209 },
-  { id: 'GB', label: 'Nguissi Nord (Manchester)', value: 151 },
-  { id: 'GB', label: 'Birmingham', value: 288 },
-  { id: 'AU', label: 'Australie', value: 259 },
-  { id: 'AT', label: 'Autriche', value: 199 },
-  { id: 'BE', label: 'Belgique Mère', value: 119 },
-  { id: 'BE', label: 'Linoyoi li Belgique', value: 297 },
-  { id: 'BE', label: 'Mawanda ma Belgique Mère', value: 105 },
-  { id: 'BE', label: 'Nsebla u Belgique', value: 99 },
-  { id: 'ES', label: 'Barcelone', value: 226 },
-  { id: 'ES', label: 'Madrid', value: 38 },
-  { id: 'ES', label: 'Nem Masse ma Bilbao', value: 237 },
-  { id: 'FR', label: 'Bilama bi Côte d’Azur', value: 293 },
-  { id: 'FR', label: 'Bordeaux', value: 134 },
-  { id: 'FR', label: 'Cœur de Lyon', value: 71 },
-  { id: 'FR', label: 'Cœur de Toulouse', value: 109 },
-  { id: 'FR', label: "Côte d'azur Monaco", value: 257 },
-  { id: 'FR', label: 'Gloire de Lyon', value: 93 },
-  { id: 'FR', label: 'Grand Est', value: 207 },
-  { id: 'FR', label: 'Grand Ouest', value: 150 },
-  { id: 'FR', label: 'La Lorraine', value: 95 },
-  { id: 'FR', label: 'Le Mans Mère', value: 57 },
-  { id: 'FR', label: 'Like li nkeke li Lyon', value: 163 },
-  { id: 'FR', label: 'Makwassi ma Lyon', value: 45 },
-  { id: 'FR', label: 'Mivag mi Grand Est', value: 173 },
-  { id: 'FR', label: 'Marseille', value: 32 },
-  { id: 'FR', label: 'Masse ma Lyon', value: 135 },
-  { id: 'FR', label: 'Mère de Lyon', value: 107 },
-  { id: 'FR', label: 'Paris Adna', value: 71 },
-  { id: 'FR', label: 'Paris Ambiance', value: 157 },
-  { id: 'FR', label: 'Paris Bisai -', value: 294 },
-  { id: 'FR', label: 'Paris Bords de Marne', value: 246 },
-  { id: 'FR', label: 'Paris Centre', value: 188 },
-  { id: 'FR', label: 'Paris Espoir', value: 193 },
-  { id: 'FR', label: 'Paris Est Mère', value: 73 },
-  { id: 'FR', label: 'Paris Est Etoile', value: 77 },
-  { id: 'FR', label: 'Paris Est Karis', value: 11 },
-  { id: 'FR', label: 'Paris Est Normandie', value: 198 },
-  { id: 'FR', label: 'Paris Est Rive de Seine', value: 264 },
-  { id: 'FR', label: 'Paris Est Sanaga', value: 73 },
-  { id: 'FR', label: 'Paris Est Victoire', value: 154 },
-  { id: 'FR', label: 'Paris Est Village', value: 111 },
-  { id: 'FR', label: 'Paris Grand Nord', value: 235 },
-  { id: 'FR', label: 'Paris Hémle', value: 284 },
-  { id: 'FR', label: 'Paris Lipém -', value: 87 },
-  { id: 'FR', label: 'Paris Lumière', value: 297 },
-  { id: 'FR', label: 'Paris Maéba', value: 202 },
-  { id: 'FR', label: 'Paris Maliga', value: 177 },
-  { id: 'FR', label: 'Paris Maliga 18ième -', value: 28 },
-  { id: 'FR', label: 'Paris Mahol', value: 236 },
-  { id: 'FR', label: 'Paris Manogla', value: 15 },
-  { id: 'FR', label: 'Paris Midi Convivialité', value: 151 },
-  { id: 'FR', label: 'Paris Midi Express', value: 59 },
-  { id: 'FR', label: 'Paris Midi Mère', value: 235 },
-  { id: 'IT', label: 'Florence', value: 167 },
-  { id: 'IT', label: 'Milan Mère', value: 284 },
-  { id: 'IT', label: 'Porta di Roma', value: 75 },
-  { id: 'IT', label: 'Rome', value: 204 },
-  { id: 'LU', label: 'Trois Frontières', value: 162 },
-  { id: 'NL', label: 'Hollande', value: 64 },
-  { id: 'CH', label: 'Mahol ma Suisse', value: 211 },
-  { id: 'CH', label: 'Mane ma Suisse', value: 120 },
-  { id: 'US', label: 'USA Mère', value: 182 },
-  { id: 'US', label: 'Libak li America', value: 239 },
-  { id: 'US', label: 'Liyomba li America', value: 81 },
-  { id: 'US', label: 'Massoda ma America', value: 40 },
-  { id: 'US', label: 'Minkwel mi America', value: 118 },
-  { id: 'JP', label: 'Tokyo', value: 264 }
-]
+import { CountryCantonData } from '../../core/models/map';
+
+export const MAHOL_COUNTRIES_DATA: CountryCantonData[]  = [
+    {
+      id: 'DE',
+      name: 'Germany',
+      cantons: [
+        { name: 'Baden Württemberg', population: 148 },
+        { name: 'Bayern', population: 31 },
+        { name: 'Berlin', population: 84 },
+        { name: 'Hambourg', population: 284 },
+        { name: 'Nordrhein - Westfalen', population: 170 },
+        { name: 'Nordrhein - Westfalen Bis', population: 60 },
+        { name: 'Hessen', population: 158 },
+      ],
+      latitude: 51.1657, // Centre approximatif de l'Allemagne
+      longitude: 10.4515
+    },
+    {
+      id: 'GB',
+      name: 'United Kingdom',
+      cantons: [
+        { name: 'Nguissi Mère (London)', population: 209 },
+        { name: 'Nguissi Nord (Manchester)', population: 151 },
+        { name: 'Birmingham', population: 288 },
+      ],
+      latitude: 55.3781, // Centre approximatif du Royaume-Uni
+      longitude: -3.4360
+    },
+    {
+      id: 'AU',
+      name: 'Australia',
+      cantons: [
+        { name: 'Australie', population: 259 },
+      ],
+      latitude: -25.2744, // Centre géographique de l'Australie
+      longitude: 133.7751
+    },
+    {
+      id: 'AT',
+      name: 'Austria',
+      cantons: [
+        { name: 'Autriche', population: 199 },
+      ],
+      latitude: 48.2082, // Vienne
+      longitude: 16.3738
+    },
+    {
+      id: 'BE',
+      name: 'Belgium',
+      cantons: [
+        { name: 'Belgique Mère', population: 119 },
+        { name: 'Linoyoi li Belgique', population: 297 },
+        { name: 'Mawanda ma Belgique Mère', population: 105 },
+        { name: 'Nsebla u Belgique', population: 99 },
+      ],
+      latitude: 50.8503, // Bruxelles
+      longitude: 4.3517
+    },
+    {
+      id: 'ES',
+      name: 'Spain',
+      cantons: [
+        { name: 'Barcelone', population: 226 },
+        { name: 'Madrid', population: 38 },
+        { name: 'Nem Masse ma Bilbao', population: 237 },
+      ],
+      latitude: 40.4168, // Madrid
+      longitude: -3.7038
+    },
+    {
+      id: 'FR',
+      name: 'France',
+      cantons: [
+        { name: 'Bilama bi Côte d’Azur', population: 293 },
+        { name: 'Bordeaux', population: 134 },
+        { name: 'Cœur de Lyon', population: 71 },
+        { name: 'Cœur de Toulouse', population: 109 },
+        { name: "Côte d'azur Monaco", population: 257 },
+        { name: 'Gloire de Lyon', population: 93 },
+        { name: 'Grand Est', population: 207 },
+        { name: 'Grand Ouest', population: 150 },
+        { name: 'La Lorraine', population: 95 },
+        { name: 'Le Mans Mère', population: 57 },
+        { name: 'Like li nkeke li Lyon', population: 163 },
+        { name: 'Makwassi ma Lyon', population: 45 },
+        { name: 'Mivag mi Grand Est', population: 173 },
+        { name: 'Marseille', population: 32 },
+        { name: 'Masse ma Lyon', population: 135 },
+        { name: 'Mère de Lyon', population: 107 },
+        { name: 'Paris Adna', population: 71 },
+        { name: 'Paris Ambiance', population: 157 },
+        { name: 'Paris Bisai -', population: 294 },
+        { name: 'Paris Bords de Marne', population: 246 },
+        { name: 'Paris Centre', population: 188 },
+        { name: 'Paris Espoir', population: 193 },
+        { name: 'Paris Est Mère', population: 73 },
+        { name: 'Paris Est Etoile', population: 77 },
+        { name: 'Paris Est Karis', population: 11 },
+        { name: 'Paris Est Normandie', population: 198 },
+        { name: 'Paris Est Rive de Seine', population: 264 },
+        { name: 'Paris Est Sanaga', population: 73 },
+        { name: 'Paris Est Victoire', population: 154 },
+        { name: 'Paris Est Village', population: 111 },
+        { name: 'Paris Grand Nord', population: 235 },
+        { name: 'Paris Hémle', population: 284 },
+        { name: 'Paris Lipém -', population: 87 },
+        { name: 'Paris Lumière', population: 297 },
+        { name: 'Paris Maéba', population: 202 },
+        { name: 'Paris Maliga', population: 177 },
+        { name: 'Paris Maliga 18ième -', population: 28 },
+        { name: 'Paris Mahol', population: 236 },
+        { name: 'Paris Manogla', population: 15 },
+        { name: 'Paris Midi Convivialité', population: 151 },
+        { name: 'Paris Midi Express', population: 59 },
+        { name: 'Paris Midi Mère', population: 235 },
+      ],
+      latitude: 46.2276, // Centre géographique de la France
+      longitude: 2.2137
+    },
+    {
+      id: 'IT',
+      name: 'Italy',
+      cantons: [
+        { name: 'Florence', population: 167 },
+        { name: 'Milan Mère', population: 284 },
+        { name: 'Porta di Roma', population: 75 },
+        { name: 'Rome', population: 204 },
+      ],
+      latitude: 41.9028, // Rome
+      longitude: 12.4964
+    },
+    {
+      id: 'LU',
+      name: 'Luxembourg',
+      cantons: [
+        { name: 'Trois Frontières', population: 162 },
+      ],
+      latitude: 49.8153, // Luxembourg-Ville
+      longitude: 6.1296
+    },
+    {
+      id: 'NL',
+      name: 'Netherlands',
+      cantons: [
+        { name: 'Hollande', population: 64 },
+      ],
+      latitude: 52.3676, // Amsterdam
+      longitude: 4.9041
+    },
+    {
+      id: 'CH',
+      name: 'Switzerland',
+      cantons: [
+        { name: 'Mahol ma Suisse', population: 211 },
+        { name: 'Mane ma Suisse', population: 120 },
+      ],
+      latitude: 46.8182, // Centre approximatif de la Suisse
+      longitude: 8.2275
+    },
+    {
+      id: 'US',
+      name: 'United States',
+      cantons: [
+        { name: 'USA Mère', population: 182 },
+        { name: 'Libak li America', population: 239 },
+        { name: 'Liyomba li America', population: 81 },
+        { name: 'Massoda ma America', population: 40 },
+        { name: 'Minkwel mi America', population: 118 },
+      ],
+      latitude: 39.8283, // Centre géographique des États-Unis contigus
+      longitude: -98.5795
+    },
+    {
+      id: 'JP',
+      name: 'Japan',
+      cantons: [
+        { name: 'Tokyo', population: 264 },
+      ],
+      latitude: 35.6762, // Tokyo
+      longitude: 139.6503
+    }
+  ];

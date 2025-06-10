@@ -1,0 +1,83 @@
+.nav-small-screen {
+
+    .p-panelmenu-panel {
+        background: none !important;
+        border: none;
+        border-top: 1px solid white !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+
+        .p-panelmenu-header {
+            .p-panelmenu-header-content {
+                a {
+                    display: inline-flex;
+                    padding: 1rem 0.5rem;
+                    width: 100%;
+                    color: var(--project-white-primary-color);
+                    border-radius: 0 !important;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: none !important;
+                        color: var(--project-black-primary-color);
+                    }
+
+                    .left {
+                        display: flex;
+                        gap: 1rem;
+                        flex: 1;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .p-panelmenu-content-container {
+            .p-panelmenu-content {
+                p-panelmenulist {
+                    p-panelmenu-sub {
+                        .p-panelmenu-submenu {
+                            .p-panelmenu-item {
+                                .p-panelmenu-item-content {
+                                    a {
+                                        display: inline-flex;
+                                        padding: 0.5rem !important;
+                                        cursor: pointer;
+                                        color: var(--project-white-primary-color) !important;
+
+                                        &:hover {
+                                            background: none !important;
+                                            color: var(--project-black-primary-color) !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+
+    .bottom {
+        height: 45px;
+        position: fixed;
+        display: flex;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--project-white-primary-color);
+
+        button {
+            flex: 1;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+}

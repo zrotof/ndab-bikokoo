@@ -15,23 +15,12 @@
     gap: 4rem;
     margin: auto;
 
-    .image-wrapper {
-      position: relative;
-      width: 600px;
-      height: 600px;
-
-      img {
-        object-fit: cover;
-        object-position: top;
-      }
-    }
-
     .text-bloc {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
       width: calc(100% - 550px);
-      align-self: center;
+      margin-bottom: 2rem;
+      align-self: flex-start;
 
       .texts {
         position: relative;
@@ -46,11 +35,11 @@
           position: absolute;
           font-size: 7rem;
           color: var(--project-brown-primary-color);
-          left: -5rem;
+          right: -5rem !important;
           top: -5rem;
         }
 
-        .sub-title {
+        h2 {
           font-weight: 900;
           max-width: 100%;
           font-size: 1.5rem;
@@ -66,30 +55,118 @@
         }
       }
     }
+
+    .image-name-role {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 600px;
+
+      .name-role {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        span {
+          font-weight: 300;
+          padding: 0.5rem 1rem;
+          border-radius: 100px;
+          color: var(--project-white-primary-color);
+          font-weight: 400;
+          background-color: var(--project-brown-quaterly-color);
+        }
+      }
+
+      img {
+        object-fit: cover;
+        object-position: top;
+      }
+    }
   }
+}
 
-  .content2 {
-    padding: 0 0 0 2rem;
+@media all and (max-width: 1300px) {
+  .president-words {
+    flex-direction: column;
+    justify-content: center;
 
-    .text-bloc {
-      margin-bottom: 2rem;
-      align-self: flex-start;
+    .content {
+      gap: 3rem;
+      margin: auto;
+      flex-direction: column;
+      align-items: center;
 
-      .texts {
+      .text-bloc {
+        width: 100%;
 
-        fa-icon {
-          position: absolute;
-          font-size: 7rem;
-          color: var(--project-brown-primary-color);
-          left: unset;
-          right: -5rem !important;
-          top: -5rem;
+        .texts {
+          fa-icon {
+            display: none;
+          }
         }
       }
     }
+  }
+}
 
-    .image-wrapper {
-      height: 514px;
+@media all and (max-width: 830px) {
+  .president-words {
+    .content {
+      margin: auto;
+      flex-direction: column;
+      align-items: center;
+
+      .image-name-role {
+        
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 670px) {
+  .president-words {
+    .content {
+      .image-name-role {
+          width: 100%;
+
+        img {
+          height: 30rem;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 545px) {
+  .president-words {
+    .content {
+
+      .text-bloc {
+        .texts {
+          padding: 2rem 1rem;
+
+          h2 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .image-name-role {
+
+        img{
+          height: 22rem;
+        }
+      }
     }
   }
 }

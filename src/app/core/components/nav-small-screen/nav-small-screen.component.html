@@ -1,0 +1,22 @@
+<div class="nav-small-screen">
+    <p-panelMenu [model]="menuItems" styleClass="sidebar-panelmenu">
+        <ng-template #item let-item>
+            <a pRipple [routerLink]="item.routerLink">
+                <div class="left">
+                    <span>
+                        {{ item.label }}
+                    </span>
+                </div>
+
+                @if (item.items){
+                     <i class="pi pi-angle-right"></i>
+                }
+            </a>
+        </ng-template>
+    </p-panelMenu>
+
+    <div class="bottom">
+        <button>Se connecter</button>
+        <button>S'inscrire</button>
+    </div>
+</div>

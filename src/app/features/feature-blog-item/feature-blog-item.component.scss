@@ -18,3 +18,23 @@
         }
     }
 }
+
+
+@media all and (max-width: 970px){
+    .feature-blog-item{
+            margin-top: 10rem;
+
+        .content{
+            flex-direction: column;
+            width: 100%;
+    
+            app-article-data{
+                width: 100%;
+            }
+    
+            app-article-detail-side-bloc{
+                width: 100%;
+            }
+        }
+    }
+}

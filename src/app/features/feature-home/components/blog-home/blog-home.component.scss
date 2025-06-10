@@ -134,3 +134,142 @@
         }
     }
 }
+
+@media all and (max-width: 1170px) {
+    .blog-home {
+        margin-bottom: 6rem;
+
+        .content {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+
+                li {
+                    .tag {
+                        padding: 5px 10px;
+                        font-size: 0.92rem;
+                        font-weight: 500;
+                        background-color: #c9c9c9;
+                        border-radius: 5px;
+                        width: fit-content;
+                    }
+
+                    img {
+                        height: 250px;
+                    }
+
+                    .bottom {
+                        .texts {
+
+                            h3 {
+                                font-size: 1.25rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1170px) {
+    .blog-home {
+        margin-bottom: 6rem;
+
+        .content {
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+
+                li {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 800px) {
+    .blog-home {
+        margin-bottom: 5rem;
+
+        .content {
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                li {
+                    img {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 700px) {
+    .blog-home {
+        margin-bottom: 5rem;
+
+        .content {
+
+            h2 {
+                font-size: 2rem;
+                padding: 0.5em 1rem
+            }
+
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                li {
+                    img {
+                        height: 250px;
+                    }
+
+                    .bottom {
+                    gap: 1.5rem;
+                    padding: 0;
+
+                    .texts {
+
+                        h3 {
+                            font-size: 1.15rem;
+                        }
+
+                        p {
+                            font-size: 0.95rem;
+                            line-height: 1.45rem;
+                        }
+                    }
+                }
+
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .blog-home {
+        margin-bottom: 4rem;
+
+        .content {
+            ul {
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+        }
+    }
+}

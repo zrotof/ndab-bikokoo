@@ -52,7 +52,7 @@
                     <app-how-we-work-header></app-how-we-work-header>
                     }
                     @case (SUBMENUIDENUM.OUR_YOUNGS) {
-                      <app-youngs-header></app-youngs-header>
+                    <app-youngs-header></app-youngs-header>
                     }
                     @case (SUBMENUIDENUM.AGENDA) {
                     <app-agenda-header></app-agenda-header>
@@ -93,6 +93,22 @@
         <a routerLink="/se-connecter" class="login">Se connecter</a>
         <a routerLink="/sinscrire" class="register">S'inscrire</a>
       </div>
+
+      <div class="burger" [class]="isSmallNavVisible === true ? 'show-cross' : ''" (click)="onBurgerMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
+
+  <p-drawer [(visible)]="isSmallNavVisible" [closable]="true" position="right" styleClass="!w-full md:!w-80 lg:!w-[30rem]">
+    <ng-template #header>
+            <p>
+              <span class="header-drawer">NDAB BIKOKOO</span>
+              <span class="bottom">Pil Gweha</span>
+            </p>
+    </ng-template>
+    <app-nav-small-screen></app-nav-small-screen>
+</p-drawer>
 </header>

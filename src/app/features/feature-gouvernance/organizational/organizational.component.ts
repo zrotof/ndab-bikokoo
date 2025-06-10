@@ -46,6 +46,10 @@ export class OrganizationalComponent {
     {
       label: "Les Administrateurs",
       isActive: false
+    },
+    {
+      label: "Bakèna Matunga",
+      isActive: false
     }
   ]
 
