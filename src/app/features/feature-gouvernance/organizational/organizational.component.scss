@@ -40,7 +40,6 @@
     .how-it-work {
         display: flex;
         justify-content: center;
-
         background-color: var(--project-brown-quaterly-color);
         width: 100%;
         padding-top: 5rem;
@@ -70,10 +69,12 @@
                     background-color: var(--project-white-primary-color);
                     color: var(--project-blue-primary-color);
                     border-radius: 100px;
-                    padding: 0.7rem 2rem;
+                    padding: 0.6rem 1rem;
                     font-weight: 600;
                     cursor: pointer;
                     white-space: nowrap;
+                    width: 240px;
+                    text-align: center;
                 }
 
                 .activeTab {
