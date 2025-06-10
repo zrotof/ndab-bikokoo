@@ -7,6 +7,10 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/core/pipes/conv
 import { YoutubePlayerModalComponent } from 'src/app/shared/components/youtube-player-modal/youtube-player-modal.component';
 import { Swiper, SwiperOptions } from 'swiper/types';
 
+import { register } from 'swiper/element/bundle';
+
+register();
+
 @Component({
   selector: 'app-swiping-hero-banner',
   templateUrl: './swiping-hero-banner.component.html',
@@ -34,12 +38,12 @@ export class SwipingHeroBannerComponent {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
-      clickable: true
+      clickable: true,
     }
   };
 
   ngAfterViewInit(): void {
-    if (this.swiperRef) {
+    if (this.swiperRef && this.swiperRef.nativeElement) {
       Object.assign(this.swiperRef.nativeElement, this.config);
       this.swiperRef.nativeElement.initialize();  // Initialize Swiper
       this.swiper = this.swiperRef.nativeElement.swiper;

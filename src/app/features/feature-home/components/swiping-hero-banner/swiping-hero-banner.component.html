@@ -1,5 +1,5 @@
 <div class="swiping-hero-banner">
-  <swiper-container #swiperRef [config]="config">
+  <swiper-container #swiperRef [config]="config" init="false">
     <swiper-slide>
       <div class="hero-view">
         <img ngSrc="/img/hero/hero.jpeg" alt="" fill priority />
@@ -10,7 +10,7 @@
         <img ngSrc="/img/hero/groups.jpeg" alt="" fill priority />
       </div>
     </swiper-slide>
-    
+
     <swiper-slide>
       <div class="hero-view">
         <img ngSrc="/img/hero/women.jpeg" alt="" fill priority />
@@ -27,6 +27,7 @@
         <img ngSrc="/img/hero/ndab.jpeg" alt="" fill priority />
       </div>
     </swiper-slide>
+
   </swiper-container>
 
   <div class="content header-container">
@@ -41,14 +42,13 @@
         <img src="img/home/events/paris.jpeg" alt="" />
 
         <div class="play-icon-wrapper">
-          <fa-icon
-            [icon]="'faPlay' | convertStringLabelToFontawesomeIcon"
-          ></fa-icon>
+          <fa-icon [icon]="'faPlay' | convertStringLabelToFontawesomeIcon"></fa-icon>
         </div>
       </div>
     </div>
 
     <div class="swiper-pagination"></div>
+
 
     <div class="navigation">
       <button class="prev" (click)="onNavigationEvent(-1)">
