@@ -1,46 +1,45 @@
+<div class="carousel-progress-container">
+  <div #progressBar class="carousel-progress-bar"></div>
+</div>
+
 <div class="swiping-hero-banner">
-  <swiper-container #swiperRef [config]="config" init="false">
+  <swiper-container #swiperRef init="false">
     <swiper-slide>
-      <div class="hero-view">
-        <img ngSrc="/img/hero/x.jpeg" alt="" fill priority />
+      <div class="hero-view slide-one">
+        <img ngSrc="/img/hero/ndab-fondators.jpeg" alt="Vue héroïque d'un événement" fill priority />
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="hero-view">
-        <img ngSrc="/img/hero/x-show.jpeg" alt="" fill priority />
-      </div>
-    </swiper-slide>
-
-    <swiper-slide>
-      <div class="hero-view">
-        <img ngSrc="/img/hero/crowd-d-w.jpeg" alt="" fill priority />
-      </div>
-    </swiper-slide>
-
-    <swiper-slide>
-      <div class="hero-view">
-        <img ngSrc="/img/hero/both-x.jpeg" alt="" fill priority />
+        <img ngSrc="/img/hero/x.jpeg" alt="Vue héroïque de scène de spectacle" fill />
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="hero-view">
-        <img ngSrc="/img/hero/blanc-x.jpeg" alt="" fill priority />
+        <img ngSrc="/img/hero/x-show.jpeg" alt="Vue héroïque d'une foule en concert" fill />
       </div>
     </swiper-slide>
-
+    <swiper-slide>
+      <div class="hero-view">
+        <img ngSrc="/img/hero/roger-x.jpeg" alt="Vue héroïque de deux artistes sur scène" fill />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="hero-view">
+        <img ngSrc="/img/hero/blanc-x.jpeg" alt="Vue héroïque minimaliste d'un événement" fill />
+      </div>
+    </swiper-slide>
   </swiper-container>
 
   <div class="content header-container">
     <div class="texts">
-      <h1>
-        Ndab Bìkòkoo Pil Gweha
-      </h1>
+      <h1>Ndab Bìkokoo Pil Gweha</h1>
       <p>Mbok Kwog Mbog Nyodag</p>
     </div>
+
     <div class="video-thumnail" (click)="onVideoClick()">
       <div class="image-video-wrapper">
-        <img src="img/home/events/paris.jpeg" alt="" />
-
+        <img src="img/home/events/paris.jpeg" alt="Miniature de vidéo de l'événement de Paris" />
         <div class="play-icon-wrapper">
           <fa-icon [icon]="'faPlay' | convertStringLabelToFontawesomeIcon"></fa-icon>
         </div>
@@ -49,13 +48,11 @@
 
     <div class="swiper-pagination"></div>
 
-
     <div class="navigation">
-      <button class="prev" (click)="onNavigationEvent(-1)">
+      <button class="prev" (click)="onNavigationEvent(-1)" aria-label="Slide précédente">
         <i class="pi pi-arrow-left"></i>
       </button>
-
-      <button class="next" (click)="onNavigationEvent(1)">
+      <button class="next" (click)="onNavigationEvent(1)" aria-label="Slide suivante">
         <i class="pi pi-arrow-right"></i>
       </button>
     </div>

@@ -15,6 +15,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withComponentInputBinding(), withInMemoryScrolling({scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled'}) ),
+    provideClientHydration(),
     provideHttpClient(),
     importProvidersFrom(FontAwesomeModule),
     provideAnimationsAsync(),

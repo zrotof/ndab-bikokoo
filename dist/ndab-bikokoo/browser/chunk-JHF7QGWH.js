@@ -1,0 +1,1 @@
+import{Ob as o,lb as n}from"./chunk-5HOWFOAW.js";var r=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-feature-youngs"]],decls:1,vars:0,consts:[[1,"feature-youngs"]],template:function(t,i){t&1&&o(0,"div",0)},encapsulation:2})}}return e})();export{r as FeatureYoungsComponent};

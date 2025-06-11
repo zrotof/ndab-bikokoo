@@ -63,6 +63,23 @@ header {
                 border: none;
                 font-size: 1rem;
                 cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease; // Ajoute une transition pour la couleur de fond et le texte
+
+                &.green {
+                  color: var(--project-green-primary-color);
+                }
+
+                &.blue {
+                  color: var(--project-blue-primary-color);
+                }
+
+                &.brown {
+                  color: var(--project-brown-quaterly-color);
+                }
+
+                &.black {
+                  color: var(--project-black-primary-color);
+                }
               }
 
               .dropdown-menu {
@@ -312,7 +329,6 @@ header {
   }
 }
 
-
 @media all and (max-width: 1270px) {
   header {
     .main-header {
@@ -347,7 +363,6 @@ header {
     }
   }
 }
-
 
 @media all and (max-width: 1170px) {
   header {

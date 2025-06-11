@@ -11,7 +11,7 @@
 
           <li class="nav-item" [class.has-submenu]="item.children">
             @if (item.children) {
-            <button class="nav-link" (mouseenter)="onEnterMenu(item)" (mouseleave)="onLeaveMenu(item)"
+            <button class="nav-link" [class]="item.open ? item.class : ''" (mouseenter)="onEnterMenu(item)" (mouseleave)="onLeaveMenu(item)"
               (mouseover)="onMenuHovered($index)" aria-haspopup="true" [attr.aria-expanded]="item.open">
               {{ item.label }}
               <fa-icon [icon]="'faAngleDown' | convertStringLabelToFontawesomeIcon">

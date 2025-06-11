@@ -126,7 +126,7 @@ export class HeaderComponent {
     },
     {
       label: 'Contacts',
-      class: 'black',
+      class: 'brown',
       children: [
         { label: 'Contactez-nous', link: '/contactez-nous', image: "/img/picto/5-5-contact-us.jpeg", id: this.SUBMENUIDENUM.CONTACT_US, isActive: false },
         { label: 'Vous faire connaitre', link: '/vehicles/motorbikes', image: "/img/picto/5-1-tel-email.png", id: this.SUBMENUIDENUM.PROFESSIONAL, isActive: false },

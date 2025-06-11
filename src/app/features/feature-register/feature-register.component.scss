@@ -1,7 +1,3 @@
-$primary-color: #007bff;
-$completed-color: #28a745;
-$neutral-color: #ccc;
-
 .stepper-container {
     display: flex;
     justify-content: center;
@@ -29,6 +25,10 @@ $neutral-color: #ccc;
             margin-bottom: 4rem;
             color: var(--project-orange-secondary-color);
         }
+
+        app-steps-menu{
+            width: 100%;
+        }
         
         .stepper-content {
             display: flex;
@@ -38,7 +38,7 @@ $neutral-color: #ccc;
 
             h2 {
                 text-align: left;
-                color: $primary-color;
+                color: var(--project-blue-primary-color);
             }
 
             label {
@@ -108,7 +108,6 @@ $neutral-color: #ccc;
     }
 }
 
-
 .stepper-nav {
     display: flex;
     justify-content: space-between;
@@ -128,6 +127,45 @@ $neutral-color: #ccc;
         &:disabled {
             background-color: var(--project-white-secondary-color);
             cursor: not-allowed;
+        }
+    }
+}
+
+
+@media all and (max-width: 520px) {
+    .feature-login {
+        .left {
+            height: 15rem;
+
+            .bottom {
+                padding: 0 1rem 1rem 0;
+                width: fit-content;
+
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    text-align: left;
+                }
+
+                p {
+                    padding: 0.4rem 0.8rem;
+                }
+            }
+        }
+
+        .right {
+
+            h1 {
+                margin-bottom: 3rem;
+            }
+
+            p {
+                flex-direction: column;
+            }
+
+            form {
+                margin-top: 3rem;
+            }
         }
     }
 }

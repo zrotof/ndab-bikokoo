@@ -1,0 +1,128 @@
+.world-map {
+    display: block;
+    max-width: 100%;
+    height: 600px;
+}
+
+/* Overlay for the modal */
+.country-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure it's above the map */
+}
+
+/* Modal content box */
+.country-modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    /* Dark background for the modal */
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    /* Responsive width */
+    max-height: 80vh;
+    /* Limit height and allow scrolling for many cantons */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    position: relative;
+    /* For positioning the close button */
+}
+
+.country-modal-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 2.5rem;
+    color: #ffcc00;
+    /* A contrasting color for headings */
+}
+
+.country-modal-content span {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--project-black-primary-color);
+    font-weight: 500;
+    background-color: var(--project-white-primary-color);
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.country-modal-content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.country-modal-content li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle separator */
+    font-size: 0.95em;
+}
+
+.country-modal-content li:last-child {
+    border-bottom: none;
+    /* No border for the last item */
+}
+
+.close-modal-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #6e422e;
+    /* Your canton highlight color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.close-modal-button:hover {
+    background-color: #8c573d;
+    /* Slightly lighter on hover */
+}
+
+
+@media all and (max-width: 1024px) {
+    .world-map {
+        height: 600px;
+    }
+}
+
+@media all and (max-width: 840px) {
+    .world-map {
+        height: 500px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .world-map {
+        height: 400px;
+    }
+}
+
+@media all and (max-width: 540px) {
+    .world-map {
+        height: 300px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .world-map {
+        height: 250px;
+    }
+}
