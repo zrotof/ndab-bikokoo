@@ -45,12 +45,14 @@ export class WorldMapComponent {
     this.chart = this.root.container.children.push(
       am5map.MapChart.new(this.root, {
         projection: am5map.geoNaturalEarth1(), // Projection Natural Earth 1
+        panX: "none",
+        panY: "none",
+        wheelX: "none",
+        wheelY: "none",
         paddingLeft: 0,
         paddingRight: 0,
         paddingBottom: 0,
-        paddingTop: 0,
-        wheelX: "none",
-        wheelY: "none"
+        paddingTop: 0
       })
     );
 

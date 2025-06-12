@@ -248,7 +248,7 @@ header {
 
         .login {
           background-color: var(--project-white-primary-color);
-          color: var(--project-black-primary-color);
+          color: var(--project-blue-primary-color);
         }
 
         .register {
@@ -416,6 +416,24 @@ header {
             transform: rotate(45deg) translate(2px, -4px);
             background-color: var(--project-orange-primary-color);
           }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 545px) {
+  header {
+    .main-header {
+      .content {
+
+        .logo-wrapper {
+          height: 70px;
+          width: 57px;
+        }
+        
+        .main-nav {
+          display: none;
         }
       }
     }

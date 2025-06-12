@@ -7,39 +7,45 @@
 
             <div class="texts">
                 <p>
-                    Dans un contexte où l'unité et l'entraide sont plus cruciales que jamais, l'approche par espaces de rassemblement se présente comme une solution comprise et prometteuse. Imaginez un écosystème où acteurs de la diaspora issue de la grotte unissent leurs forces pour optimiser la communauté d'intérêts qui existe entre eux !                
+                    Dans un contexte où l'unité et l'entraide sont plus cruciales que jamais, l'approche par espaces de
+                    rassemblement se présente comme une solution comprise et prometteuse. Imaginez un écosystème où
+                    acteurs de la diaspora issue de la grotte unissent leurs forces pour optimiser la communauté
+                    d'intérêts qui existe entre eux !
                 </p>
-    
+
                 <p>
-                    Le programme évènementiel Ndab Bìkòkoo offre cette opportunité unique : rassembler les membres, cadres et experts autour de sujets de découverte et d'assimilation des cultures Ɓàsà'a et organiser la convergence des synergies. Ensemble, améliorons notre connaissance et l'efficience des actions solidaires !
+                    Le programme évènementiel Ndab Bìkòkoo offre cette opportunité unique : rassembler les membres,
+                    cadres et experts autour de sujets de découverte et d'assimilation des cultures Ɓàsà'a et organiser
+                    la convergence des synergies. Ensemble, améliorons notre connaissance et l'efficience des actions
+                    solidaires !
                 </p>
             </div>
             <button routerLink="/evenements"> Voir tout</button>
         </div>
 
-        <div class="events">
-            @for (event of events$ | async; track $index) {
-                        <div class="event" [style.backgroundColor]="event.color">
-                            <div class="top">
-                                {{event.typeName}}
-                            </div>
-                            <div class="image-wrapper">
-                                <img ngSrc={{event.coverImage}} alt="" fill>
-                            </div>
-                            <div class="bottom">
-                                <span>
-                                    <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>  
-                                    {{event.dateStart | dateRange:event.dateEnd}}
-                                 </span>
-                                <span> 
-                                    <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>  
-                                    {{event.town}},
-                                    {{event.country}}  
-                                </span>
-                            </div>
-                        </div>
-                 
-            }
-        </div>
+        <p-carousel [value]="(events$ | async)!" [numVisible]="4" [numScroll]="1" [circular]="true"
+            [responsiveOptions]="responsiveOptions">
+            <ng-template let-event #item>
+                <div class="event" [style.backgroundColor]="event.color">
+                <div class="top">
+                    {{event.typeName}}
+                </div>
+                <div class="image-wrapper">
+                    <img ngSrc={{event.coverImage}} alt="" fill>
+                </div>
+                <div class="bottom">
+                    <span>
+                        <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        {{event.dateStart | dateRange:event.dateEnd}}
+                    </span>
+                    <span>
+                        <fa-icon [icon]=" 'faLocationDot' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        {{event.town}},
+                        {{event.country}}
+                    </span>
+                </div>
+            </div>
+            </ng-template>
+        </p-carousel>
     </div>
 </div>

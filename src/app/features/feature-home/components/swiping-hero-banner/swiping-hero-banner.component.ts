@@ -33,14 +33,13 @@ export class SwipingHeroBannerComponent implements AfterViewInit {
     slidesPerView: 1,
     loop: true,
     autoplay: {
-      delay: 7000,
+      delay: 5000,
       disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-    mousewheel: true,
     allowTouchMove: true
   };
 
