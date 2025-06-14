@@ -88,7 +88,7 @@ export class HeaderComponent {
       label: 'La Maison',
       class: 'green',
       children: [
-        { label: 'À propos de nous?', link: '/a-propos', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ABOUT_US, isActive: false },
+        { label: 'À propos de nous', link: '/a-propos', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ABOUT_US, isActive: false },
         { label: 'Notre offre', link: '/notre-offre', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.OUR_OFFER, isActive: false },
         { label: "S'engager", link: '/sengager', image: "/img/picto/1-2-notre-approche.png", id: this.SUBMENUIDENUM.ENGAGE, isActive: false }
       ],
@@ -117,10 +117,10 @@ export class HeaderComponent {
       label: 'Culture et tradition',
       class: 'brown',
       children: [
-        { label: 'Histoire', link: '/culture-et-tradition', image: "/img/picto/4-1-langue-basaa.png", id: this.SUBMENUIDENUM.HISTORY, isActive: false },
-        { label: 'Langues', link: '/culture-et-tradition', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.LANGUAGES, isActive: false },
-        { label: 'Us et coutumes', link: '/culture-et-tradition', image: "/img/picto/4-3-danses.png", id: this.SUBMENUIDENUM.US, isActive: false },
-        { label: 'Art', link: '/culture-et-tradition', image: "/img/picto/4-4-notre-gastronomie.png", id: this.SUBMENUIDENUM.ART, isActive: false },
+        { label: "L'histoire", link: '/culture-et-tradition', image: "/img/picto/4-1-langue-basaa.png", id: this.SUBMENUIDENUM.HISTORY, isActive: false },
+        { label: 'Les langues', link: '/culture-et-tradition', image: "/img/picto/2-1-organigramme.png", id: this.SUBMENUIDENUM.LANGUAGES, isActive: false },
+        { label: 'Les Us et coutumes', link: '/culture-et-tradition', image: "/img/picto/4-3-danses.png", id: this.SUBMENUIDENUM.US, isActive: false },
+        { label: 'Les arts', link: '/culture-et-tradition', image: "/img/picto/4-4-notre-gastronomie.png", id: this.SUBMENUIDENUM.ART, isActive: false },
       ],
       open: false
     },

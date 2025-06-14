@@ -7,12 +7,14 @@ import { JoinBannerComponent } from "../../shared/components/join-banner/join-ba
 import { TestimoniesComponent } from './components/testimonies/testimonies.component';
 import { WorldMapProgressionComponent } from "./components/world-map-progression/world-map-progression.component";
 import { BlogHomeComponent } from './components/blog-home/blog-home.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-feature-home',
   templateUrl: './feature-home.component.html',
   styleUrl: './feature-home.component.scss',
   imports: [
+    NgOptimizedImage,
     SwipingHeroBannerComponent,
     PresidentWordsComponent,
     NextEventsComponent,

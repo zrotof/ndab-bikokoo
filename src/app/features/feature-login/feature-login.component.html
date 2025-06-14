@@ -21,12 +21,12 @@
         <form [formGroup]="loginForm" (submit)="onSubmit()">
             <div class="field">
                 <label>Nom d'utilisateur</label>
-                <input type="text" pInputText formControlName="username" placeholder="Entrez votre nbom d'utilisateur">
+                <input type="text" pInputText formControlName="username" readonly placeholder="Entrez votre nbom d'utilisateur">
             </div>
 
             <div class="field">
                 <label>Mot de passe</label>
-                <p-password formControlName="password" [feedback]="false" placeholder="Entrez votre mot de passe"
+                <p-password formControlName="password" [feedback]="false" [disabled]="true" placeholder="Entrez votre mot de passe"
                     [toggleMask]="true" />
             </div>
 

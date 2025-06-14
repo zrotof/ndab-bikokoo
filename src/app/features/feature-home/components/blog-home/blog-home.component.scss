@@ -27,6 +27,7 @@
                         .p-carousel-viewport {
                             .p-carousel-item-list {
                                 padding: 1rem 0;
+                                touch-action: pan-y !important;
 
                                 .p-carousel-item {
                                     padding: 0.3rem;
@@ -43,6 +44,7 @@
                                         overflow: hidden;
                                         padding-bottom: 0.8rem;
                                         height: 100%;
+                                        background-color: var(--project-white-primary-color);
 
                                         &:hover {
                                             transform: scale(1.03);
@@ -171,7 +173,7 @@
         .see-all {
             align-self: center;
             color: var(--project-brown-quaterly-color);
-            border: 1px solid  #6f460e;
+            border: 1px solid #6f460e;
             background-color: #f4ede4;
             cursor: pointer;
             padding: 0.7rem 1rem;
@@ -216,11 +218,11 @@
 @media all and (max-width: 600px) {
     .blog-home {
         margin-bottom: 4rem;
-        
-        .content{
+
+        .content {
             gap: 1rem;
 
-            h2{
+            h2 {
                 text-align: center;
             }
         }

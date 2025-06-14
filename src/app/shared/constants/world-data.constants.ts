@@ -110,11 +110,13 @@ export const MAHOL_COUNTRIES_DATA: CountryCantonData[]  = [
         { name: 'Paris Maéba', population: 202 },
         { name: 'Paris Maliga', population: 177 },
         { name: 'Paris Maliga 18ième -', population: 28 },
+        { name: 'Paris Maliga 19ième -', population: 28 },
         { name: 'Paris Mahol', population: 236 },
         { name: 'Paris Manogla', population: 15 },
         { name: 'Paris Midi Convivialité', population: 151 },
         { name: 'Paris Midi Express', population: 59 },
         { name: 'Paris Midi Mère', population: 235 },
+        { name: 'Toulouse Mère', population: 235 },
       ],
       latitude: 46.2276, // Centre géographique de la France
       longitude: 2.2137

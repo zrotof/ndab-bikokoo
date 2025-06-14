@@ -2,7 +2,7 @@
     <div class="content my-container">
         <h2>Nos dernières actualités</h2>
 
-        <p-carousel [value]="(blog$ | async)!" [numVisible]="4" [numScroll]="1" [circular]="true"
+        <p-carousel #myCarousel [value]="(blog$ | async)!" [numVisible]="4" [numScroll]="1" [circular]="true"
             [responsiveOptions]="responsiveOptions">
             <ng-template let-blog #item>
             <div class="blog">

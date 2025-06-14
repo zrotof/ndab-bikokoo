@@ -22,7 +22,7 @@
 
 @media all and (max-width: 970px){
     .feature-blog-item{
-            margin-top: 10rem;
+            margin-top: 9rem;
 
         .content{
             flex-direction: column;
@@ -33,6 +33,22 @@
             }
     
             app-article-detail-side-bloc{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 545px){
+    .feature-blog-item{
+            margin-top: 7rem;
+
+        .content{
+            flex-direction: column;
+            width: 100%;
+    
+            app-article-data{
                 width: 100%;
             }
         }

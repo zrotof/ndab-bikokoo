@@ -28,7 +28,7 @@ export class WhyJoinComponent {
     {
       picto: "/img/picto/2-1-organigramme.png",
       title: "Développer votre réseau professionnel",
-      text: "Vous serez en mesure de profiter des opportunités que les relations créées autour de vous, vous offrions.",
+      text: "Vous serez en mesure de profiter des opportunités que les relations créées autour de vous, vous offrirons.",
       bgColor: "var(--project-blue-primary-color)"
 
     }

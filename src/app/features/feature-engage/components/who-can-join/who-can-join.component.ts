@@ -13,7 +13,7 @@ export class WhoCanJoinComponent {
       label: "Qui peut adhérer à Ndab Bikokoo?",
       possibilities: [
         "Vous êtes Ɓàsà’a (Mbɛ́nɛ̂ Ɓàti M̀pòo)",
-        "Vous accepter adhérer librement au règlement intérieur de Ndab Bikokoo",
+        "Vous acceptez d'adhérer librement au règlement intérieur de Ndab Bìkokoo",
         "Vous respectez les trois conditions relatives à l'inscritption d'un membre"
       ]
     },

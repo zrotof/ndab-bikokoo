@@ -1,9 +1,9 @@
 import { AsyncPipe, NgOptimizedImage } from '@angular/common';
-import { Component, inject, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ViewChild, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ConvertTimeZoneToDatePipe } from 'src/app/core/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 import { BlogService } from 'src/app/core/services/blog.service';
-import { CarouselModule } from 'primeng/carousel';
+import { Carousel, CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-blog-home',
@@ -20,6 +20,9 @@ import { CarouselModule } from 'primeng/carousel';
 })
 
 export class BlogHomeComponent {
+
+  @ViewChild('myCarousel') carousel!: Carousel;
+
   private readonly blogService = inject(BlogService);
 
   protected blog$ = this.blogService.getArticles("limit=8");
@@ -46,4 +49,8 @@ export class BlogHomeComponent {
       numScroll: 1
     }
   ];
+
+  constructor(){
+    Carousel.prototype.onTouchMove = () => { };
+  }
 }

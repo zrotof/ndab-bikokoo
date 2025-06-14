@@ -32,7 +32,7 @@ export class OrganizationalComponent {
 
   protected tabs = [
     {
-      label: "L'instance Dirigeante",
+      label: "L'instance dirigeante",
       isActive: true
     },
     {

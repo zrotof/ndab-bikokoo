@@ -39,7 +39,7 @@ export class FeatureDancesComponent {
     {
       title: "Assiko",
       image: "/img/dances/assiko.jpg",
-      intro: "Le mot Assiko vient probablement de siko, qui signifie « secouer » ou « bouger avec énergie. C'est une danse traditionnelle originaire du peuple Bassa au Cameroun, particulièrement répandue dans les régions du Littoral (Douala, Edea, etc.). C’est bien plus qu’une danse : c’est une expression culturelle riche, mêlant musique, danse, costumes, et poésie. Elle est énergique et rapide, avec beaucoup de mouvements de hanches, d’épaules et de jambes. C’est une danse qui célèbre la vie, la joie, et l’endurance. Elle est souvent dansée lors de fêtes traditionnelles, mariages, cérémonies ou veillées.",
+      intro: "Le mot Assiko vient probablement de siko, qui signifie « secouer » ou « bouger avec énergie. C'est une danse traditionnelle originaire du peuple Ɓàsà’a au Cameroun, particulièrement répandue dans les régions du Littoral (Douala, Edea, etc.). C’est bien plus qu’une danse : c’est une expression culturelle riche, mêlant musique, danse, costumes, et poésie. Elle est énergique et rapide, avec beaucoup de mouvements de hanches, d’épaules et de jambes. C’est une danse qui célèbre la vie, la joie, et l’endurance. Elle est souvent dansée lors de fêtes traditionnelles, mariages, cérémonies ou veillées.",
       instruments: [
         "Guitare sèche",
         "Tômbâ",

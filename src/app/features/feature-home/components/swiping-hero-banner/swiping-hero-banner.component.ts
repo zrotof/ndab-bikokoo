@@ -85,7 +85,7 @@ export class SwipingHeroBannerComponent implements AfterViewInit {
 
       this.ngZone.run(() => {
 
-        const url = 'https://www.youtube.com/embed/GypIvT-IdB0?si=zlH6dE72S9S9bauq';
+        const url = 'https://www.youtube.com/embed/kv4wAqcrPz4?si=k26Z4NBsA1t2WJj4';
 
         this.ref = this.dialogService.open(YoutubePlayerModalComponent, {
           data: { youtubeUrlVideo: url },
